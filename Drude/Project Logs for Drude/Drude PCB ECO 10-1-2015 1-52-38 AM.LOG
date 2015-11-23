@@ -1,0 +1,22 @@
+Added Pin To Net: NetName=NetR21_1 Pin=J6-1
+Added Pin To Net: NetName=NetR33_1 Pin=J6-3
+Change Net Name : Old Net Name=NetR21_1 New Net Name=I2C_SDA
+Change Net Name : Old Net Name=NetR33_1 New Net Name=I2C_SCL
+Added Pin To Net: NetName=PB0 Pin=U9-8
+Added Net: Name=PB0
+Added Pin To Net: NetName=PB1 Pin=U9-9
+Added Net: Name=PB1
+Added Pin To Net: NetName=PB2 Pin=U9-10
+Added Net: Name=PB2
+Added Pin To Net: NetName=PB3 Pin=U9-11
+Added Net: Name=PB3
+Added Pin To Net: NetName=PD2 Pin=J6-5
+Added Pin To Net: NetName=PD2 Pin=U9-20
+Added Net: Name=PD2
+Added Pin To Net: NetName=PD3 Pin=U9-21
+Added Net: Name=PD3
+Added Pin To Net: NetName=PD4 Pin=J6-9
+Added Pin To Net: NetName=PD4 Pin=U9-25
+Added Net: Name=PD4
+Added Pin To Net: NetName=PD6 Pin=U9-26
+Added Net: Name=PD6

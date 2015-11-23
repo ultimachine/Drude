@@ -1,0 +1,5 @@
+Change Net Name : Old Net Name=NetD27_1 New Net Name=UC_N
+Change Net Name : Old Net Name=NetD27_3 New Net Name=UC_P
+Added Class: Name=USB
+Added Differential Pair: Name=UC
+Added Differential Pair: Name=UD

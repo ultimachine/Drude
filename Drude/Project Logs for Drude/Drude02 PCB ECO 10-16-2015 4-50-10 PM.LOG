@@ -1,0 +1,12 @@
+Added Component: Designator=FID1(FIDUCIAL-1X2)
+Added Component: Designator=FID2(FIDUCIAL-1X2)
+Added Component: Designator=FID3(FIDUCIAL-1X2)
+Added Component: Designator=FID4(FIDUCIAL-1X2)
+Added Component: Designator=FID5(FIDUCIAL-1X2)
+Added Component: Designator=FID6(FIDUCIAL-1X2)
+Added Member To Class: ClassName=DrudePower Member=Component FID1 FIDUCIAL
+Added Member To Class: ClassName=DrudePower Member=Component FID2 FIDUCIAL
+Added Member To Class: ClassName=DrudePower Member=Component FID3 FIDUCIAL
+Added Member To Class: ClassName=DrudePower Member=Component FID4 FIDUCIAL
+Added Member To Class: ClassName=DrudePower Member=Component FID5 FIDUCIAL
+Added Member To Class: ClassName=DrudePower Member=Component FID6 FIDUCIAL

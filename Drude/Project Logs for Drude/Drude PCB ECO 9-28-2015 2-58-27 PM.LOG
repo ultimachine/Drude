@@ -1,0 +1,93 @@
+Change Component Comment : Designator=R43 Old Comment=24r New Comment=22r
+Change Component Comment : Designator=R46 Old Comment=24r New Comment=22r
+Added Component: Designator=C28(C0402)
+Added Component: Designator=C39(C0402)
+Added Component: Designator=J12(10118194-0001LF)
+Added Component: Designator=R72(R0402)
+Added Pin To Net: NetName=GND Pin=C57-2
+Added Pin To Net: NetName=GND Pin=C58-2
+Added Pin To Net: NetName=GND Pin=Y1-2
+Added Pin To Net: NetName=GND Pin=Y1-4
+Added Pin To Net: NetName=FGND Pin=D26-C
+Added Net: Name=FGND
+Added Pin To Net: NetName=NetC43_2 Pin=C43-2
+Added Pin To Net: NetName=NetC43_2 Pin=D27-5
+Added Pin To Net: NetName=NetC43_2 Pin=J12-1
+Added Pin To Net: NetName=NetC43_2 Pin=L2-2
+Added Net: Name=NetC43_2
+Added Pin To Net: NetName=NetC48_2 Pin=C48-2
+Added Pin To Net: NetName=NetC48_2 Pin=D26-A
+Added Pin To Net: NetName=NetC48_2 Pin=D27-2
+Added Pin To Net: NetName=NetC48_2 Pin=J12-5
+Added Pin To Net: NetName=NetC48_2 Pin=L4-2
+Added Pin To Net: NetName=NetC48_2 Pin=R44-1
+Added Net: Name=NetC48_2
+Added Pin To Net: NetName=NetC57_1 Pin=C57-1
+Added Pin To Net: NetName=NetC57_1 Pin=R72-1
+Added Pin To Net: NetName=NetC57_1 Pin=U9-17
+Added Pin To Net: NetName=NetC57_1 Pin=Y1-1
+Added Net: Name=NetC57_1
+Added Pin To Net: NetName=NetC58_1 Pin=C58-1
+Added Pin To Net: NetName=NetC58_1 Pin=R72-2
+Added Pin To Net: NetName=NetC58_1 Pin=U9-16
+Added Pin To Net: NetName=NetC58_1 Pin=Y1-3
+Added Net: Name=NetC58_1
+Added Pin To Net: NetName=NetD27_1 Pin=D27-1
+Added Pin To Net: NetName=NetD27_1 Pin=D27-6
+Added Pin To Net: NetName=NetD27_1 Pin=J12-2
+Added Pin To Net: NetName=NetD27_1 Pin=L5-3
+Added Net: Name=NetD27_1
+Added Pin To Net: NetName=NetD27_3 Pin=D27-3
+Added Pin To Net: NetName=NetD27_3 Pin=D27-4
+Added Pin To Net: NetName=NetD27_3 Pin=J12-3
+Added Pin To Net: NetName=NetD27_3 Pin=L5-2
+Added Net: Name=NetD27_3
+Added Pin To Net: NetName=NetL5_1 Pin=L5-1
+Added Pin To Net: NetName=NetL5_1 Pin=R46-2
+Added Net: Name=NetL5_1
+Added Pin To Net: NetName=NetL5_4 Pin=L5-4
+Added Pin To Net: NetName=NetL5_4 Pin=R43-2
+Added Net: Name=NetL5_4
+Added Pin To Net: NetName=UD_N Pin=R43-1
+Added Net: Name=UD_N
+Added Pin To Net: NetName=UD_P Pin=R46-1
+Added Net: Name=UD_P
+Added Pin To Net: NetName=USB_GND Pin=C28-2
+Added Pin To Net: NetName=USB_GND Pin=C32-2
+Added Pin To Net: NetName=USB_GND Pin=C39-2
+Added Pin To Net: NetName=USB_GND Pin=C43-1
+Added Pin To Net: NetName=USB_GND Pin=L4-1
+Added Net: Name=USB_GND
+Added Pin To Net: NetName=USBSHIELD Pin=C48-1
+Added Pin To Net: NetName=USBSHIELD Pin=J12-6
+Added Pin To Net: NetName=USBSHIELD Pin=J12-7
+Added Pin To Net: NetName=USBSHIELD Pin=J12-8
+Added Pin To Net: NetName=USBSHIELD Pin=J12-9
+Added Pin To Net: NetName=USBSHIELD Pin=J12-10
+Added Pin To Net: NetName=USBSHIELD Pin=J12-11
+Added Pin To Net: NetName=USBSHIELD Pin=R44-2
+Added Net: Name=USBSHIELD
+Added Pin To Net: NetName=VDD1 Pin=C39-1
+Added Net: Name=VDD1
+Added Pin To Net: NetName=VUSB Pin=C28-1
+Added Pin To Net: NetName=VUSB Pin=C32-1
+Added Pin To Net: NetName=VUSB Pin=L2-1
+Added Net: Name=VUSB
+Added Member To Class: ClassName=MCU Member=Component C28 100nF
+Added Member To Class: ClassName=MCU Member=Component C32 1uF
+Added Member To Class: ClassName=MCU Member=Component C39 100nF
+Added Member To Class: ClassName=MCU Member=Component C43 10nF
+Added Member To Class: ClassName=MCU Member=Component C48 4.7nF
+Added Member To Class: ClassName=MCU Member=Component C57 22pF
+Added Member To Class: ClassName=MCU Member=Component C58 22pF
+Added Member To Class: ClassName=MCU Member=Component D26 RSB39VTE-17
+Added Member To Class: ClassName=MCU Member=Component D27 PRTR5V0U2F
+Added Member To Class: ClassName=MCU Member=Component J12 USB Micro
+Added Member To Class: ClassName=MCU Member=Component L2 MPZ1608S221A
+Added Member To Class: ClassName=MCU Member=Component L4 MPZ1608S221A
+Added Member To Class: ClassName=MCU Member=Component L5 DLW21HN900SQ2L
+Added Member To Class: ClassName=MCU Member=Component R43 22r
+Added Member To Class: ClassName=MCU Member=Component R44 1M
+Added Member To Class: ClassName=MCU Member=Component R46 22r
+Added Member To Class: ClassName=MCU Member=Component R72 1M
+Added Member To Class: ClassName=MCU Member=Component Y1 7M-16.000MEEQ-T

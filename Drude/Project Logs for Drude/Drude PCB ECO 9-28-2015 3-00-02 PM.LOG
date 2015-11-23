@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=VUSB Pin=C28-1
+Removed Pin From Net: NetName=USB_GND Pin=C28-2
+Removed Pin From Net: NetName=USB_GND Pin=C39-2
+Removed Member From Class: ClassName=MCU Member=C28
+Removed Member From Class: ClassName=MCU Member=C39

@@ -1,0 +1,4 @@
+Change Component DesignItemId : Designator=U9 Old DesignItemId=CMP-0095-00166-2 New DesignItemId=MC-8B-ATM16U4-SQ45
+Change Component Description : Designator=U9 Old Description=8-bit AVR Microcontroller, 2.7-5.5V, 16MHz, 32KB Flash, 1KB EEPROM, 2.5KB SRAM, USB Controller, 44-pin QFN, Industrial Grade (-40°C to 85°C), Ext Osc New Description=
+Change Component Library : Designator=U9 Old Library=Altium Content Vault New Library=MC-8B-ATM16U4-SQ45.SchLib
+Added Member To Class: ClassName=MCU Member=Component U9 ATmega32U4-MU

@@ -1,0 +1,1041 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD16\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">11/20/2015</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10:39:03 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:04</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc" class="file"><acronym title="C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc">C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">179</td></tr>
+</table>
+</td>
+</table><a name="IDRZ03KIPOGCKGM5GTNRXY5HI3VKM5HFZPOSPYPGPD3CDT145MN1OD"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNAO2TALMCPPAM1TUWNVCFQO3HCPDHHGYJVHNVYDWKTEWWFQXO4ZP">RoomTC (Bounding Region = (48.616mm, 43.815mm, 57.056mm, 51.359mm) (InComponentClass('Components Class 1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0TRHUKUWCJESO4IND1M0R22DHGPXVXZVSXGLTPXZT0YSIYPMGCN">Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.203mm) (Max=0.203mm) (Prefered=0.203mm)  and Width Constraints (Min=0.102mm) (Max=0.102mm) (Prefered=0.102mm) (All)</a></td>
+<td class="column2">57</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDMMMJKAQHVZJYG31HDPHM4SIQEL5H2QVQLDVE4TAT2P2WJHYUZYP">Clearance Constraint (Gap=0.203mm) (InNetClass('USB')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUZGSN1DERW00OYFKK04FPWV05FCGRFUV1REZWLFOUIT3DDEZLR2H">Width Constraint (Min=0.127mm) (Max=0.127mm) (Preferred=0.127mm) (InNetClass('USB'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDULWWUTNDDSTHIWIKTKOTBQLCQEDWHATAHH11I1GQA4BJ11GSBNFN">Clearance Constraint (Gap=0.203mm) (InNetClass('DSI')  or InNetClass('HDMI')   or InNetClass('HDMI_CONN')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLFKO4AKORGJ2BMMC51R1MSVZIGMCR3V2BLSEX4HSZTM5CKPAE1EC">RoomHDMIConn (Bounding Region = (71.181mm, 40.575mm, 73.756mm, 49.95mm) (InComponentClass('Components Class 1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUBD14BIJGZHCEMFZU3JAMC2XHORYB3MIFLXZFZLGQIT5DB0BDMNO">RoomIP (Bounding Region = (62.154mm, 43.967mm, 68.275mm, 50.089mm) (InComponentClass('Components Class 1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBGQEPILPLLSTHIBAV12AJZ0QFC0QS5TAZNBLYIJMRQQUEFFPSMC">Clearance Constraint (Gap=0.102mm) (WithinRoom('RoomTC')    or WithinRoom('RoomIP') or WithinRoom('RoomHDMIConn')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4SLG2EU3CHRTEC0JUQ1QOCGUBDLMOK01ZY5RK5LSLNKG4RLNCEQP">Width Constraint (Min=0.102mm) (Max=0.508mm) (Preferred=0.203mm) (WithinRoom('RoomTC'))</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQUZHMSMYH0KFMYTRQRHCCLBKNDNFHXXKPW5RGQN0DD0IR1GLSPAM">Routing Via (MinHoleWidth=0.203mm) (MaxHoleWidth=0.203mm) (PreferredHoleWidth=0.203mm) (MinWidth=0.406mm) (MaxWidth=0.406mm) (PreferedWidth=0.406mm) (InNetClass('DSI'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNTUYGE54NQ4XDUBBWR2JQPVJAD11IVXDOPX3SYPQVZW4FKFTD1IK">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZP0Z011AD0AJOXY0IN55REL3DH1EW1YQA255EAN3ITBAXSOTYKVP">SMD Entry (Side = Allowed) (Corner = Allowed) (Any Angle = Not Allowed) (Ignore First Corner = Allowed)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWGRPZPHMGQHRL0V0E5GXHDRWFBAIP5EKSJIDGHOYDHVEZRMLGX1L">Silk primitive without silk layer</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZY1FV4KKQ5LTCYAGJ0NRAHKRREA2CJFV34O4DLO0TWZ5I4JJRDRN">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPC40SPZFRUEDLYO3EBZH0BCOLD1XPFFM4LD5FJCH2KHK3122MNQ">Silk to Silk (Clearance=0.254mm) (Disabled)(All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLR4AONA3HBRABM3VDNRMJ0H4FPTQXQHPVFLUM55NC0X0VIV041E">Silk To Solder Mask (Clearance=0.254mm) (Disabled)(IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVHN5YVLOW1KEBAUPO1QHI434MAMTMIKJN0DS5P0SZCROFYOUZJL">Minimum Solder Mask Sliver (Gap=0.102mm) (All),(All)</a></td>
+<td class="column2">89</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDATCJAR5YKEMJLFA4WFW4Q1VB5PW321LRD3PYI00PTU22R2PLSYO">Hole To Hole Clearance (Gap=0.203mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQTIEZUWLK3SWFQH5YYYZTO4AID3BGF3SVVNWEVFG4RRQWLJ5DNW">Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.203mm) (Max=0.203mm) (Prefered=0.203mm)  and Width Constraints (Min=0.127mm) (Max=0.127mm) (Prefered=0.127mm) (InNetClass('USB'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUED0WFHRDF2ELKEVLAO2ABOVYGG00ICJHB1IL4KNS4LDXRPYE2JO">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXTBWLDOK4BMRJ140NSMYXHSJDKYWRKXHLSQLCUKQQTDOGPNI13TD">Pads and Vias to follow the Drill pairs settings</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBQU1EVFGDZ1LK0BNDT34FTG4MPR1IRD0WUJKAUHRDMUJL1FBX3NE">Hole Size Constraint (Min=0.203mm) (Max=2540mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRT1OD0HSA0VTFYOR0FP1Z12E4P5VJZX3H0PD5AGTH2NSIJJWAIPM">Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0.254mm ) (All),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDASF05AYR3SG1GCOP3JU5JKNK3OUBM5MWAY2T55OCNOLX3RB32M4">Component Clearance Constraint ( Horizontal Gap = 0.025mm, Vertical Gap = 0.254mm ) (InComponentClass('Connectors')),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSFBDMNLYEKIPHV1SWK0JQHLSTHHB0RFLOOE1GPNMFZYHXCXVLJZF">SMD To Corner (Distance=0.076mm) (All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDESJMF2ODSULWEHGYEOJPVZQ4WLETTECBUI4T2LMSAE4HHL0BRMCG">RoomDisplayConnector (Bounding Region = (36.426mm, 42.65mm, 40.281mm, 51.325mm) (Not IsComponent)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4ARA1MEQYBOFOWRGUJU43Z0ZBONQYVGYFOPDDDB0YNGQHY1Y2TYN">Acute Angle Constraint (Minimum=60.000) (All)</a></td>
+<td class="column2">8</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRS2EFZB3DDQ4KWE5RWMISP2VJNSEXRCB3SUTZFPPM3XFE3TJIWXN">Minimum Annular Ring (Minimum=0.102mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPGY1OSH5Z2T4FNZ00KRZRD5OWOHHY2NEQPLPTLXLWASOI2XMZAH">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA3OW3ICBYXS0I0ZT5FFUMYCGOENPQ1TYNKNK4YLUPOKQUXWAUR1G">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLIRGOOXNFOUDL211DRVVP2OCGI3JPBUVQAOX2ALYSUT0AI03IS5J">Routing Via (MinHoleWidth=0.203mm) (MaxHoleWidth=0.711mm) (PreferredHoleWidth=0.381mm) (MinWidth=0.406mm) (MaxWidth=1.27mm) (PreferedWidth=0.762mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUHN1HTMQXH1EEIG4P1ZZD5ENSJ2HSIEYEVJ1UTFVUJY0OQMLUJFK">Routing Layers(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCSU52KQ3KTDZOTNEEVERPZCLDFCBVQHTU0OO5JDCQFZSVROQGQBJ">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYT1VGCURVSP4J33Z4IAXRG4NJKGGVZSPV41TTRCW4TLEEPYZWXKM">Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (IsVia)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWMBCRY0VXPOYBKYLPGKZ4DZ5NONN12FE4Y0WTDXIQU0N5Y3OIRG">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.61mm) (Air Gap=0.254mm) (Entries=4) (InNet('+12V'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWANJFHF4FXE2FV4LVWFVR5MRKBC1VHA3PQOVX0PPXIG3CFEDOAEL">Matched Lengths(Tolerance=0.127mm) (InNetClass('DSI'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID31BKBWBK4IAUCNLSEP53EB0R2LNDCXEEWUM5R0DMX5BG1K5OMZ2O">Width Constraint (Min=0.127mm) (Max=2.54mm) (Preferred=0.203mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFRU42NLCNCWAICFQUV3GADY25GGYAOXWBA0S3GHLW5XYXWSE2GUK">Width Constraint (Min=0.102mm) (Max=0.203mm) (Preferred=0.127mm) (WithinRoom('RoomDisplayConnector'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLMTEKRAPUYXHPLJJHLRQWNXLIPYIWABS5IUAUEBFVYSGJYGAEIKB">Width Constraint (Min=0.102mm) (Max=0.145mm) (Preferred=0.145mm) (InNetClass('DSI')  or InNetClass('HDMI')   or InNetClass('HDMI_CONN'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIDGZL5IY4XGFHFO3Q20LJNO0ECJCEYSLNCQQFTODF1DIH5N3TUG">Parallel Segment Constraint (Gap=0.914mm ) (Limit=200mm) ((InDifferentialPairClass('All Differential Pairs'))),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXEMFZA4BFU31MQJVYLYS3WUODNKJFMDXVK0DFQGVTB4PERZ2JBJG">Parallel Segment Constraint (Gap=0.203mm ) (Limit=76.2mm) ((InDifferentialPairClass('UD'))),((InDifferentialPairClass('UD')))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDF1ZSYCC0JCDQCSRWQ3B0J3EUMH0AN5JUEU4YJVGGFPL21JROEX2E">Clearance Constraint (Gap=0.152mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDL3XYAG20CBR2FMOFB4J3CAJJDLRK5ARGHVKM1LPGD2AMOGAHN5CD">Clearance Constraint (Gap=0.305mm) (InNetClass('DSI')  or InNetClass('HDMI')   or InNetClass('HDMI_CONN')),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZXBDZ21QAPXFEGV3GFGGEWCQYNI1QWTRF3RDAPCMPG42WJKEOYQD">Clearance Constraint (Gap=0.102mm) (WithinRoom('RoomDisplayConnector')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKIVGERK1A5G4FKGM1444DZFWMMCWGZIWXBSYY4IAPPKB4DYSYJXM">Matched Lengths(Tolerance=0.127mm) (InNetClass('HDMI_CONN'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZFVS3IYXHKWUFNR04YSPCUVQEJKSXVL3MGFBWFCKWU5ITX42WXGK">Matched Lengths(Tolerance=0.127mm) (InNetClass('HDMI'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQDHNHTI145HZKTRYANCVRC3L4HBYPUPM1D2NO3IR4A24AFHDR52F">Parallel Segment Constraint (Gap=1.067mm ) (Limit=12.7mm) ((InDifferentialPairClass('All Differential Pairs'))),(All)</a></td>
+<td class="column2">10</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1KDMCSM3FPQVFQPPV2VAXPSWWKFLDOHLUAXSLWD0HNKG0KT31HKJ">Parallel Segment Constraint (Gap=0.203mm ) (Limit=7.62mm) ((InDifferentialPairClass('UD'))),((InDifferentialPairClass('UD')))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTMEVIERCWNPHLMTKY4TKAOMW1IXJV2VEFYUTGQH0MO2Y33PI10IC">Parallel Segment Constraint (Gap=0.203mm ) (Limit=76.2mm) ((InDifferentialPairClass('LANE2'))),((InDifferentialPairClass('LANE2')))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">179</td>
+</tr>
+</table><br><a name="ID0TRHUKUWCJESO4IND1M0R22DHGPXVXZVSXGLTPXZT0YSIYPMGCN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.203mm) (Max=0.203mm) (Prefered=0.203mm)  and Width Constraints (Min=0.102mm) (Max=0.102mm) (Prefered=0.102mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2508.778mil|Location2.X=2554.002mil|Location1.Y=2704.461mil|Location2.Y=2750.958mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2508.778mil|Location2.X=2554.002mil|Location1.Y=2704.461mil|Location2.Y=2750.958mil|Absolute=True">Differential Pairs Routing: Track (28.476mm,57.115mm)(28.561mm,57.03mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2495.99mil|Location2.X=2554.492mil|Location1.Y=2736.388mil|Location2.Y=2759.072mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2495.99mil|Location2.X=2554.492mil|Location1.Y=2736.388mil|Location2.Y=2759.072mil|Absolute=True">Differential Pairs Routing: Track (27.911mm,57.115mm)(28.476mm,57.115mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2555.676mil|Location2.X=2614.178mil|Location1.Y=2733.045mil|Location2.Y=2755.729mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2555.676mil|Location2.X=2614.178mil|Location1.Y=2733.045mil|Location2.Y=2755.729mil|Absolute=True">Differential Pairs Routing: Track (28.561mm,57.03mm)(30.859mm,57.03mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2610.451mil|Location2.X=2656.948mil|Location1.Y=2750.836mil|Location2.Y=2796.06mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2610.451mil|Location2.X=2656.948mil|Location1.Y=2750.836mil|Location2.Y=2796.06mil|Absolute=True">Differential Pairs Routing: Track (30.859mm,57.03mm)(31.344mm,57.515mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2613.558mil|Location2.X=2636.242mil|Location1.Y=2926.385mil|Location2.Y=2984.887mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2613.558mil|Location2.X=2636.242mil|Location1.Y=2926.385mil|Location2.Y=2984.887mil|Absolute=True">Differential Pairs Routing: Track (31.344mm,57.515mm)(31.344mm,65.948mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2657.609mil|Location2.X=2716.111mil|Location1.Y=3109.852mil|Location2.Y=3132.537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2657.609mil|Location2.X=2716.111mil|Location1.Y=3109.852mil|Location2.Y=3132.537mil|Absolute=True">Differential Pairs Routing: Track (31.997mm,66.601mm)(32.601mm,66.601mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2632.855mil|Location2.X=2679.352mil|Location1.Y=3105.24mil|Location2.Y=3150.464mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2632.855mil|Location2.X=2679.352mil|Location1.Y=3105.24mil|Location2.Y=3150.464mil|Absolute=True">Differential Pairs Routing: Track (31.344mm,65.948mm)(31.997mm,66.601mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2676.055mil|Location2.X=2722.552mil|Location1.Y=3124.642mil|Location2.Y=3169.866mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2676.055mil|Location2.X=2722.552mil|Location1.Y=3124.642mil|Location2.Y=3169.866mil|Absolute=True">Differential Pairs Routing: Track (32.601mm,66.601mm)(32.934mm,66.934mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2690.852mil|Location2.X=2749.354mil|Location1.Y=3122.947mil|Location2.Y=3145.631mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2690.852mil|Location2.X=2749.354mil|Location1.Y=3122.947mil|Location2.Y=3145.631mil|Absolute=True">Differential Pairs Routing: Track (32.934mm,66.934mm)(33.353mm,66.934mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2495.99mil|Location2.X=2554.492mil|Location1.Y=2716.703mil|Location2.Y=2739.387mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2495.99mil|Location2.X=2554.492mil|Location1.Y=2716.703mil|Location2.Y=2739.387mil|Absolute=True">Differential Pairs Routing: Track (27.911mm,56.615mm)(28.476mm,56.615mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2508.778mil|Location2.X=2555.275mil|Location1.Y=2726.616mil|Location2.Y=2771.84mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2508.778mil|Location2.X=2555.275mil|Location1.Y=2726.616mil|Location2.Y=2771.84mil|Absolute=True">Differential Pairs Routing: Track (28.476mm,56.615mm)(28.561mm,56.7mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2558.368mil|Location2.X=2616.87mil|Location1.Y=2720.045mil|Location2.Y=2742.729mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2558.368mil|Location2.X=2616.87mil|Location1.Y=2720.045mil|Location2.Y=2742.729mil|Absolute=True">Differential Pairs Routing: Track (28.561mm,56.7mm)(30.995mm,56.7mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2619.644mil|Location2.X=2666.141mil|Location1.Y=2741.644mil|Location2.Y=2786.868mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2619.644mil|Location2.X=2666.141mil|Location1.Y=2741.644mil|Location2.Y=2786.868mil|Absolute=True">Differential Pairs Routing: Track (30.995mm,56.7mm)(31.674mm,57.379mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2626.558mil|Location2.X=2649.242mil|Location1.Y=2921mil|Location2.Y=2979.502mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2626.558mil|Location2.X=2649.242mil|Location1.Y=2921mil|Location2.Y=2979.502mil|Absolute=True">Differential Pairs Routing: Track (31.674mm,57.379mm)(31.674mm,65.811mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2642.047mil|Location2.X=2688.544mil|Location1.Y=3096.047mil|Location2.Y=3141.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2642.047mil|Location2.X=2688.544mil|Location1.Y=3096.047mil|Location2.Y=3141.272mil|Absolute=True">Differential Pairs Routing: Track (31.674mm,65.811mm)(32.133mm,66.271mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2660.301mil|Location2.X=2718.803mil|Location1.Y=3096.852mil|Location2.Y=3119.537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2660.301mil|Location2.X=2718.803mil|Location1.Y=3096.852mil|Location2.Y=3119.537mil|Absolute=True">Differential Pairs Routing: Track (32.133mm,66.271mm)(32.601mm,66.271mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2690.852mil|Location2.X=2749.354mil|Location1.Y=3083.758mil|Location2.Y=3106.442mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2690.852mil|Location2.X=2749.354mil|Location1.Y=3083.758mil|Location2.Y=3106.442mil|Absolute=True">Differential Pairs Routing: Track (32.934mm,65.938mm)(33.353mm,65.938mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2676.055mil|Location2.X=2721.279mil|Location1.Y=3060.05mil|Location2.Y=3106.547mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2676.055mil|Location2.X=2721.279mil|Location1.Y=3060.05mil|Location2.Y=3106.547mil|Absolute=True">Differential Pairs Routing: Track (32.601mm,66.271mm)(32.934mm,65.938mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2853.607mil|Location2.X=2912.109mil|Location1.Y=3118.506mil|Location2.Y=3141.19mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2853.607mil|Location2.X=2912.109mil|Location1.Y=3118.506mil|Location2.Y=3141.19mil|Absolute=True">Differential Pairs Routing: Track (37.121mm,66.821mm)(37.433mm,66.821mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2864.624mil|Location2.X=2911.122mil|Location1.Y=3131.624mil|Location2.Y=3176.849mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2864.624mil|Location2.X=2911.122mil|Location1.Y=3131.624mil|Location2.Y=3176.849mil|Absolute=True">Differential Pairs Routing: Track (37.433mm,66.821mm)(37.681mm,67.069mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2883.5mil|Location2.X=2942.003mil|Location1.Y=3129.258mil|Location2.Y=3151.942mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2883.5mil|Location2.X=2942.003mil|Location1.Y=3129.258mil|Location2.Y=3151.942mil|Absolute=True">Differential Pairs Routing: Track (37.681mm,67.094mm)(38.392mm,67.094mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2891.058mil|Location2.X=2913.742mil|Location1.Y=3137.238mil|Location2.Y=3195.74mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2891.058mil|Location2.X=2913.742mil|Location1.Y=3137.238mil|Location2.Y=3195.74mil|Absolute=True">Differential Pairs Routing: Track (38.392mm,67.081mm)(38.392mm,67.094mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2907.209mil|Location2.X=2965.711mil|Location1.Y=3122.996mil|Location2.Y=3145.68mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2907.209mil|Location2.X=2965.711mil|Location1.Y=3122.996mil|Location2.Y=3145.68mil|Absolute=True">Differential Pairs Routing: Track (38.538mm,66.935mm)(38.74mm,66.935mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2900.369mil|Location2.X=2945.594mil|Location1.Y=3095.61mil|Location2.Y=3142.108mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2900.369mil|Location2.X=2945.594mil|Location1.Y=3095.61mil|Location2.Y=3142.108mil|Absolute=True">Differential Pairs Routing: Track (38.392mm,67.081mm)(38.538mm,66.935mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2903.328mil|Location2.X=2949.825mil|Location1.Y=3131.328mil|Location2.Y=3176.552mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2903.328mil|Location2.X=2949.825mil|Location1.Y=3131.328mil|Location2.Y=3176.552mil|Absolute=True">Differential Pairs Routing: Track (38.538mm,66.935mm)(38.542mm,66.94mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3010.417mil|Location2.X=3068.919mil|Location1.Y=3116.758mil|Location2.Y=3139.442mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3010.417mil|Location2.X=3068.919mil|Location1.Y=3116.758mil|Location2.Y=3139.442mil|Absolute=True">Differential Pairs Routing: Track (40.643mm,66.777mm)(41.877mm,66.777mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2980.358mil|Location2.X=3025.583mil|Location1.Y=3092.278mil|Location2.Y=3138.775mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2980.358mil|Location2.X=3025.583mil|Location1.Y=3092.278mil|Location2.Y=3138.775mil|Absolute=True">Differential Pairs Routing: Track (40.35mm,67.07mm)(40.643mm,66.777mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2925.01mil|Location2.X=2983.512mil|Location1.Y=3122.443mil|Location2.Y=3145.127mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2925.01mil|Location2.X=2983.512mil|Location1.Y=3122.443mil|Location2.Y=3145.127mil|Absolute=True">Differential Pairs Routing: Track (38.754mm,66.921mm)(39.428mm,66.921mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2911.456mil|Location2.X=2956.68mil|Location1.Y=3092.465mil|Location2.Y=3138.962mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2911.456mil|Location2.X=2956.68mil|Location1.Y=3092.465mil|Location2.Y=3138.962mil|Absolute=True">Differential Pairs Routing: Track (38.74mm,66.935mm)(38.754mm,66.921mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2942.92mil|Location2.X=3001.422mil|Location1.Y=3122.443mil|Location2.Y=3145.127mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2942.92mil|Location2.X=3001.422mil|Location1.Y=3122.443mil|Location2.Y=3145.127mil|Absolute=True">Differential Pairs Routing: Track (39.428mm,66.921mm)(39.663mm,66.921mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2950.485mil|Location2.X=2996.982mil|Location1.Y=3133.618mil|Location2.Y=3178.842mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2950.485mil|Location2.X=2996.982mil|Location1.Y=3133.618mil|Location2.Y=3178.842mil|Absolute=True">Differential Pairs Routing: Track (39.663mm,66.921mm)(39.812mm,67.07mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2964mil|Location2.X=3022.503mil|Location1.Y=3128.308mil|Location2.Y=3150.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2964mil|Location2.X=3022.503mil|Location1.Y=3128.308mil|Location2.Y=3150.992mil|Absolute=True">Differential Pairs Routing: Track (39.812mm,67.07mm)(40.35mm,67.07mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2864.14mil|Location2.X=2909.365mil|Location1.Y=3051.379mil|Location2.Y=3097.876mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2864.14mil|Location2.X=2909.365mil|Location1.Y=3051.379mil|Location2.Y=3097.876mil|Absolute=True">Differential Pairs Routing: Track (37.408mm,66.021mm)(37.681mm,65.748mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2883.247mil|Location2.X=2941.749mil|Location1.Y=3076.258mil|Location2.Y=3098.942mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2883.247mil|Location2.X=2941.749mil|Location1.Y=3076.258mil|Location2.Y=3098.942mil|Absolute=True">Differential Pairs Routing: Track (37.681mm,65.748mm)(38.379mm,65.748mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2900.2mil|Location2.X=2946.698mil|Location1.Y=3087.723mil|Location2.Y=3132.948mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2900.2mil|Location2.X=2946.698mil|Location1.Y=3087.723mil|Location2.Y=3132.948mil|Absolute=True">Differential Pairs Routing: Track (38.379mm,65.748mm)(38.543mm,65.912mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2853.115mil|Location2.X=2911.617mil|Location1.Y=3087.01mil|Location2.Y=3109.694mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2853.115mil|Location2.X=2911.617mil|Location1.Y=3087.01mil|Location2.Y=3109.694mil|Absolute=True">Differential Pairs Routing: Track (37.121mm,66.021mm)(37.408mm,66.021mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2907.78mil|Location2.X=2966.282mil|Location1.Y=3083.073mil|Location2.Y=3105.757mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2907.78mil|Location2.X=2966.282mil|Location1.Y=3083.073mil|Location2.Y=3105.757mil|Absolute=True">Differential Pairs Routing: Track (38.553mm,65.921mm)(38.754mm,65.921mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2950.485mil|Location2.X=2995.709mil|Location1.Y=3049.885mil|Location2.Y=3096.383mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2950.485mil|Location2.X=2995.709mil|Location1.Y=3049.885mil|Location2.Y=3096.383mil|Absolute=True">Differential Pairs Routing: Track (39.663mm,65.921mm)(39.812mm,65.772mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2964mil|Location2.X=3022.503mil|Location1.Y=3077.208mil|Location2.Y=3099.892mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2964mil|Location2.X=3022.503mil|Location1.Y=3077.208mil|Location2.Y=3099.892mil|Absolute=True">Differential Pairs Routing: Track (39.812mm,65.772mm)(40.35mm,65.772mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2981.563mil|Location2.X=3028.06mil|Location1.Y=3092.43mil|Location2.Y=3137.654mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2981.563mil|Location2.X=3028.06mil|Location1.Y=3092.43mil|Location2.Y=3137.654mil|Absolute=True">Differential Pairs Routing: Track (40.35mm,65.772mm)(40.705mm,66.127mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2942.92mil|Location2.X=3001.422mil|Location1.Y=3083.073mil|Location2.Y=3105.757mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2942.92mil|Location2.X=3001.422mil|Location1.Y=3083.073mil|Location2.Y=3105.757mil|Absolute=True">Differential Pairs Routing: Track (39.428mm,65.921mm)(39.663mm,65.921mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2925.01mil|Location2.X=2983.512mil|Location1.Y=3083.073mil|Location2.Y=3105.757mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2925.01mil|Location2.X=2983.512mil|Location1.Y=3083.073mil|Location2.Y=3105.757mil|Absolute=True">Differential Pairs Routing: Track (38.754mm,65.921mm)(39.428mm,65.921mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3011.622mil|Location2.X=3070.124mil|Location1.Y=3091.167mil|Location2.Y=3113.852mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3011.622mil|Location2.X=3070.124mil|Location1.Y=3091.167mil|Location2.Y=3113.852mil|Absolute=True">Differential Pairs Routing: Track (40.705mm,66.127mm)(41.877mm,66.127mm) on Top Layer Actual Width = 0.127mm, Target Width = 0.102mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2848.962mil|Location2.X=3041.204mil|Location1.Y=3085.997mil|Location2.Y=3144.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2848.962mil|Location2.X=3041.204mil|Location1.Y=3085.997mil|Location2.Y=3144.003mil|Absolute=True">Differential Pairs Routing: Between Net UC_P And Net UC_N [Uncoupled Length = 5.135mm], [Maximum Uncoupled Length = 2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2658.501mil|Location2.X=2869.751mil|Location1.Y=1899.209mil|Location2.Y=1962.011mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2658.501mil|Location2.X=2869.751mil|Location1.Y=1899.209mil|Location2.Y=1962.011mil|Absolute=True">Differential Pairs Routing: Between Net HDMI_CON_D2_P And Net HDMI_CON_D2_N [Uncoupled Length = 2.649mm], [Maximum Uncoupled Length = 2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2658.501mil|Location2.X=2869.751mil|Location1.Y=1859.58mil|Location2.Y=1902.956mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2658.501mil|Location2.X=2869.751mil|Location1.Y=1859.58mil|Location2.Y=1902.956mil|Absolute=True">Differential Pairs Routing: Between Net HDMI_CON_D1_P And Net HDMI_CON_D1_N [Uncoupled Length = 2.866mm], [Maximum Uncoupled Length = 2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2658.501mil|Location2.X=2869.751mil|Location1.Y=1800.524mil|Location2.Y=1844.161mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2658.501mil|Location2.X=2869.751mil|Location1.Y=1800.524mil|Location2.Y=1844.161mil|Absolute=True">Differential Pairs Routing: Between Net HDMI_CON_D0_P And Net HDMI_CON_D0_N [Uncoupled Length = 2.864mm], [Maximum Uncoupled Length = 2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2658.501mil|Location2.X=2869.751mil|Location1.Y=1741.469mil|Location2.Y=1804.791mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2658.501mil|Location2.X=2869.751mil|Location1.Y=1741.469mil|Location2.Y=1804.791mil|Absolute=True">Differential Pairs Routing: Between Net HDMI_CON_CK_P And Net HDMI_CON_CK_N [Uncoupled Length = 2.61mm], [Maximum Uncoupled Length = 2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2150.564mil|Location2.X=2475.499mil|Location1.Y=1873.792mil|Location2.Y=1939.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2150.564mil|Location2.X=2475.499mil|Location1.Y=1873.792mil|Location2.Y=1939.003mil|Absolute=True">Differential Pairs Routing: Between Net HDMI_D2_P And Net HDMI_D2_N [Uncoupled Length = 3.756mm], [Maximum Uncoupled Length = 2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2150.564mil|Location2.X=2475.499mil|Location1.Y=1848.201mil|Location2.Y=1890.709mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2150.564mil|Location2.X=2475.499mil|Location1.Y=1848.201mil|Location2.Y=1890.709mil|Absolute=True">Differential Pairs Routing: Between Net HDMI_D1_P And Net HDMI_D1_N [Uncoupled Length = 2.086mm], [Maximum Uncoupled Length = 2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2150.564mil|Location2.X=2475.499mil|Location1.Y=1811.552mil|Location2.Y=1844.161mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2150.564mil|Location2.X=2475.499mil|Location1.Y=1811.552mil|Location2.Y=1844.161mil|Absolute=True">Differential Pairs Routing: Between Net HDMI_D0_P And Net HDMI_D0_N [Uncoupled Length = 2.366mm], [Maximum Uncoupled Length = 2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2150.564mil|Location2.X=2475.499mil|Location1.Y=1781.099mil|Location2.Y=1813.939mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2150.564mil|Location2.X=2475.499mil|Location1.Y=1781.099mil|Location2.Y=1813.939mil|Absolute=True">Differential Pairs Routing: Between Net HDMI_CK_P And Net HDMI_CK_N [Uncoupled Length = 2.71mm], [Maximum Uncoupled Length = 2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.973mil|Location2.X=1975.436mil|Location1.Y=1717.997mil|Location2.Y=1761.846mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.973mil|Location2.X=1975.436mil|Location1.Y=1717.997mil|Location2.Y=1761.846mil|Absolute=True">Differential Pairs Routing: Between Net LANE3_P And Net LANE3_N [Uncoupled Length = 4.901mm], [Maximum Uncoupled Length = 2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1452.957mil|Location2.X=1975.436mil|Location1.Y=1760.997mil|Location2.Y=1934.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1452.957mil|Location2.X=1975.436mil|Location1.Y=1760.997mil|Location2.Y=1934.003mil|Absolute=True">Differential Pairs Routing: Between Net LANE2_P And Net LANE2_N [Uncoupled Length = 4.1mm], [Maximum Uncoupled Length = 2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.997mil|Location2.X=1975.436mil|Location1.Y=1836.997mil|Location2.Y=1913.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.997mil|Location2.X=1975.436mil|Location1.Y=1836.997mil|Location2.Y=1913.003mil|Absolute=True">Differential Pairs Routing: Between Net LANE1_P And Net LANE1_N [Uncoupled Length = 5.283mm], [Maximum Uncoupled Length = 2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.997mil|Location2.X=1975.436mil|Location1.Y=1766.997mil|Location2.Y=1928.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.997mil|Location2.X=1975.436mil|Location1.Y=1766.997mil|Location2.Y=1928.003mil|Absolute=True">Differential Pairs Routing: Between Net LANE0_P And Net LANE0_N [Uncoupled Length = 3.466mm], [Maximum Uncoupled Length = 2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.997mil|Location2.X=1975.436mil|Location1.Y=1796.997mil|Location2.Y=1839.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.997mil|Location2.X=1975.436mil|Location1.Y=1796.997mil|Location2.Y=1839.003mil|Absolute=True">Differential Pairs Routing: Between Net DSI_CLK_P And Net DSI_CLK_N [Uncoupled Length = 6.637mm], [Maximum Uncoupled Length = 2mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID4SLG2EU3CHRTEC0JUQ1QOCGUBDLMOK01ZY5RK5LSLNKG4RLNCEQP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Width Constraint (Min=0.102mm) (Max=0.508mm) (Preferred=0.203mm) (WithinRoom('RoomTC'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1969.047mil|Location2.X=2028.049mil|Location1.Y=1824.372mil|Location2.Y=1847.056mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1969.047mil|Location2.X=2028.049mil|Location1.Y=1824.372mil|Location2.Y=1847.056mil|Absolute=True">Width Constraint: Track (14.819mm,33.95mm)(14.825mm,33.95mm) on Top Layer Actual Width = 0.152mm, Target Width = 0.127mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDVHN5YVLOW1KEBAUPO1QHI434MAMTMIKJN0DS5P0SZCROFYOUZJL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.102mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1612.895mil|Location2.Y=1618.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1612.895mil|Location2.Y=1618.145mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-18(37.535mm,28.584mm) on Top Layer And Pad J1-19(37.535mm,28.084mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1632.58mil|Location2.Y=1637.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1632.58mil|Location2.Y=1637.83mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-17(37.535mm,29.084mm) on Top Layer And Pad J1-18(37.535mm,28.584mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1652.265mil|Location2.Y=1657.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1652.265mil|Location2.Y=1657.515mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-16(37.535mm,29.584mm) on Top Layer And Pad J1-17(37.535mm,29.084mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1671.95mil|Location2.Y=1677.2mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1671.95mil|Location2.Y=1677.2mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-15(37.535mm,30.084mm) on Top Layer And Pad J1-16(37.535mm,29.584mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1691.635mil|Location2.Y=1696.885mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1691.635mil|Location2.Y=1696.885mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-14(37.535mm,30.584mm) on Top Layer And Pad J1-15(37.535mm,30.084mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1711.32mil|Location2.Y=1716.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1711.32mil|Location2.Y=1716.57mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-13(37.535mm,31.084mm) on Top Layer And Pad J1-14(37.535mm,30.584mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1731.005mil|Location2.Y=1736.255mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1731.005mil|Location2.Y=1736.255mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-12(37.535mm,31.584mm) on Top Layer And Pad J1-13(37.535mm,31.084mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1750.69mil|Location2.Y=1755.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1750.69mil|Location2.Y=1755.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-11(37.535mm,32.084mm) on Top Layer And Pad J1-12(37.535mm,31.584mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1770.375mil|Location2.Y=1775.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1770.375mil|Location2.Y=1775.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-10(37.535mm,32.584mm) on Top Layer And Pad J1-11(37.535mm,32.084mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1790.06mil|Location2.Y=1795.31mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1790.06mil|Location2.Y=1795.31mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-9(37.535mm,33.084mm) on Top Layer And Pad J1-10(37.535mm,32.584mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1809.745mil|Location2.Y=1814.995mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1809.745mil|Location2.Y=1814.995mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-8(37.535mm,33.584mm) on Top Layer And Pad J1-9(37.535mm,33.084mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1829.43mil|Location2.Y=1834.68mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1829.43mil|Location2.Y=1834.68mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-7(37.535mm,34.084mm) on Top Layer And Pad J1-8(37.535mm,33.584mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1849.115mil|Location2.Y=1854.365mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1849.115mil|Location2.Y=1854.365mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-6(37.535mm,34.584mm) on Top Layer And Pad J1-7(37.535mm,34.084mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1868.8mil|Location2.Y=1874.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1868.8mil|Location2.Y=1874.05mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-5(37.535mm,35.084mm) on Top Layer And Pad J1-6(37.535mm,34.584mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1888.485mil|Location2.Y=1893.735mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1888.485mil|Location2.Y=1893.735mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-4(37.535mm,35.584mm) on Top Layer And Pad J1-5(37.535mm,35.084mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1908.17mil|Location2.Y=1913.42mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1908.17mil|Location2.Y=1913.42mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-3(37.535mm,36.084mm) on Top Layer And Pad J1-4(37.535mm,35.584mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1947.54mil|Location2.Y=1952.79mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1947.54mil|Location2.Y=1952.79mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-1(37.535mm,37.084mm) on Top Layer And Pad J1-2(37.535mm,36.584mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1927.855mil|Location2.Y=1933.105mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2824.722mil|Location2.X=2829.972mil|Location1.Y=1927.855mil|Location2.Y=1933.105mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad J1-3(37.535mm,36.084mm) on Top Layer And Pad J1-2(37.535mm,36.584mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3006.501mil|Location2.X=3011.751mil|Location1.Y=3087.989mil|Location2.Y=3093.239mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3006.501mil|Location2.X=3011.751mil|Location1.Y=3087.989mil|Location2.Y=3093.239mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad J2-2(41.877mm,66.127mm) on Top Layer And Pad J2-1(41.877mm,65.477mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3006.501mil|Location2.X=3011.751mil|Location1.Y=3113.58mil|Location2.Y=3118.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3006.501mil|Location2.X=3011.751mil|Location1.Y=3113.58mil|Location2.Y=3118.83mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad J2-3(41.877mm,66.777mm) on Top Layer And Pad J2-2(41.877mm,66.127mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3006.501mil|Location2.X=3011.751mil|Location1.Y=3139.17mil|Location2.Y=3144.42mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3006.501mil|Location2.X=3011.751mil|Location1.Y=3139.17mil|Location2.Y=3144.42mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad J2-4(41.877mm,67.427mm) on Top Layer And Pad J2-3(41.877mm,66.777mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3006.501mil|Location2.X=3011.751mil|Location1.Y=3164.761mil|Location2.Y=3170.011mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3006.501mil|Location2.X=3011.751mil|Location1.Y=3164.761mil|Location2.Y=3170.011mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad J2-5(41.877mm,68.077mm) on Top Layer And Pad J2-4(41.877mm,67.427mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2903.71mil|Location2.X=2908.96mil|Location1.Y=3122.218mil|Location2.Y=3127.468mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2903.71mil|Location2.X=2908.96mil|Location1.Y=3122.218mil|Location2.Y=3127.468mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.078mm &lt; 0.102mm) Between Pad D27-5(38.754mm,66.421mm) on Top Layer And Pad D27-4(38.754mm,66.921mm) on Top Layer [Top Solder] Mask Sliver [0.078mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2903.71mil|Location2.X=2908.96mil|Location1.Y=3102.533mil|Location2.Y=3107.783mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2903.71mil|Location2.X=2908.96mil|Location1.Y=3102.533mil|Location2.Y=3107.783mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.078mm &lt; 0.102mm) Between Pad D27-6(38.754mm,65.921mm) on Top Layer And Pad D27-5(38.754mm,66.421mm) on Top Layer [Top Solder] Mask Sliver [0.078mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2930.265mil|Location2.X=2935.515mil|Location1.Y=3122.218mil|Location2.Y=3127.468mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2930.265mil|Location2.X=2935.515mil|Location1.Y=3122.218mil|Location2.Y=3127.468mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.078mm &lt; 0.102mm) Between Pad D27-2(39.428mm,66.421mm) on Top Layer And Pad D27-3(39.428mm,66.921mm) on Top Layer [Top Solder] Mask Sliver [0.078mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2930.265mil|Location2.X=2935.515mil|Location1.Y=3102.533mil|Location2.Y=3107.783mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2930.265mil|Location2.X=2935.515mil|Location1.Y=3102.533mil|Location2.Y=3107.783mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.078mm &lt; 0.102mm) Between Pad D27-1(39.428mm,65.921mm) on Top Layer And Pad D27-2(39.428mm,66.421mm) on Top Layer [Top Solder] Mask Sliver [0.078mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2193.674mil|Location2.X=2198.924mil|Location1.Y=1021.903mil|Location2.Y=1027.153mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2193.674mil|Location2.X=2198.924mil|Location1.Y=1021.903mil|Location2.Y=1027.153mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U1-2(20.73mm,13.773mm) on Top Layer And Pad U1-1(20.23mm,13.773mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2213.359mil|Location2.X=2218.609mil|Location1.Y=1021.903mil|Location2.Y=1027.153mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2213.359mil|Location2.X=2218.609mil|Location1.Y=1021.903mil|Location2.Y=1027.153mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U1-3(21.23mm,13.773mm) on Top Layer And Pad U1-2(20.73mm,13.773mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2233.044mil|Location2.X=2238.294mil|Location1.Y=1021.903mil|Location2.Y=1027.153mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2233.044mil|Location2.X=2238.294mil|Location1.Y=1021.903mil|Location2.Y=1027.153mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U1-4(21.73mm,13.773mm) on Top Layer And Pad U1-3(21.23mm,13.773mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2252.729mil|Location2.X=2257.979mil|Location1.Y=1021.903mil|Location2.Y=1027.153mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2252.729mil|Location2.X=2257.979mil|Location1.Y=1021.903mil|Location2.Y=1027.153mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U1-5(22.23mm,13.773mm) on Top Layer And Pad U1-4(21.73mm,13.773mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2193.674mil|Location2.X=2198.924mil|Location1.Y=1193.162mil|Location2.Y=1198.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2193.674mil|Location2.X=2198.924mil|Location1.Y=1193.162mil|Location2.Y=1198.412mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U1-9(20.73mm,18.123mm) on Top Layer And Pad U1-10(20.23mm,18.123mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2213.359mil|Location2.X=2218.609mil|Location1.Y=1193.162mil|Location2.Y=1198.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2213.359mil|Location2.X=2218.609mil|Location1.Y=1193.162mil|Location2.Y=1198.412mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U1-8(21.23mm,18.123mm) on Top Layer And Pad U1-9(20.73mm,18.123mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2233.044mil|Location2.X=2238.294mil|Location1.Y=1193.162mil|Location2.Y=1198.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2233.044mil|Location2.X=2238.294mil|Location1.Y=1193.162mil|Location2.Y=1198.412mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U1-7(21.73mm,18.123mm) on Top Layer And Pad U1-8(21.23mm,18.123mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2252.729mil|Location2.X=2257.979mil|Location1.Y=1193.162mil|Location2.Y=1198.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2252.729mil|Location2.X=2257.979mil|Location1.Y=1193.162mil|Location2.Y=1198.412mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U1-6(22.23mm,18.123mm) on Top Layer And Pad U1-7(21.73mm,18.123mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2681.666mil|Location2.X=2686.916mil|Location1.Y=1185.367mil|Location2.Y=1190.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2681.666mil|Location2.X=2686.916mil|Location1.Y=1185.367mil|Location2.Y=1190.617mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U2-2(33.325mm,17.725mm) on Top Layer And Pad U2-1(33.325mm,17.225mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2681.666mil|Location2.X=2686.916mil|Location1.Y=1205.052mil|Location2.Y=1210.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2681.666mil|Location2.X=2686.916mil|Location1.Y=1205.052mil|Location2.Y=1210.302mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U2-3(33.325mm,18.225mm) on Top Layer And Pad U2-2(33.325mm,17.725mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2681.666mil|Location2.X=2686.916mil|Location1.Y=1224.737mil|Location2.Y=1229.987mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2681.666mil|Location2.X=2686.916mil|Location1.Y=1224.737mil|Location2.Y=1229.987mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U2-4(33.325mm,18.725mm) on Top Layer And Pad U2-3(33.325mm,18.225mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2681.666mil|Location2.X=2686.916mil|Location1.Y=1244.422mil|Location2.Y=1249.672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2681.666mil|Location2.X=2686.916mil|Location1.Y=1244.422mil|Location2.Y=1249.672mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U2-5(33.325mm,19.225mm) on Top Layer And Pad U2-4(33.325mm,18.725mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2510.407mil|Location2.X=2515.657mil|Location1.Y=1185.367mil|Location2.Y=1190.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2510.407mil|Location2.X=2515.657mil|Location1.Y=1185.367mil|Location2.Y=1190.617mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U2-9(28.975mm,17.725mm) on Top Layer And Pad U2-10(28.975mm,17.225mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2510.407mil|Location2.X=2515.657mil|Location1.Y=1205.052mil|Location2.Y=1210.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2510.407mil|Location2.X=2515.657mil|Location1.Y=1205.052mil|Location2.Y=1210.302mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U2-8(28.975mm,18.225mm) on Top Layer And Pad U2-9(28.975mm,17.725mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2510.407mil|Location2.X=2515.657mil|Location1.Y=1224.737mil|Location2.Y=1229.987mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2510.407mil|Location2.X=2515.657mil|Location1.Y=1224.737mil|Location2.Y=1229.987mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U2-7(28.975mm,18.725mm) on Top Layer And Pad U2-8(28.975mm,18.225mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2510.407mil|Location2.X=2515.657mil|Location1.Y=1244.422mil|Location2.Y=1249.672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2510.407mil|Location2.X=2515.657mil|Location1.Y=1244.422mil|Location2.Y=1249.672mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U2-6(28.975mm,19.225mm) on Top Layer And Pad U2-7(28.975mm,18.725mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2441.958mil|Location2.X=2447.208mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2441.958mil|Location2.X=2447.208mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-43(26.536mm,54.74mm) on Top Layer And Pad U9-44(27.036mm,54.74mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2422.273mil|Location2.X=2427.523mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2422.273mil|Location2.X=2427.523mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-42(26.036mm,54.74mm) on Top Layer And Pad U9-43(26.536mm,54.74mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2402.588mil|Location2.X=2407.838mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2402.588mil|Location2.X=2407.838mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-41(25.536mm,54.74mm) on Top Layer And Pad U9-42(26.036mm,54.74mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2382.903mil|Location2.X=2388.153mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2382.903mil|Location2.X=2388.153mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-40(25.036mm,54.74mm) on Top Layer And Pad U9-41(25.536mm,54.74mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2363.218mil|Location2.X=2368.468mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2363.218mil|Location2.X=2368.468mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-39(24.536mm,54.74mm) on Top Layer And Pad U9-40(25.036mm,54.74mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2343.532mil|Location2.X=2348.782mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2343.532mil|Location2.X=2348.782mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-38(24.036mm,54.74mm) on Top Layer And Pad U9-39(24.536mm,54.74mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2323.847mil|Location2.X=2329.097mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2323.847mil|Location2.X=2329.097mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-37(23.536mm,54.74mm) on Top Layer And Pad U9-38(24.036mm,54.74mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2304.162mil|Location2.X=2309.412mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2304.162mil|Location2.X=2309.412mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-36(23.036mm,54.74mm) on Top Layer And Pad U9-37(23.536mm,54.74mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2284.477mil|Location2.X=2289.727mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2284.477mil|Location2.X=2289.727mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-35(22.536mm,54.74mm) on Top Layer And Pad U9-36(23.036mm,54.74mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2264.792mil|Location2.X=2270.042mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2264.792mil|Location2.X=2270.042mil|Location1.Y=2640.69mil|Location2.Y=2645.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-34(22.036mm,54.74mm) on Top Layer And Pad U9-35(22.536mm,54.74mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2696.792mil|Location2.Y=2702.042mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2696.792mil|Location2.Y=2702.042mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-32(21.161mm,56.115mm) on Top Layer And Pad U9-33(21.161mm,55.615mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2716.477mil|Location2.Y=2721.727mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2716.477mil|Location2.Y=2721.727mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-31(21.161mm,56.615mm) on Top Layer And Pad U9-32(21.161mm,56.115mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2736.162mil|Location2.Y=2741.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2736.162mil|Location2.Y=2741.412mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-30(21.161mm,57.115mm) on Top Layer And Pad U9-31(21.161mm,56.615mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2755.847mil|Location2.Y=2761.097mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2755.847mil|Location2.Y=2761.097mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-29(21.161mm,57.615mm) on Top Layer And Pad U9-30(21.161mm,57.115mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2775.532mil|Location2.Y=2780.782mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2775.532mil|Location2.Y=2780.782mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-28(21.161mm,58.115mm) on Top Layer And Pad U9-29(21.161mm,57.615mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2795.217mil|Location2.Y=2800.467mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2795.217mil|Location2.Y=2800.467mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-27(21.161mm,58.615mm) on Top Layer And Pad U9-28(21.161mm,58.115mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2814.902mil|Location2.Y=2820.152mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2814.902mil|Location2.Y=2820.152mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-26(21.161mm,59.115mm) on Top Layer And Pad U9-27(21.161mm,58.615mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2834.587mil|Location2.Y=2839.837mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2834.587mil|Location2.Y=2839.837mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-25(21.161mm,59.615mm) on Top Layer And Pad U9-26(21.161mm,59.115mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2854.272mil|Location2.Y=2859.522mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2854.272mil|Location2.Y=2859.522mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-24(21.161mm,60.115mm) on Top Layer And Pad U9-25(21.161mm,59.615mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2873.957mil|Location2.Y=2879.207mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2208.69mil|Location2.X=2213.94mil|Location1.Y=2873.957mil|Location2.Y=2879.207mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-23(21.161mm,60.615mm) on Top Layer And Pad U9-24(21.161mm,60.115mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2264.792mil|Location2.X=2270.042mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2264.792mil|Location2.X=2270.042mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-21(22.536mm,61.49mm) on Top Layer And Pad U9-22(22.036mm,61.49mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2284.477mil|Location2.X=2289.727mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2284.477mil|Location2.X=2289.727mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-20(23.036mm,61.49mm) on Top Layer And Pad U9-21(22.536mm,61.49mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2304.162mil|Location2.X=2309.412mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2304.162mil|Location2.X=2309.412mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-19(23.536mm,61.49mm) on Top Layer And Pad U9-20(23.036mm,61.49mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2323.847mil|Location2.X=2329.097mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2323.847mil|Location2.X=2329.097mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-18(24.036mm,61.49mm) on Top Layer And Pad U9-19(23.536mm,61.49mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2343.532mil|Location2.X=2348.782mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2343.532mil|Location2.X=2348.782mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-17(24.536mm,61.49mm) on Top Layer And Pad U9-18(24.036mm,61.49mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2363.218mil|Location2.X=2368.468mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2363.218mil|Location2.X=2368.468mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-16(25.036mm,61.49mm) on Top Layer And Pad U9-17(24.536mm,61.49mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2382.903mil|Location2.X=2388.153mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2382.903mil|Location2.X=2388.153mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-15(25.536mm,61.49mm) on Top Layer And Pad U9-16(25.036mm,61.49mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2402.588mil|Location2.X=2407.838mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2402.588mil|Location2.X=2407.838mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-14(26.036mm,61.49mm) on Top Layer And Pad U9-15(25.536mm,61.49mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2422.273mil|Location2.X=2427.523mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2422.273mil|Location2.X=2427.523mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-13(26.536mm,61.49mm) on Top Layer And Pad U9-14(26.036mm,61.49mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2441.958mil|Location2.X=2447.208mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2441.958mil|Location2.X=2447.208mil|Location1.Y=2906.438mil|Location2.Y=2911.688mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-12(27.036mm,61.49mm) on Top Layer And Pad U9-13(26.536mm,61.49mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2873.957mil|Location2.Y=2879.207mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2873.957mil|Location2.Y=2879.207mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-10(27.911mm,60.115mm) on Top Layer And Pad U9-11(27.911mm,60.615mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2854.272mil|Location2.Y=2859.522mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2854.272mil|Location2.Y=2859.522mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-9(27.911mm,59.615mm) on Top Layer And Pad U9-10(27.911mm,60.115mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2834.587mil|Location2.Y=2839.837mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2834.587mil|Location2.Y=2839.837mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-8(27.911mm,59.115mm) on Top Layer And Pad U9-9(27.911mm,59.615mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2814.902mil|Location2.Y=2820.152mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2814.902mil|Location2.Y=2820.152mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-7(27.911mm,58.615mm) on Top Layer And Pad U9-8(27.911mm,59.115mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2795.217mil|Location2.Y=2800.467mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2795.217mil|Location2.Y=2800.467mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-6(27.911mm,58.115mm) on Top Layer And Pad U9-7(27.911mm,58.615mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2775.532mil|Location2.Y=2780.782mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2775.532mil|Location2.Y=2780.782mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-5(27.911mm,57.615mm) on Top Layer And Pad U9-6(27.911mm,58.115mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2755.847mil|Location2.Y=2761.097mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2755.847mil|Location2.Y=2761.097mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-4(27.911mm,57.115mm) on Top Layer And Pad U9-5(27.911mm,57.615mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2736.162mil|Location2.Y=2741.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2736.162mil|Location2.Y=2741.412mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-3(27.911mm,56.615mm) on Top Layer And Pad U9-4(27.911mm,57.115mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2716.477mil|Location2.Y=2721.727mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2716.477mil|Location2.Y=2721.727mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-2(27.911mm,56.115mm) on Top Layer And Pad U9-3(27.911mm,56.615mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2696.792mil|Location2.Y=2702.042mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2474.438mil|Location2.X=2479.688mil|Location1.Y=2696.792mil|Location2.Y=2702.042mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.098mm &lt; 0.102mm) Between Pad U9-1(27.911mm,55.615mm) on Top Layer And Pad U9-2(27.911mm,56.115mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2760.359mil|Location2.X=2765.609mil|Location1.Y=3188.714mil|Location2.Y=3193.964mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2760.359mil|Location2.X=2765.609mil|Location1.Y=3188.714mil|Location2.Y=3193.964mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad U11-2(35.65mm,68.11mm) on Bottom Layer And Pad U11-1(35.65mm,68.61mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2760.359mil|Location2.X=2765.609mil|Location1.Y=3169.028mil|Location2.Y=3174.278mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2760.359mil|Location2.X=2765.609mil|Location1.Y=3169.028mil|Location2.Y=3174.278mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad U11-3(35.65mm,67.61mm) on Bottom Layer And Pad U11-2(35.65mm,68.11mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2760.359mil|Location2.X=2765.609mil|Location1.Y=3149.343mil|Location2.Y=3154.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2760.359mil|Location2.X=2765.609mil|Location1.Y=3149.343mil|Location2.Y=3154.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad U11-4(35.65mm,67.11mm) on Bottom Layer And Pad U11-3(35.65mm,67.61mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2760.359mil|Location2.X=2765.609mil|Location1.Y=3129.658mil|Location2.Y=3134.908mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2760.359mil|Location2.X=2765.609mil|Location1.Y=3129.658mil|Location2.Y=3134.908mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad U11-5(35.65mm,66.61mm) on Bottom Layer And Pad U11-4(35.65mm,67.11mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2760.359mil|Location2.X=2765.609mil|Location1.Y=3109.973mil|Location2.Y=3115.223mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2760.359mil|Location2.X=2765.609mil|Location1.Y=3109.973mil|Location2.Y=3115.223mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad U11-6(35.65mm,66.11mm) on Bottom Layer And Pad U11-5(35.65mm,66.61mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2760.359mil|Location2.X=2765.609mil|Location1.Y=3090.288mil|Location2.Y=3095.538mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2760.359mil|Location2.X=2765.609mil|Location1.Y=3090.288mil|Location2.Y=3095.538mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad U11-7(35.65mm,65.61mm) on Bottom Layer And Pad U11-6(35.65mm,66.11mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2760.359mil|Location2.X=2765.609mil|Location1.Y=3070.603mil|Location2.Y=3075.853mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2760.359mil|Location2.X=2765.609mil|Location1.Y=3070.603mil|Location2.Y=3075.853mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.102mm) Between Pad U11-8(35.65mm,65.11mm) on Bottom Layer And Pad U11-7(35.65mm,65.61mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDSFBDMNLYEKIPHV1SWK0JQHLSTHHB0RFLOOE1GPNMFZYHXCXVLJZF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">SMD To Corner (Distance=0.076mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2907.781mil|Location2.X=2909.381mil|Location1.Y=3094.515mil|Location2.Y=3096.115mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2907.781mil|Location2.X=2909.381mil|Location1.Y=3094.515mil|Location2.Y=3096.115mil|Absolute=True">SMD To Corner Constraint: (0.038mm &lt; 0.076mm) Between Pad D27-6(38.754mm,65.921mm) on Top Layer And Track (38.553mm,65.921mm)(38.754mm,65.921mm) on Top Layer Actual Distance = 0.038mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1968.783mil|Location2.X=1974.035mil|Location1.Y=1993.207mil|Location2.Y=1998.777mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1968.783mil|Location2.X=1974.035mil|Location1.Y=1993.207mil|Location2.Y=1998.777mil|Absolute=True">SMD To Corner Constraint: (0.006mm &lt; 0.076mm) Between Pad U6-K9(14.819mm,37.85mm) on Top Layer And Track (14.719mm,37.95mm)(14.819mm,37.85mm) on Top Layer Actual Distance = 0.006mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2157.96mil|Location2.X=2159.56mil|Location1.Y=1963.767mil|Location2.Y=1965.367mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2157.96mil|Location2.X=2159.56mil|Location1.Y=1963.767mil|Location2.Y=1965.367mil|Absolute=True">SMD To Corner Constraint: (0.044mm &lt; 0.076mm) Between Pad U6-J2(19.369mm,37.2mm) on Top Layer And Track (19.369mm,37.2mm)(19.549mm,37.2mm) on Top Layer Actual Distance = 0.044mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2096.76mil|Location2.X=2103.355mil|Location1.Y=1750.79mil|Location2.Y=1756.816mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2096.76mil|Location2.X=2103.355mil|Location1.Y=1750.79mil|Location2.Y=1756.816mil|Absolute=True">SMD To Corner Constraint: (0.004mm &lt; 0.076mm) Between Pad U6-A4(18.069mm,32mm) on Top Layer And Track (17.971mm,31.901mm)(18.069mm,32mm) on Top Layer Actual Distance = 0.004mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID4ARA1MEQYBOFOWRGUJU43Z0ZBONQYVGYFOPDDDB0YNGQHY1Y2TYN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Acute Angle Constraint (Minimum=60.000) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2211.421mil|Location2.X=2230.921mil|Location1.Y=811.292mil|Location2.Y=830.792mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2211.421mil|Location2.X=2230.921mil|Location1.Y=811.292mil|Location2.Y=830.792mil|Absolute=True">Acute Angle Constraint: (45.000 &lt; 60.000) Between Track (20mm,7.943mm)(21.254mm,7.943mm) on Top Layer And Track (20.909mm,8.287mm)(21.254mm,7.943mm) on Top Layer (Angle = 45.000)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1853.537mil|Location2.X=1873.037mil|Location1.Y=1345.675mil|Location2.Y=1365.175mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1853.537mil|Location2.X=1873.037mil|Location1.Y=1345.675mil|Location2.Y=1365.175mil|Absolute=True">Acute Angle Constraint: (45.000 &lt; 60.000) Between Via (12.418mm,21.556mm) from Top Layer to Bottom Layer And Pad C9-2(11.218mm,21.091mm) on Top Layer (Angle = 45.000)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1760.833mil|Location2.X=1780.333mil|Location1.Y=1071.988mil|Location2.Y=1091.488mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1760.833mil|Location2.X=1780.333mil|Location1.Y=1071.988mil|Location2.Y=1091.488mil|Absolute=True">Acute Angle Constraint: (54.868 &lt; 60.000) Between Pad C11-2(9.052mm,13.956mm) on Top Layer And Via (9.418mm,15.156mm) from Top Layer to Bottom Layer (Angle = 54.868)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2259.339mil|Location2.X=2278.839mil|Location1.Y=2860.344mil|Location2.Y=2879.844mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2259.339mil|Location2.X=2278.839mil|Location1.Y=2860.344mil|Location2.Y=2879.844mil|Absolute=True">Acute Angle Constraint: (56.251 &lt; 60.000) Between Via (22.336mm,60.315mm) from Top Layer to Bottom Layer And Pad C56-2(21.946mm,59.868mm) on Bottom Layer (Angle = 56.251)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2199.714mil|Location2.X=2219.214mil|Location1.Y=2857.818mil|Location2.Y=2877.318mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2199.714mil|Location2.X=2219.214mil|Location1.Y=2857.818mil|Location2.Y=2877.318mil|Absolute=True">Acute Angle Constraint: (58.135 &lt; 60.000) Between Pad C56-1(20.988mm,59.868mm) on Bottom Layer And Track (20.687mm,60.194mm)(20.988mm,59.893mm) on Bottom Layer (Angle = 58.135)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2485.01mil|Location2.X=2504.51mil|Location1.Y=1260.223mil|Location2.Y=1279.723mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2485.01mil|Location2.X=2504.51mil|Location1.Y=1260.223mil|Location2.Y=1279.723mil|Absolute=True">Acute Angle Constraint: (47.424 &lt; 60.000) Between Track (28.026mm,19.523mm)(28.026mm,19.605mm) on Top Layer And Pad C7-2(27.45mm,19.605mm) on Top Layer (Angle = 47.424)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2903.835mil|Location2.X=2923.335mil|Location1.Y=3087.266mil|Location2.Y=3106.766mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2903.835mil|Location2.X=2923.335mil|Location1.Y=3087.266mil|Location2.Y=3106.766mil|Absolute=True">Acute Angle Constraint: (47.211 &lt; 60.000) Between Track (38.379mm,65.748mm)(38.543mm,65.912mm) on Top Layer And Pad D27-6(38.754mm,65.921mm) on Top Layer (Angle = 47.211)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3108.988mil|Location2.X=3128.488mil|Location1.Y=3008.727mil|Location2.Y=3028.227mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3108.988mil|Location2.X=3128.488mil|Location1.Y=3008.727mil|Location2.Y=3028.227mil|Absolute=True">Acute Angle Constraint: (56.051 &lt; 60.000) Between Region (0 hole(s)) Top Layer And Polygon Region (0 hole(s)) Top Layer (Angle = 56.051)</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDPGY1OSH5Z2T4FNZ00KRZRD5OWOHHY2NEQPLPTLXLWASOI2XMZAH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.866mil|Location2.X=1980.52mil|Location1.Y=1906.299mil|Location2.Y=1941.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1944.866mil|Location2.X=1980.52mil|Location1.Y=1906.299mil|Location2.Y=1941.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (14.5mm,36.195mm) from Top Layer to Bottom Layer And Pad U6-G9(14.819mm,35.9mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1820mil|Location2.X=2052.992mil|Location1.Y=1792mil|Location2.Y=1984.708mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1820mil|Location2.X=2052.992mil|Location1.Y=1792mil|Location2.Y=1984.708mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (13.462mm,35.357mm)(13.462mm,35.544mm) on Bottom Layer And Pad C29-1(14.3mm,35.172mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2712mil|Location2.X=2872.182mil|Location1.Y=2935mil|Location2.Y=3110.126mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2712mil|Location2.X=2872.182mil|Location1.Y=2935mil|Location2.Y=3110.126mil|Absolute=True">Un-Routed Net Constraint: Net UC_N Between Pad TP1-TP(34.29mm,62.56mm) on Bottom Layer And Pad L5-3(37.121mm,66.021mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2725mil|Location2.X=2872.182mil|Location1.Y=2996mil|Location2.Y=3141.622mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2725mil|Location2.X=2872.182mil|Location1.Y=2996mil|Location2.Y=3141.622mil|Absolute=True">Un-Routed Net Constraint: Net UC_P Between Pad TP4-TP(34.62mm,64.11mm) on Bottom Layer And Pad L5-2(37.121mm,66.821mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDA3OW3ICBYXS0I0ZT5FFUMYCGOENPQ1TYNKNK4YLUPOKQUXWAUR1G"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1463.472mil|Location2.X=1522.418mil|Location1.Y=561.723mil|Location2.Y=620.67mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1463.472mil|Location2.X=1522.418mil|Location1.Y=561.723mil|Location2.Y=620.67mil|Absolute=True">Short-Circuit Constraint: Between Pad H4-1(2.615mm,2.316mm) on Top Layer And Arc (4.115mm,4.216mm) on Top Layer Location : [X = 37.921mm][Y = 15.016mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1485.472mil|Location2.X=1544.418mil|Location1.Y=3092.724mil|Location2.Y=3151.67mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1485.472mil|Location2.X=1544.418mil|Location1.Y=3092.724mil|Location2.Y=3151.67mil|Absolute=True">Short-Circuit Constraint: Between Pad H2-1(3.174mm,66.604mm) on Top Layer And Arc (4.674mm,68.504mm) on Top Layer Location : [X = 38.48mm][Y = 79.304mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2958.472mil|Location2.X=3017.418mil|Location1.Y=2357.724mil|Location2.Y=2416.67mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2958.472mil|Location2.X=3017.418mil|Location1.Y=2357.724mil|Location2.Y=2416.67mil|Absolute=True">Short-Circuit Constraint: Between Pad H1-1(40.588mm,47.935mm) on Top Layer And Arc (42.088mm,49.835mm) on Top Layer Location : [X = 75.894mm][Y = 60.635mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2938.472mil|Location2.X=2997.418mil|Location1.Y=568.723mil|Location2.Y=627.67mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2938.472mil|Location2.X=2997.418mil|Location1.Y=568.723mil|Location2.Y=627.67mil|Absolute=True">Short-Circuit Constraint: Between Pad H3-1(40.08mm,2.494mm) on Top Layer And Arc (41.58mm,4.394mm) on Top Layer Location : [X = 75.386mm][Y = 15.194mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDL3XYAG20CBR2FMOFB4J3CAJJDLRK5ARGHVKM1LPGD2AMOGAHN5CD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=0.305mm) (InNetClass('DSI')  or InNetClass('HDMI')   or InNetClass('HDMI_CONN')),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1721.375mil|Location2.X=1744.37mil|Location1.Y=1843.375mil|Location2.Y=1856.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1721.375mil|Location2.X=1744.37mil|Location1.Y=1843.375mil|Location2.Y=1856.625mil|Absolute=True">Clearance Constraint: (0.271mm &lt; 0.305mm) Between Via (8.661mm,34.62mm) from Top Layer to Bottom Layer And Via (8.509mm,33.96mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.375mil|Location2.X=1633.612mil|Location1.Y=1937.375mil|Location2.Y=1950.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.375mil|Location2.X=1633.612mil|Location1.Y=1937.375mil|Location2.Y=1950.625mil|Absolute=True">Clearance Constraint: (0.254mm &lt; 0.305mm) Between Via (5.69mm,36.982mm) from Top Layer to Bottom Layer And Via (5.944mm,36.373mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDQDHNHTI145HZKTRYANCVRC3L4HBYPUPM1D2NO3IR4A24AFHDR52F"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Parallel Segment Constraint (Gap=1.067mm ) (Limit=12.7mm) ((InDifferentialPairClass('All Differential Pairs'))),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.983mil|Location2.X=1949.86mil|Location1.Y=1797.006mil|Location2.Y=1867.461mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.983mil|Location2.X=1949.86mil|Location1.Y=1797.006mil|Location2.Y=1867.461mil|Absolute=True">Parallel Segment Constraint: (12.852mm &gt; 12.7mm) Between Net DSI_CLK_P And Net DSI_CLK_N Gap &lt; 1.067mm; Actual Parallel Span = 12.852mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.983mil|Location2.X=1949.86mil|Location1.Y=1766.983mil|Location2.Y=1928.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.983mil|Location2.X=1949.86mil|Location1.Y=1766.983mil|Location2.Y=1928.017mil|Absolute=True">Parallel Segment Constraint: (14.139mm &gt; 12.7mm) Between Net LANE0_P And Net LANE0_N Gap &lt; 1.067mm; Actual Parallel Span = 14.139mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.983mil|Location2.X=1949.86mil|Location1.Y=1766.983mil|Location2.Y=1928.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.983mil|Location2.X=1949.86mil|Location1.Y=1766.983mil|Location2.Y=1928.017mil|Absolute=True">Parallel Segment Constraint: (14.139mm &gt; 12.7mm) Between Net LANE0_N And Net LANE0_P Gap &lt; 1.067mm; Actual Parallel Span = 14.139mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.983mil|Location2.X=1949.86mil|Location1.Y=1836.983mil|Location2.Y=1913.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.983mil|Location2.X=1949.86mil|Location1.Y=1836.983mil|Location2.Y=1913.017mil|Absolute=True">Parallel Segment Constraint: (13.012mm &gt; 12.7mm) Between Net LANE1_P And Net LANE1_N Gap &lt; 1.067mm; Actual Parallel Span = 13.012mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.983mil|Location2.X=1949.86mil|Location1.Y=1836.983mil|Location2.Y=1913.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.983mil|Location2.X=1949.86mil|Location1.Y=1836.983mil|Location2.Y=1913.017mil|Absolute=True">Parallel Segment Constraint: (13.012mm &gt; 12.7mm) Between Net LANE1_N And Net LANE1_P Gap &lt; 1.067mm; Actual Parallel Span = 13.012mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1452.983mil|Location2.X=1949.86mil|Location1.Y=1760.983mil|Location2.Y=1934.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1452.983mil|Location2.X=1949.86mil|Location1.Y=1760.983mil|Location2.Y=1934.017mil|Absolute=True">Parallel Segment Constraint: (14.023mm &gt; 12.7mm) Between Net LANE2_P And Net LANE2_N Gap &lt; 1.067mm; Actual Parallel Span = 14.023mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1452.983mil|Location2.X=1949.86mil|Location1.Y=1760.983mil|Location2.Y=1934.017mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1452.983mil|Location2.X=1949.86mil|Location1.Y=1760.983mil|Location2.Y=1934.017mil|Absolute=True">Parallel Segment Constraint: (14.023mm &gt; 12.7mm) Between Net LANE2_N And Net LANE2_P Gap &lt; 1.067mm; Actual Parallel Span = 14.023mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.983mil|Location2.X=1962.655mil|Location1.Y=1667.983mil|Location2.Y=1761.86mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.983mil|Location2.X=1962.655mil|Location1.Y=1667.983mil|Location2.Y=1761.86mil|Absolute=True">Parallel Segment Constraint: (13.691mm &gt; 12.7mm) Between Net LANE3_P And Net LANE3_N Gap &lt; 1.067mm; Actual Parallel Span = 13.691mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.983mil|Location2.X=1962.655mil|Location1.Y=1667.983mil|Location2.Y=1761.86mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.983mil|Location2.X=1962.655mil|Location1.Y=1667.983mil|Location2.Y=1761.86mil|Absolute=True">Parallel Segment Constraint: (13.691mm &gt; 12.7mm) Between Net LANE3_N And Net LANE3_P Gap &lt; 1.067mm; Actual Parallel Span = 13.691mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2486.352mil|Location2.X=2705.624mil|Location1.Y=2726.423mil|Location2.Y=3137.711mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2486.352mil|Location2.X=2705.624mil|Location1.Y=2726.423mil|Location2.Y=3137.711mil|Absolute=True">Parallel Segment Constraint: (13.381mm &gt; 12.7mm) Between Net UD_P And Net UD_N Gap &lt; 1.067mm; Actual Parallel Span = 13.381mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

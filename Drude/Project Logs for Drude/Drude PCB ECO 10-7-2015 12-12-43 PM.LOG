@@ -1,0 +1,21 @@
+Added Component: Designator=TP34(TP1-27)
+Added Component: Designator=TP35(TP1-27)
+Added Component: Designator=TP36(TP1-27)
+Added Component: Designator=TP37(TP1-27)
+Added Component: Designator=X18(2X03)
+Added Pin To Net: NetName=PB3 Pin=TP34-TP
+Added Pin To Net: NetName=PB1 Pin=TP35-TP
+Added Pin To Net: NetName=PB2 Pin=TP36-TP
+Added Pin To Net: NetName=RESET Pin=TP37-TP
+Added Pin To Net: NetName=PB3 Pin=X18-1
+Added Pin To Net: NetName=PB1 Pin=X18-3
+Added Pin To Net: NetName=PB2 Pin=X18-4
+Added Pin To Net: NetName=RESET Pin=X18-5
+Added Pin To Net: NetName=GND Pin=X18-6
+Added Pin To Net: NetName=VCC Pin=X18-2
+Added Net: Name=VCC
+Added Member To Class: ClassName=MCU Member=Component TP34 TestPoint
+Added Member To Class: ClassName=MCU Member=Component TP35 TestPoint
+Added Member To Class: ClassName=MCU Member=Component TP36 TestPoint
+Added Member To Class: ClassName=MCU Member=Component TP37 TestPoint
+Added Member To Class: ClassName=MCU Member=Component X18 PINHD-2X3

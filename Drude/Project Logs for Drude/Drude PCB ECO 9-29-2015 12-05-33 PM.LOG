@@ -1,0 +1,11 @@
+Change Net Name : Old Net Name=NetJ1_1 New Net Name=HDMI_CON_D2_P
+Change Net Name : Old Net Name=NetJ1_3 New Net Name=HDMI_CON_D2_N
+Change Net Name : Old Net Name=NetJ1_4 New Net Name=HDMI_CON_D1_P
+Change Net Name : Old Net Name=NetJ1_6 New Net Name=HDMI_CON_D1_N
+Change Net Name : Old Net Name=NetJ1_7 New Net Name=HDMI_CON_D0_P
+Change Net Name : Old Net Name=NetJ1_9 New Net Name=HDMI_CON_D0_N
+Change Net Name : Old Net Name=NetJ1_10 New Net Name=HDMI_CON_CK_P
+Change Net Name : Old Net Name=NetJ1_12 New Net Name=HDMI_CON_CK_N
+Change Net Name : Old Net Name=NetJ1_13 New Net Name=CEC_CON
+Change Net Name : Old Net Name=NetJ1_15 New Net Name=DDC_CLK_CON
+Change Net Name : Old Net Name=NetJ1_16 New Net Name=DDC_DAT_CON

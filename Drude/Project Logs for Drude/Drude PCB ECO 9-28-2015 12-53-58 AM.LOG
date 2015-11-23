@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=NetC2_1 Pin=U4-1
+Removed Pin From Net: NetName=GND Pin=U4-2
+Removed Pin From Net: NetName=GND Pin=U4-3
+Removed Pin From Net: NetName=1.8V Pin=U4-5
+Removed Member From Class: ClassName=DrudePower Member=U4

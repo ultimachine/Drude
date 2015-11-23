@@ -1,0 +1,20 @@
+Added Component: Designator=C66(C0402)
+Added Component: Designator=C67(C0402)
+Added Component: Designator=C68(C0402)
+Added Component: Designator=C69(C0402)
+Added Component: Designator=C70(C0402)
+Added Pin To Net: NetName=5V Pin=C66-1
+Added Pin To Net: NetName=GND Pin=C66-2
+Added Pin To Net: NetName=GND Pin=C67-1
+Added Pin To Net: NetName=5V Pin=C67-2
+Added Pin To Net: NetName=3.3V Pin=C68-1
+Added Pin To Net: NetName=GND Pin=C68-2
+Added Pin To Net: NetName=GND Pin=C69-1
+Added Pin To Net: NetName=3.3V Pin=C69-2
+Added Pin To Net: NetName=GND Pin=C70-1
+Added Pin To Net: NetName=NetC23_1 Pin=C70-2
+Added Member To Class: ClassName=HDMI Member=Component C66 100nF
+Added Member To Class: ClassName=HDMI Member=Component C67 10nF
+Added Member To Class: ClassName=HDMI Member=Component C68 100nF
+Added Member To Class: ClassName=HDMI Member=Component C69 10nF
+Added Member To Class: ClassName=HDMI Member=Component C70 10nF

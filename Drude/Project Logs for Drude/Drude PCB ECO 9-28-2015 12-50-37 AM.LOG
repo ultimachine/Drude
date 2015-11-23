@@ -1,0 +1,6 @@
+Change Class Name : Old Net Name=LCD-Powers New Net Name=DrudePower
+Added Class: Name=MCU
+Added Member To Class: ClassName=DrudePower Member=Component U5 BD12IA5WEFJ-E2
+Added Member To Class: ClassName=DrudePower Member=Component U6 TC358779
+Added Member To Class: ClassName=DrudePower Member=Component U7 AP2127K-3.3
+Added Member To Class: ClassName=DrudePower Member=Component U8 AP2127K-1.8

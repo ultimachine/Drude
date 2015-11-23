@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=RESET Pin=S2-2
+Added Component: Designator=R24(R0402)
+Added Component: Designator=R25(R0402)
+Added Pin To Net: NetName=PWR_BTN Pin=D13-A
+Added Pin To Net: NetName=PWR_BTN Pin=R19-1
+Added Pin To Net: NetName=PWR_BTN Pin=R24-1
+Added Pin To Net: NetName=RESET Pin=R25-1
+Added Pin To Net: NetName=NetR24_2 Pin=R24-2
+Added Pin To Net: NetName=NetR24_2 Pin=S1-2
+Added Net: Name=NetR24_2
+Added Pin To Net: NetName=NetR25_2 Pin=R25-2
+Added Pin To Net: NetName=NetR25_2 Pin=S2-2
+Added Net: Name=NetR25_2
+Added Member To Class: ClassName=MCU Member=Component R24 1k
+Added Member To Class: ClassName=MCU Member=Component R25 1k

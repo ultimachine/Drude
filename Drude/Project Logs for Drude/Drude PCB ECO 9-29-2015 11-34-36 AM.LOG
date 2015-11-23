@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=VSN Pin=C15-1
+Removed Pin From Net: NetName=GND Pin=C15-2
+Removed Pin From Net: NetName=VSP Pin=C16-1
+Removed Pin From Net: NetName=GND Pin=C16-2
+Removed Member From Class: ClassName=DSI-LCD Member=C15
+Removed Member From Class: ClassName=DSI-LCD Member=C16
+Change Component DesignItemId : Designator=C17 Old DesignItemId=Capacitor New DesignItemId=GRM155R71C104KA88D
+Change Component Comment : Designator=C17 Old Comment= New Comment=100nF
+Change Component Description : Designator=C17 Old Description=Capacitor Non Polarized New Description=CAP CER 0402 100nF 16V 10% X7R

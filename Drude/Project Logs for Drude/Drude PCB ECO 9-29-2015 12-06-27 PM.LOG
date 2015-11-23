@@ -1,0 +1,3 @@
+Added Component: Designator=TP2(TP1-27)
+Added Pin To Net: NetName=NetC43_2 Pin=TP2-TP
+Added Member To Class: ClassName=MCU Member=Component TP2 TestPoint

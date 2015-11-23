@@ -1,0 +1,3 @@
+Change Component DesignItemId : Designator=R23 Old DesignItemId=ERJ-3EKF1002V New DesignItemId=RC0402FR-0710KP
+Change Component Footprint: Designator=R23 Old Footprint=R0603 New Footprint=R0402
+Added Pin To Net: NetName=INT Pin=U9-12

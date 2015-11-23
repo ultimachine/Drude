@@ -1,0 +1,10 @@
+Added Pin To Net: NetName=A_SD_2 Pin=J3-1
+Added Pin To Net: NetName=A_SD_1 Pin=J3-2
+Added Pin To Net: NetName=A_SD_2 Pin=J3-3
+Added Pin To Net: NetName=A_SD_0 Pin=J3-4
+Added Pin To Net: NetName=PCKIN Pin=J3-5
+Added Pin To Net: NetName=A_SCK Pin=J3-6
+Added Pin To Net: NetName=DAOUT Pin=J3-7
+Added Pin To Net: NetName=A_OSCK Pin=J3-8
+Added Pin To Net: NetName=IR Pin=J3-9
+Added Pin To Net: NetName=A_WFS Pin=J3-10

@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=3.3V Pin=C55-1
+Removed Pin From Net: NetName=USB_GND Pin=C61-1
+Removed Pin From Net: NetName=USB_GND Pin=C62-2
+Removed Pin From Net: NetName=GND Pin=U9-5
+Removed Pin From Net: NetName=3.3V Pin=U9-42
+Added Pin To Net: NetName=USB_GND Pin=U9-5
+Added Pin To Net: NetName=GND Pin=U9-45
+Change Net Name : Old Net Name=USB_GND New Net Name=UGND
+Added Pin To Net: NetName=NetC55_1 Pin=C55-1
+Added Pin To Net: NetName=NetC55_1 Pin=U9-42
+Added Net: Name=NetC55_1
+Added Pin To Net: NetName=USB_GND Pin=C61-1
+Added Pin To Net: NetName=USB_GND Pin=C62-2
+Added Net: Name=USB_GND

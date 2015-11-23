@@ -1,0 +1,97 @@
+Removed Pin From Net: NetName=1.8V Pin=C3-1
+Removed Pin From Net: NetName=NetC45_1 Pin=P1-2
+Removed Pin From Net: NetName=NetC11_1 Pin=P4-2
+Removed Pin From Net: NetName=GND Pin=X1-2
+Removed Pin From Net: NetName=1.8V Pin=X1-3
+Removed Pin From Net: NetName=GND Pin=X1-4
+Removed Member From Class: ClassName=DrudePower Member=P1
+Removed Member From Class: ClassName=DrudePower Member=P2
+Removed Member From Class: ClassName=DrudePower Member=P3
+Removed Member From Class: ClassName=DrudePower Member=P4
+Removed Member From Class: ClassName=DrudePower Member=X1
+Change Component DesignItemId : Designator=C3 Old DesignItemId=GRM31CR71H475KA12L New DesignItemId=CC0603ZRY5V6BB105
+Change Component Footprint: Designator=C3 Old Footprint=C1206 New Footprint=C0603
+Change Component Comment : Designator=C3 Old Comment=4.7uF New Comment=1uF
+Added Component: Designator=C18(C0603)
+Added Component: Designator=C19(C0603)
+Added Component: Designator=C20(C0603)
+Added Component: Designator=C21(C0603)
+Added Component: Designator=R5(R0402)
+Added Pin To Net: NetName=NetC11_1 Pin=C2-1
+Added Pin To Net: NetName=NetC45_1 Pin=C5-1
+Added Pin To Net: NetName=NetC11_1 Pin=C18-1
+Added Pin To Net: NetName=GND Pin=C18-2
+Added Pin To Net: NetName=NetC45_1 Pin=C19-1
+Added Pin To Net: NetName=GND Pin=C19-2
+Added Pin To Net: NetName=NetC11_1 Pin=C20-1
+Added Pin To Net: NetName=GND Pin=C20-2
+Added Pin To Net: NetName=1.8V Pin=C21-1
+Added Pin To Net: NetName=GND Pin=C21-2
+Added Pin To Net: NetName=NetC45_1 Pin=R5-1
+Added Pin To Net: NetName=NetC45_1 Pin=R7-1
+Added Pin To Net: NetName=NetC45_1 Pin=U2-7
+Added Pin To Net: NetName=GND Pin=U5-3
+Added Pin To Net: NetName=GND Pin=U5-4
+Added Pin To Net: NetName=NetC45_1 Pin=U5-5
+Added Pin To Net: NetName=GND Pin=U5-6
+Added Pin To Net: NetName=GND Pin=U5-7
+Added Pin To Net: NetName=NetC11_1 Pin=U5-8
+Added Pin To Net: NetName=GND Pin=U6-A7
+Added Pin To Net: NetName=NetC45_1 Pin=U6-B1
+Added Pin To Net: NetName=GND Pin=U6-B2
+Added Pin To Net: NetName=GND Pin=U6-B3
+Added Pin To Net: NetName=GND Pin=U6-B4
+Added Pin To Net: NetName=GND Pin=U6-B5
+Added Pin To Net: NetName=GND Pin=U6-B6
+Added Pin To Net: NetName=GND Pin=U6-B8
+Added Pin To Net: NetName=GND Pin=U6-D4
+Added Pin To Net: NetName=GND Pin=U6-D5
+Added Pin To Net: NetName=GND Pin=U6-D6
+Added Pin To Net: NetName=GND Pin=U6-D7
+Added Pin To Net: NetName=GND Pin=U6-D9
+Added Pin To Net: NetName=GND Pin=U6-E4
+Added Pin To Net: NetName=GND Pin=U6-E5
+Added Pin To Net: NetName=GND Pin=U6-E6
+Added Pin To Net: NetName=GND Pin=U6-E7
+Added Pin To Net: NetName=GND Pin=U6-F4
+Added Pin To Net: NetName=GND Pin=U6-F5
+Added Pin To Net: NetName=GND Pin=U6-F6
+Added Pin To Net: NetName=GND Pin=U6-F7
+Added Pin To Net: NetName=NetC45_1 Pin=U6-G1
+Added Pin To Net: NetName=GND Pin=U6-G2
+Added Pin To Net: NetName=GND Pin=U6-G4
+Added Pin To Net: NetName=GND Pin=U6-G6
+Added Pin To Net: NetName=GND Pin=U6-G7
+Added Pin To Net: NetName=GND Pin=U6-G9
+Added Pin To Net: NetName=GND Pin=U6-J8
+Added Pin To Net: NetName=NetC45_1 Pin=U6-K2
+Added Pin To Net: NetName=NetC45_1 Pin=U6-K7
+Added Pin To Net: NetName=NetC11_1 Pin=U7-1
+Added Pin To Net: NetName=GND Pin=U7-2
+Added Pin To Net: NetName=NetC11_1 Pin=U7-3
+Added Pin To Net: NetName=NetC45_1 Pin=U7-5
+Added Pin To Net: NetName=NetC11_1 Pin=U8-1
+Added Pin To Net: NetName=GND Pin=U8-2
+Added Pin To Net: NetName=NetC45_1 Pin=U8-3
+Added Pin To Net: NetName=1.8V Pin=U8-5
+Change Net Name : Old Net Name=NetC11_1 New Net Name=5V
+Change Net Name : Old Net Name=NetC45_1 New Net Name=3.3V
+Added Pin To Net: NetName=1.2V Pin=C3-1
+Added Pin To Net: NetName=1.2V Pin=U5-1
+Added Pin To Net: NetName=1.2V Pin=U5-2
+Added Pin To Net: NetName=1.2V Pin=U6-A1
+Added Pin To Net: NetName=1.2V Pin=U6-A3
+Added Pin To Net: NetName=1.2V Pin=U6-A8
+Added Pin To Net: NetName=1.2V Pin=U6-D10
+Added Pin To Net: NetName=1.2V Pin=U6-H1
+Added Pin To Net: NetName=1.2V Pin=U6-K1
+Added Pin To Net: NetName=1.2V Pin=U6-K10
+Added Net: Name=1.2V
+Added Pin To Net: NetName=NetR5_2 Pin=R5-2
+Added Pin To Net: NetName=NetR5_2 Pin=U6-A2
+Added Net: Name=NetR5_2
+Added Member To Class: ClassName=DrudePower Member=Component C18 1uF
+Added Member To Class: ClassName=DrudePower Member=Component C19 1uF
+Added Member To Class: ClassName=DrudePower Member=Component C20 1uF
+Added Member To Class: ClassName=DrudePower Member=Component C21 1uF
+Added Member To Class: ClassName=DrudePower Member=Component R5 2K

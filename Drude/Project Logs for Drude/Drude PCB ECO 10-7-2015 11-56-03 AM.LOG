@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=3.3V Pin=D2-C
+Removed Pin From Net: NetName=RESET Pin=D3-A
+Removed Pin From Net: NetName=3.3V Pin=D3-C
+Removed Pin From Net: NetName=UGND Pin=D26-A
+Removed Pin From Net: NetName=GND Pin=D26-C
+Removed Member From Class: ClassName=MCU Member=D26
+Change Component DesignItemId : Designator=D2 Old DesignItemId=1N4148WT New DesignItemId=ESD9B3.3ST5G
+Change Component DesignItemId : Designator=D3 Old DesignItemId=1N4148WT New DesignItemId=ESD9B3.3ST5G
+Change Component Footprint: Designator=D2 Old Footprint=SOD523 New Footprint=SOD923-100X40-2N
+Change Component Footprint: Designator=D3 Old Footprint=SOD523 New Footprint=SOD923-100X40-2N
+Change Component Comment : Designator=D2 Old Comment=1N4148WT New Comment=ESD9B3.3ST5G
+Change Component Comment : Designator=D3 Old Comment=1N4148WT New Comment=ESD9B3.3ST5G
+Added Component: Designator=D13(SOD923-100X40-2N)
+Added Pin To Net: NetName=RESET Pin=D2-A
+Added Pin To Net: NetName=GND Pin=D2-C
+Added Pin To Net: NetName=UGND Pin=D3-A
+Added Pin To Net: NetName=GND Pin=D3-C
+Added Pin To Net: NetName=GND Pin=D13-C
+Added Pin To Net: NetName=NetD13_A Pin=D13-A
+Added Pin To Net: NetName=NetD13_A Pin=R19-1
+Added Pin To Net: NetName=NetD13_A Pin=S1-2
+Added Net: Name=NetD13_A
+Added Member To Class: ClassName=MCU Member=Component D13 ESD9B3.3ST5G

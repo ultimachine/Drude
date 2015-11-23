@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=UC_N Pin=TP1-TP
+Removed Pin From Net: NetName=UC_P Pin=TP4-TP
+Removed Member From Class: ClassName=MCU Member=TP1

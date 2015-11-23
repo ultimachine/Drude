@@ -1,0 +1,3 @@
+Removed Member From Class: ClassName=DSI-LCD Member=J2
+Added Class: Name=DSI
+Added Member To Class: ClassName=DSI-LCD Member=Component J4 20021121-00010C4LF

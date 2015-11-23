@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<TComponentSet id="0" CurrentRevColumnWidth="100" NameColumnWidth="300" NextRevColumnWidth="100">
+  <LifeCycleDefinitionGUID>C49BAAE1-4B93-4C84-9FD7-CC93C2E8574D</LifeCycleDefinitionGUID>
+  <RevisionNamingSchemeGUID>1C7FB9EE-333C-4E69-AEDB-057152119FFC</RevisionNamingSchemeGUID>
+  <VaultGUID>B7D15EC3-160A-466F-A46C-7801FE6295A7</VaultGUID>
+  <VaultName>Altium Content Vault</VaultName>
+  <RequiredParameters>
+    <TRequiredParameter id="1" ColumnWidth="100">
+      <HRID>Code_JEDEC</HRID>
+      <Visible>true</Visible>
+    </TRequiredParameter>
+    <TRequiredParameter id="2" ColumnWidth="100">
+      <HRID>Comment</HRID>
+      <Visible>true</Visible>
+    </TRequiredParameter>
+    <TRequiredParameter id="3" ColumnWidth="100">
+      <HRID>ComponentLink1Description</HRID>
+      <Visible>true</Visible>
+    </TRequiredParameter>
+    <TRequiredParameter id="4" ColumnWidth="100">
+      <HRID>ComponentLink1URL</HRID>
+      <Visible>true</Visible>
+    </TRequiredParameter>
+    <TRequiredParameter id="5" ColumnWidth="100">
+      <HRID>ComponentLink2Description</HRID>
+      <Visible>true</Visible>
+    </TRequiredParameter>
+    <TRequiredParameter id="6" ColumnWidth="100">
+      <HRID>ComponentLink2URL</HRID>
+      <Visible>true</Visible>
+    </TRequiredParameter>
+    <TRequiredParameter id="7" ColumnWidth="100">
+      <HRID>ComponentLink3Description</HRID>
+      <Visible>true</Visible>
+    </TRequiredParameter>
+    <TRequiredParameter id="8" ColumnWidth="100">
+      <HRID>ComponentLink3URL</HRID>
+      <Visible>true</Visible>
+    </TRequiredParameter>
+    <TRequiredParameter id="9" ColumnWidth="100">
+      <HRID>DatasheetVersion</HRID>
+      <Visible>true</Visible>
+    </TRequiredParameter>
+    <TRequiredParameter id="10" ColumnWidth="100">
+      <HRID>Description</HRID>
+      <Visible>true</Visible>
+    </TRequiredParameter>
+    <TRequiredParameter id="11" ColumnWidth="100">
+      <HRID>PackageDescription</HRID>
+      <Visible>true</Visible>
+    </TRequiredParameter>
+    <TRequiredParameter id="12" ColumnWidth="100">
+      <HRID>PackageReference</HRID>
+      <Visible>true</Visible>
+    </TRequiredParameter>
+    <TRequiredParameter id="13" ColumnWidth="100">
+      <HRID>PackageVersion</HRID>
+      <Visible>true</Visible>
+    </TRequiredParameter>
+    <TRequiredParameter id="14" ColumnWidth="100">
+      <HRID>RevisionNote</HRID>
+      <Visible>true</Visible>
+    </TRequiredParameter>
+  </RequiredParameters>
+  <RequiredModels>
+    <TRequiredModel id="15" ColumnWidth="100">
+      <HRID>PCBLIB</HRID>
+      <Visible>true</Visible>
+      <ModelKind>PCBLIB</ModelKind>
+    </TRequiredModel>
+    <TRequiredModel id="16" ColumnWidth="100">
+      <HRID>PCBLIB 1</HRID>
+      <Visible>true</Visible>
+      <ModelKind>PCBLIB</ModelKind>
+    </TRequiredModel>
+    <TRequiredModel id="17" ColumnWidth="100">
+      <HRID>PCBLIB 2</HRID>
+      <Visible>true</Visible>
+      <ModelKind>PCBLIB</ModelKind>
+    </TRequiredModel>
+    <TRequiredModel id="18" ColumnWidth="100">
+      <HRID>SCHLIB</HRID>
+      <Visible>true</Visible>
+      <ModelKind>SCHLIB</ModelKind>
+    </TRequiredModel>
+  </RequiredModels>
+  <ModelLinks>
+    <TModelLink id="19">
+      <HRID>PCC-0019-00096-2</HRID>
+      <VaultGUID>B7D15EC3-160A-466F-A46C-7801FE6295A7</VaultGUID>
+      <ItemGUID>80AC0810-BCAB-4088-B5BD-5DA58948631C</ItemGUID>
+      <ModelKind>PCBLIB</ModelKind>
+      <RevisionGUID>C5F13F05-4AB0-4DBE-8C29-66463F695485</RevisionGUID>
+    </TModelLink>
+    <TModelLink id="20">
+      <HRID>PCC-0019-00115-2</HRID>
+      <VaultGUID>B7D15EC3-160A-466F-A46C-7801FE6295A7</VaultGUID>
+      <ItemGUID>838EE26E-479E-4AD2-84A0-21C310F967C1</ItemGUID>
+      <ModelKind>PCBLIB</ModelKind>
+      <RevisionGUID>FCB60E2B-92EB-406F-9843-18E45A85C91B</RevisionGUID>
+    </TModelLink>
+    <TModelLink id="21">
+      <HRID>PCC-0019-00133-2</HRID>
+      <VaultGUID>B7D15EC3-160A-466F-A46C-7801FE6295A7</VaultGUID>
+      <ItemGUID>19412A64-32CC-4E44-AF08-79AF832775B2</ItemGUID>
+      <ModelKind>PCBLIB</ModelKind>
+      <RevisionGUID>DA4DF94E-5ACE-450A-BA59-4135EA8B5774</RevisionGUID>
+    </TModelLink>
+    <TModelLink id="22">
+      <HRID>SYM-0019-00108-1</HRID>
+      <VaultGUID>B7D15EC3-160A-466F-A46C-7801FE6295A7</VaultGUID>
+      <ItemGUID>44F0E6EF-2476-4910-BDF8-EC905CED411C</ItemGUID>
+      <ModelKind>SCHLIB</ModelKind>
+      <RevisionGUID>0D2A7574-DAE7-4203-9836-DCFACD43BE6C</RevisionGUID>
+    </TModelLink>
+  </ModelLinks>
+  <PartChoiceListLinks StateIndex="2">
+    <ComponentSet href="#0"/>
+    <ItemNamingScheme>PCL-{00000}</ItemNamingScheme>
+  </PartChoiceListLinks>
+  <TopGroup id="23" StateIndex="2" Collapsed="false">
+    <Parameters/>
+    <ModelChoices/>
+    <ComponentSet href="#0"/>
+    <ItemNamingScheme>CMP-0095-{00000}</ItemNamingScheme>
+    <Groups>
+      <TGroup id="24" StateIndex="2" Collapsed="false">
+        <HRID>Unified Components</HRID>
+        <ParentGroup href="#23"/>
+        <Parameters/>
+        <ModelChoices/>
+        <ComponentSet href="#0"/>
+        <Groups>
+          <TGroup id="25" StateIndex="2" Collapsed="false">
+            <HRID>Components</HRID>
+            <ParentGroup href="#24"/>
+            <Parameters/>
+            <ModelChoices/>
+            <ComponentSet href="#0"/>
+            <Groups>
+              <TGroup id="26" StateIndex="2" Collapsed="false">
+                <HRID>Atmel</HRID>
+                <ParentGroup href="#25"/>
+                <Parameters/>
+                <ModelChoices/>
+                <ComponentSet href="#0"/>
+                <Groups>
+                  <TGroup id="27" StateIndex="2" Collapsed="false">
+                    <HRID>Microcontroller megaAVR</HRID>
+                    <GUID>5D5801B0-1E6E-49E4-931D-029DBC14554C</GUID>
+                    <ParentGroup href="#26"/>
+                    <Parameters/>
+                    <ModelChoices/>
+                    <ComponentSet href="#0"/>
+                    <Groups/>
+                    <ComponentDefinitions>
+                      <TComponentDefinition StateIndex="0">
+                        <HRID>CMP-0095-00166</HRID>
+                        <GUID>D7A6864A-F5C0-49EF-B4C3-952A8206C888</GUID>
+                        <ParentGroup href="#27"/>
+                        <Parameters>
+                          <TParameter>
+                            <RequiredParameter href="#2"/>
+                            <Value>ATmega32U4-MU</Value>
+                          </TParameter>
+                          <TParameter>
+                            <RequiredParameter href="#10"/>
+                            <Value>8-bit AVR Microcontroller, 2.7-5.5V, 16MHz, 32KB Flash, 1KB EEPROM, 2.5KB SRAM, USB Controller, 44-pin QFN, Industrial Grade (-40Â°C to 85Â°C), Ext Osc</Value>
+                          </TParameter>
+                          <TParameter>
+                            <RequiredParameter href="#13"/>
+                            <Value>revG, Sep-2009</Value>
+                          </TParameter>
+                          <TParameter>
+                            <RequiredParameter href="#12"/>
+                            <Value>44PW</Value>
+                          </TParameter>
+                          <TParameter>
+                            <RequiredParameter href="#4"/>
+                            <Value>http://www.atmel.com/</Value>
+                          </TParameter>
+                          <TParameter>
+                            <RequiredParameter href="#11"/>
+                            <Value>44-Pin Quad Flat No-Lead Package, 7 x 7 mm Body, 0.5 mm Pitch (QFN)</Value>
+                          </TParameter>
+                          <TParameter>
+                            <RequiredParameter href="#7"/>
+                            <Value>ATmega16U4 ATmega32U4 Summary</Value>
+                          </TParameter>
+                          <TParameter>
+                            <RequiredParameter href="#14"/>
+                            <Value>DatasheetVersion, PackageVersion &amp; PCB updated. URLs added.</Value>
+                          </TParameter>
+                          <TParameter>
+                            <RequiredParameter href="#5"/>
+                            <Value>ATmega16U4/32U4 Datasheet</Value>
+                          </TParameter>
+                          <TParameter>
+                            <RequiredParameter href="#3"/>
+                            <Value>Manufacturer URL</Value>
+                          </TParameter>
+                          <TParameter>
+                            <RequiredParameter href="#8"/>
+                            <Value>http://www.atmel.com/dyn/resources/prod_documents/7766S.pdf</Value>
+                          </TParameter>
+                          <TParameter>
+                            <RequiredParameter href="#9"/>
+                            <Value>revF, Nov-2010</Value>
+                          </TParameter>
+                          <TParameter>
+                            <RequiredParameter href="#6"/>
+                            <Value>http://www.atmel.com/dyn/resources/prod_documents/doc7766.pdf</Value>
+                          </TParameter>
+                          <TParameter>
+                            <RequiredParameter href="#1"/>
+                            <Value>MO-220-VKKD-1</Value>
+                          </TParameter>
+                        </Parameters>
+                        <ModelChoices>
+                          <TModelChoice>
+                            <RequiredModel href="#15"/>
+                            <ModelLink href="#20"/>
+                          </TModelChoice>
+                          <TModelChoice>
+                            <RequiredModel href="#16"/>
+                            <ModelLink href="#19"/>
+                          </TModelChoice>
+                          <TModelChoice>
+                            <RequiredModel href="#18"/>
+                            <ModelLink href="#22"/>
+                          </TModelChoice>
+                          <TModelChoice>
+                            <RequiredModel href="#17"/>
+                            <ModelLink href="#21"/>
+                          </TModelChoice>
+                        </ModelChoices>
+                        <ItemHRID>CMP-0095-00166</ItemHRID>
+                        <RevisionGUID>8A675D5D-F5F9-4FBA-BF81-C062A5FDC791</RevisionGUID>
+                        <RevisionId>2</RevisionId>
+                      </TComponentDefinition>
+                    </ComponentDefinitions>
+                    <Path>Unified Components\Components\Atmel\Microcontroller megaAVR</Path>
+                    <IsDefaultGroup>true</IsDefaultGroup>
+                  </TGroup>
+                </Groups>
+                <ComponentDefinitions/>
+                <Path>Unified Components\Components\Atmel</Path>
+                <IsDefaultGroup>false</IsDefaultGroup>
+              </TGroup>
+            </Groups>
+            <ComponentDefinitions/>
+            <Path>Unified Components\Components</Path>
+            <IsDefaultGroup>false</IsDefaultGroup>
+          </TGroup>
+        </Groups>
+        <ComponentDefinitions/>
+        <Path>Unified Components</Path>
+        <IsDefaultGroup>false</IsDefaultGroup>
+      </TGroup>
+    </Groups>
+    <ComponentDefinitions/>
+    <IsDefaultGroup>false</IsDefaultGroup>
+  </TopGroup>
+  <ShowReleaseState>false</ShowReleaseState>
+  <ItemNamingSchemeMappings>
+    <TItemNamingSchemeMapping>
+      <SimpleNamingScheme>CMP-{00000}</SimpleNamingScheme>
+      <InitialIndex>0</InitialIndex>
+    </TItemNamingSchemeMapping>
+  </ItemNamingSchemeMappings>
+</TComponentSet>

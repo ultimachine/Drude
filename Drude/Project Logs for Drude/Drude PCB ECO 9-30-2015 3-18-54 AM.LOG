@@ -1,0 +1,4 @@
+Removed Member From Class: ClassName=MCU Member=J12
+Change Component Designator: OldDesignator=J2 NewDesignator=J6
+Change Component Designator: OldDesignator=J12 NewDesignator=J2
+Added Member To Class: ClassName=MCU Member=Component J6 20021121-00010C4LF

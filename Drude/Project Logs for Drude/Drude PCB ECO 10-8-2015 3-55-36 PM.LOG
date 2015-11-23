@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=GND Pin=J1-20
+Removed Pin From Net: NetName=GND Pin=J1-21
+Removed Pin From Net: NetName=GND Pin=J1-22
+Removed Pin From Net: NetName=GND Pin=J1-23
+Added Component: Designator=L8(C0603)
+Added Pin To Net: NetName=GND Pin=L8-1
+Added Pin To Net: NetName=NetJ1_20 Pin=J1-20
+Added Pin To Net: NetName=NetJ1_20 Pin=J1-21
+Added Pin To Net: NetName=NetJ1_20 Pin=J1-22
+Added Pin To Net: NetName=NetJ1_20 Pin=J1-23
+Added Pin To Net: NetName=NetJ1_20 Pin=L8-2
+Added Net: Name=NetJ1_20
+Added Member To Class: ClassName=HDMI Member=Component L8 MPZ1608S221A
