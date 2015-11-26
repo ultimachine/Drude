@@ -172,7 +172,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=FFFXEYNU
+DocumentUniqueId=HLELLPTR
 
 [Document9]
 DocumentPath=..\PCC-0019-00096-2\Released\44PW_L-UM.PcbLib
@@ -200,7 +200,123 @@ DocumentPath=Project Outputs for Drude\Design Rule Check - Drude.html
 DItemRevisionGUID=
 
 [GeneratedDocument3]
+DocumentPath=Drude.sdf
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=./ProjectOutputs\NC Drill\Drude_0.1a-RoundHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=./ProjectOutputs\NC Drill\Drude_0.1a-SlotHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=./ProjectOutputs\BOM\Drude_0.1a.csv
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=./ProjectOutputs\NC Drill\Drude_0.1a.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GD1
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GG1
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GM1
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GM2
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GM8
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GM15
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GP1
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GP2
+DItemRevisionGUID=
+
+[GeneratedDocument21]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument22]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument23]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument24]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument25]
+DocumentPath=./ProjectOutputs\NC Drill\Drude_0.1a.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument26]
+DocumentPath=./ProjectOutputs\Gerber\Drude_0.1a.REP
+DItemRevisionGUID=
+
+[GeneratedDocument27]
+DocumentPath=./ProjectOutputs\ExportSTEP\Drude_0.1a.step
+DItemRevisionGUID=
+
+[GeneratedDocument28]
+DocumentPath=./ProjectOutputs\BOM\Drude_0.1a.txt
+DItemRevisionGUID=
+
+[GeneratedDocument29]
+DocumentPath=./ProjectOutputs\Pick Place\Drude_0.1a.txt
+DItemRevisionGUID=
+
+[GeneratedDocument30]
+DocumentPath=MessageListReport.html
+DItemRevisionGUID=
+
+[GeneratedDocument31]
 DocumentPath=Project Outputs for Drude\Net Status - Drude.html
+DItemRevisionGUID=
+
+[GeneratedDocument32]
+DocumentPath=Signal Integrity Tests Report.txt
 DItemRevisionGUID=
 
 [Parameter1]
@@ -217,7 +333,7 @@ Value=
 
 [Parameter4]
 Name=projectTitle
-Value=
+Value=Drude
 
 [Parameter5]
 Name=projectVersion
@@ -272,138 +388,188 @@ SaveSettingsToOutJob=-1
 [Generic_EDE]
 OutputDir=
 
+[Generic_SignalIntegritySimulation]
+SignalIntegrityInitialised=-1
+TrackImpedance=100
+TrackLength=20000000
+UseManhattan=-1
+UseSupplyNetsRules=-1
+SupplyNetsCount=0
+UseStimulusRules=-1
+StimKind=1
+StimLevel=0
+StimStartTime=1E-8
+StimStopTime=6E-8
+StimPeriodTime=1E-7
+
+[Generic_SignalIntegrityTestSetup]
+Falling Edge OvershootDefaultEnabled=-1
+Falling Edge OvershootDefaultValue=20
+Falling Edge UndershootDefaultEnabled=-1
+Falling Edge UndershootDefaultValue=20
+Rising Edge OvershootDefaultEnabled=-1
+Rising Edge OvershootDefaultValue=20
+Rising Edge UndershootDefaultEnabled=-1
+Rising Edge UndershootDefaultValue=20
+
+[Generic_SignalIntegrityPanelSetup]
+TerminationName0=No Termination
+TerminationEnabled0=True
+TerminationSweeps0=1
+TerminationName1=Serial Res
+TerminationEnabled1=False
+TerminationSweeps1=10
+TerminationName2=Parallel Res to VCC
+TerminationEnabled2=False
+TerminationSweeps2=10
+TerminationName3=Parallel Res to GND
+TerminationEnabled3=True
+TerminationSweeps3=10
+TerminationName4=Parallel Res to VCC & GND
+TerminationEnabled4=False
+TerminationSweeps4=10
+TerminationName5=Parallel Cap to GND
+TerminationEnabled5=False
+TerminationSweeps5=10
+TerminationName6=Res and Cap to GND
+TerminationEnabled6=False
+TerminationSweeps6=10
+TerminationName7=Parallel Schottky Diodes
+TerminationEnabled7=False
+TerminationSweeps7=10
+TerminationMinR10=0
+TerminationMaxR10=0
+TerminationPrefR10=0
+TerminationMinR20=0
+TerminationMaxR20=0
+TerminationPrefR20=0
+TerminationMinC0=0
+TerminationMaxC0=0
+TerminationPrefC0=0
+TerminationVCC0=0
+TerminationMinR11=25
+TerminationMaxR11=150
+TerminationPrefR11=47
+TerminationMinR21=0
+TerminationMaxR21=0
+TerminationPrefR21=0
+TerminationMinC1=0
+TerminationMaxC1=0
+TerminationPrefC1=0
+TerminationVCC1=0
+TerminationMinR12=50
+TerminationMaxR12=200
+TerminationPrefR12=100
+TerminationMinR22=0
+TerminationMaxR22=0
+TerminationPrefR22=0
+TerminationMinC2=0
+TerminationMaxC2=0
+TerminationPrefC2=0
+TerminationVCC2=5
+TerminationMinR13=0
+TerminationMaxR13=0
+TerminationPrefR13=0
+TerminationMinR23=50
+TerminationMaxR23=200
+TerminationPrefR23=100
+TerminationMinC3=0
+TerminationMaxC3=0
+TerminationPrefC3=0
+TerminationVCC3=0
+TerminationMinR14=50
+TerminationMaxR14=200
+TerminationPrefR14=100
+TerminationMinR24=50
+TerminationMaxR24=200
+TerminationPrefR24=100
+TerminationMinC4=0
+TerminationMaxC4=0
+TerminationPrefC4=0
+TerminationVCC4=5
+TerminationMinR15=0
+TerminationMaxR15=0
+TerminationPrefR15=0
+TerminationMinR25=0
+TerminationMaxR25=0
+TerminationPrefR25=0
+TerminationMinC5=2.35E-11
+TerminationMaxC5=9.4E-11
+TerminationPrefC5=4.7E-11
+TerminationVCC5=0
+TerminationMinR16=0
+TerminationMaxR16=0
+TerminationPrefR16=0
+TerminationMinR26=34
+TerminationMaxR26=136
+TerminationPrefR26=68
+TerminationMinC6=5E-11
+TerminationMaxC6=2E-10
+TerminationPrefC6=1E-10
+TerminationVCC6=0
+TerminationMinR17=0
+TerminationMaxR17=0
+TerminationPrefR17=0
+TerminationMinR27=0
+TerminationMaxR27=0
+TerminationPrefR27=0
+TerminationMinC7=0
+TerminationMaxC7=0
+TerminationPrefC7=0
+TerminationVCC7=5
+
+[Generic_PCB]
+Collation=True
+Copies=1
+DelegateCopies=False
+PrinterName=Default
+Duplex=1
+Orientation=1
+PaperName=A4
+BinName=Default
+Units=1
+PageDef.mmHeight=210079
+PageDef.mmWidth=297127
+PageDef.mmMarginLeft=10160
+PageDef.mmMarginRight=10160
+PageDef.mmMarginTop=6350
+PageDef.mmMarginBottom=6350
+
 [OutputGroup1]
 Name=Netlist Outputs
 Description=
 TargetPrinter=Brother DCP-7045N
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
-OutputType1=PCADnltNetlist
-OutputName1=PCADnlt Netlist
+OutputType1=Verilog
+OutputName1=Verilog File
 OutputDocumentPath1=
 OutputVariantName1=
 OutputDefault1=0
-OutputType2=Protel2Netlist
-OutputName2=Protel2 Netlist
+OutputType2=VHDL
+OutputName2=VHDL File
 OutputDocumentPath2=
 OutputVariantName2=
 OutputDefault2=0
-OutputType3=ProtelNetlist
-OutputName3=Protel
+OutputType3=XSpiceNetlist
+OutputName3=XSpice Netlist
 OutputDocumentPath3=
 OutputVariantName3=
 OutputDefault3=0
-OutputType4=OrCadPCB2Netlist
-OutputName4=Orcad/PCB2 Netlist
+OutputType4=PCADNetlist
+OutputName4=PCAD Netlist
 OutputDocumentPath4=
 OutputVariantName4=
 OutputDefault4=0
-OutputType5=PADSNetlist
-OutputName5=PADS ASCII Netlist
+OutputType5=SIMetrixNetlist
+OutputName5=SIMetrix
 OutputDocumentPath5=
 OutputVariantName5=
 OutputDefault5=0
-OutputType6=Pcad
-OutputName6=Pcad for PCB
+OutputType6=SIMPLISNetlist
+OutputName6=SIMPLIS
 OutputDocumentPath6=
 OutputVariantName6=
 OutputDefault6=0
-OutputType7=TangoNetlist
-OutputName7=Tango Netlist
-OutputDocumentPath7=
-OutputVariantName7=
-OutputDefault7=0
-OutputType8=TelesisNetlist
-OutputName8=Telesis Netlist
-OutputDocumentPath8=
-OutputVariantName8=
-OutputDefault8=0
-OutputType9=WireListNetlist
-OutputName9=WireList Netlist
-OutputDocumentPath9=
-OutputVariantName9=
-OutputDefault9=0
-Configuration9_Name1=OutputConfigurationParameter1
-Configuration9_Item1=??
-OutputType10=RacalNetlist
-OutputName10=Racal Netlist
-OutputDocumentPath10=
-OutputVariantName10=
-OutputDefault10=0
-OutputType11=RINFNetlist
-OutputName11=RINF Netlist
-OutputDocumentPath11=
-OutputVariantName11=
-OutputDefault11=0
-OutputType12=SciCardsNetlist
-OutputName12=SciCards Netlist
-OutputDocumentPath12=
-OutputVariantName12=
-OutputDefault12=0
-OutputType13=MultiWire
-OutputName13=MultiWire
-OutputDocumentPath13=
-OutputVariantName13=
-OutputDefault13=0
-OutputType14=Verilog
-OutputName14=Verilog File
-OutputDocumentPath14=
-OutputVariantName14=
-OutputDefault14=0
-OutputType15=VHDL
-OutputName15=VHDL File
-OutputDocumentPath15=
-OutputVariantName15=
-OutputDefault15=0
-OutputType16=XSpiceNetlist
-OutputName16=XSpice Netlist
-OutputDocumentPath16=
-OutputVariantName16=
-OutputDefault16=0
-OutputType17=PCADNetlist
-OutputName17=PCAD Netlist
-OutputDocumentPath17=
-OutputVariantName17=
-OutputDefault17=0
-OutputType18=SIMetrixNetlist
-OutputName18=SIMetrix
-OutputDocumentPath18=
-OutputVariantName18=
-OutputDefault18=0
-OutputType19=SIMPLISNetlist
-OutputName19=SIMPLIS
-OutputDocumentPath19=
-OutputVariantName19=
-OutputDefault19=0
-OutputType20=EESofNetlist
-OutputName20=EESof Netlist
-OutputDocumentPath20=
-OutputVariantName20=
-OutputDefault20=0
-OutputType21=IntergraphNetlist
-OutputName21=Intergraph Netlist
-OutputDocumentPath21=
-OutputVariantName21=
-OutputDefault21=0
-OutputType22=MentorBoardStationNetlist
-OutputName22=Mentor BoardStation Netlist
-OutputDocumentPath22=
-OutputVariantName22=
-OutputDefault22=0
-OutputType23=CadnetixNetlist
-OutputName23=Cadnetix Netlist
-OutputDocumentPath23=
-OutputVariantName23=
-OutputDefault23=0
-OutputType24=CalayNetlist
-OutputName24=Calay Netlist
-OutputDocumentPath24=
-OutputVariantName24=
-OutputDefault24=0
-OutputType25=EDIF
-OutputName25=EDIF for PCB
-OutputDocumentPath25=
-OutputVariantName25=
-OutputDefault25=0
 
 [OutputGroup2]
 Name=Simulator Outputs
@@ -571,17 +737,17 @@ OutputDocumentPath18=
 OutputVariantName18=
 OutputDefault18=0
 PageOptions18=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType19=Software Platform Print
-OutputName19=Software Platform Prints
+OutputType19=PDF3D
+OutputName19=PDF3D
 OutputDocumentPath19=
-OutputVariantName19=
+OutputVariantName19=[No Variations]
 OutputDefault19=0
 PageOptions19=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 
 [OutputGroup4]
 Name=Assembly Outputs
 Description=
-TargetPrinter=KONICA MINOLTA C360SeriesPCL
+TargetPrinter=KONICA MINOLTA C360SeriesPCL (Copy 1)
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Test Points For Assembly
 OutputName1=Test Point Report
@@ -605,7 +771,7 @@ PageOptions3=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 [OutputGroup5]
 Name=Fabrication Outputs
 Description=
-TargetPrinter=KONICA MINOLTA C360SeriesPCL
+TargetPrinter=KONICA MINOLTA C360SeriesPCL (Copy 1)
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Plane
 OutputName1=Power-Plane Prints
@@ -971,16 +1137,6 @@ OutputName4=Export STEP
 OutputDocumentPath4=
 OutputVariantName4=[No Variations]
 OutputDefault4=0
-OutputType5=NetList Sch
-OutputName5=NetList Sch
-OutputDocumentPath5=
-OutputVariantName5=
-OutputDefault5=0
-OutputType6=PDF3D
-OutputName6=Export PDF3D
-OutputDocumentPath6=
-OutputVariantName6=
-OutputDefault6=0
 
 [Modification Levels]
 Type1=1
@@ -1061,6 +1217,8 @@ Type75=1
 Type76=1
 Type77=1
 Type78=1
+Type79=1
+Type80=1
 
 [Difference Levels]
 Type1=1
@@ -1106,6 +1264,8 @@ Type40=1
 Type41=1
 Type42=1
 Type43=1
+Type44=0
+Type45=1
 
 [Electrical Rules Check]
 Type1=1
@@ -2160,232 +2320,292 @@ ComponentUpdate1=1
 ComponentIsDeviceSheet1=0
 ComponentLibIdentifierKind2=Library Name And Type
 ComponentLibraryIdentifier2=3Delight.SCHLIB
-ComponentDesignItemID2=C0603C104K5RACTU
-ComponentSymbolReference2=C0603C104K5RACTU
+ComponentDesignItemID2=C0402TBD
+ComponentSymbolReference2=C0402TBD
 ComponentUpdate2=1
 ComponentIsDeviceSheet2=0
 ComponentLibIdentifierKind3=Library Name And Type
 ComponentLibraryIdentifier3=3Delight.SCHLIB
-ComponentDesignItemID3=C0805C106K8PACTU
-ComponentSymbolReference3=C0805C106K8PACTU
+ComponentDesignItemID3=C0603C104K5RACTU
+ComponentSymbolReference3=C0603C104K5RACTU
 ComponentUpdate3=1
 ComponentIsDeviceSheet3=0
 ComponentLibIdentifierKind4=Library Name And Type
 ComponentLibraryIdentifier4=3Delight.SCHLIB
-ComponentDesignItemID4=Capacitor
-ComponentSymbolReference4=Capacitor
+ComponentDesignItemID4=C0805C106K8PACTU
+ComponentSymbolReference4=C0805C106K8PACTU
 ComponentUpdate4=1
 ComponentIsDeviceSheet4=0
 ComponentLibIdentifierKind5=Library Name And Type
 ComponentLibraryIdentifier5=3Delight.SCHLIB
-ComponentDesignItemID5=CC0402KRX7R8BB472
-ComponentSymbolReference5=CC0402KRX7R8BB472
+ComponentDesignItemID5=Capacitor
+ComponentSymbolReference5=Capacitor
 ComponentUpdate5=1
 ComponentIsDeviceSheet5=0
 ComponentLibIdentifierKind6=Library Name And Type
 ComponentLibraryIdentifier6=3Delight.SCHLIB
-ComponentDesignItemID6=CC0603ZRY5V6BB105
-ComponentSymbolReference6=CC0603ZRY5V6BB105
+ComponentDesignItemID6=CC0402KRX7R8BB472
+ComponentSymbolReference6=CC0402KRX7R8BB472
 ComponentUpdate6=1
 ComponentIsDeviceSheet6=0
 ComponentLibIdentifierKind7=Library Name And Type
 ComponentLibraryIdentifier7=3Delight.SCHLIB
-ComponentDesignItemID7=DLW21HN900SQ2L
-ComponentSymbolReference7=DLW21HN900SQ2L
+ComponentDesignItemID7=CC0603ZRY5V6BB105
+ComponentSymbolReference7=CC0603ZRY5V6BB105
 ComponentUpdate7=1
 ComponentIsDeviceSheet7=0
 ComponentLibIdentifierKind8=Library Name And Type
 ComponentLibraryIdentifier8=3Delight.SCHLIB
-ComponentDesignItemID8=ERJ2GEJ105X
-ComponentSymbolReference8=ERJ2GEJ105X
+ComponentDesignItemID8=DLW21HN900SQ2L
+ComponentSymbolReference8=DLW21HN900SQ2L
 ComponentUpdate8=1
 ComponentIsDeviceSheet8=0
 ComponentLibIdentifierKind9=Library Name And Type
 ComponentLibraryIdentifier9=3Delight.SCHLIB
-ComponentDesignItemID9=ERJ3EKF4701V
-ComponentSymbolReference9=ERJ3EKF4701V
+ComponentDesignItemID9=ERJ2GEJ105X
+ComponentSymbolReference9=ERJ2GEJ105X
 ComponentUpdate9=1
 ComponentIsDeviceSheet9=0
 ComponentLibIdentifierKind10=Library Name And Type
 ComponentLibraryIdentifier10=3Delight.SCHLIB
-ComponentDesignItemID10=GRM155R60J105KE19D
-ComponentSymbolReference10=GRM155R60J105KE19D
+ComponentDesignItemID10=ERJ3EKF4701V
+ComponentSymbolReference10=ERJ3EKF4701V
 ComponentUpdate10=1
 ComponentIsDeviceSheet10=0
 ComponentLibIdentifierKind11=Library Name And Type
 ComponentLibraryIdentifier11=3Delight.SCHLIB
-ComponentDesignItemID11=GRM155R71C104KA88D
-ComponentSymbolReference11=GRM155R71C104KA88D
+ComponentDesignItemID11=ESD9B3.3ST5G
+ComponentSymbolReference11=ESD9B3.3ST5G
 ComponentUpdate11=1
 ComponentIsDeviceSheet11=0
 ComponentLibIdentifierKind12=Library Name And Type
 ComponentLibraryIdentifier12=3Delight.SCHLIB
-ComponentDesignItemID12=GRM21BR71H105KA12L
-ComponentSymbolReference12=GRM21BR71H105KA12L
+ComponentDesignItemID12=FIDUCIAL
+ComponentSymbolReference12=FIDUCIAL
 ComponentUpdate12=1
 ComponentIsDeviceSheet12=0
 ComponentLibIdentifierKind13=Library Name And Type
 ComponentLibraryIdentifier13=3Delight.SCHLIB
-ComponentDesignItemID13=GRM31CR71H475KA12L
-ComponentSymbolReference13=GRM31CR71H475KA12L
+ComponentDesignItemID13=GRM155R60J105KE19D
+ComponentSymbolReference13=GRM155R60J105KE19D
 ComponentUpdate13=1
 ComponentIsDeviceSheet13=0
 ComponentLibIdentifierKind14=Library Name And Type
 ComponentLibraryIdentifier14=3Delight.SCHLIB
-ComponentDesignItemID14=MPZ1608S221A
-ComponentSymbolReference14=MPZ1608S221A
+ComponentDesignItemID14=GRM155R71C104KA88D
+ComponentSymbolReference14=GRM155R71C104KA88D
 ComponentUpdate14=1
 ComponentIsDeviceSheet14=0
 ComponentLibIdentifierKind15=Library Name And Type
 ComponentLibraryIdentifier15=3Delight.SCHLIB
-ComponentDesignItemID15=PRTR5V0U2F
-ComponentSymbolReference15=PRTR5V0U2F
+ComponentDesignItemID15=GRM21BR71H105KA12L
+ComponentSymbolReference15=GRM21BR71H105KA12L
 ComponentUpdate15=1
 ComponentIsDeviceSheet15=0
 ComponentLibIdentifierKind16=Library Name And Type
 ComponentLibraryIdentifier16=3Delight.SCHLIB
-ComponentDesignItemID16=R0402TBD
-ComponentSymbolReference16=R0402TBD
+ComponentDesignItemID16=GRM31CR71H475KA12L
+ComponentSymbolReference16=GRM31CR71H475KA12L
 ComponentUpdate16=1
 ComponentIsDeviceSheet16=0
 ComponentLibIdentifierKind17=Library Name And Type
 ComponentLibraryIdentifier17=3Delight.SCHLIB
-ComponentDesignItemID17=RC0402FR-0722RL
-ComponentSymbolReference17=RC0402FR-0722RL
+ComponentDesignItemID17=MPZ1608S221A
+ComponentSymbolReference17=MPZ1608S221A
 ComponentUpdate17=1
 ComponentIsDeviceSheet17=0
 ComponentLibIdentifierKind18=Library Name And Type
 ComponentLibraryIdentifier18=3Delight.SCHLIB
-ComponentDesignItemID18=RC0402FR-072KL
-ComponentSymbolReference18=RC0402FR-072KL
+ComponentDesignItemID18=PINHD-2X3
+ComponentSymbolReference18=PINHD-2X3
 ComponentUpdate18=1
 ComponentIsDeviceSheet18=0
 ComponentLibIdentifierKind19=Library Name And Type
 ComponentLibraryIdentifier19=3Delight.SCHLIB
-ComponentDesignItemID19=RC0603FR-07100KL
-ComponentSymbolReference19=RC0603FR-07100KL
+ComponentDesignItemID19=PRTR5V0U2F
+ComponentSymbolReference19=PRTR5V0U2F
 ComponentUpdate19=1
 ComponentIsDeviceSheet19=0
 ComponentLibIdentifierKind20=Library Name And Type
 ComponentLibraryIdentifier20=3Delight.SCHLIB
-ComponentDesignItemID20=Resistor
-ComponentSymbolReference20=Resistor
+ComponentDesignItemID20=R0402TBD
+ComponentSymbolReference20=R0402TBD
 ComponentUpdate20=1
 ComponentIsDeviceSheet20=0
 ComponentLibIdentifierKind21=Library Name And Type
 ComponentLibraryIdentifier21=3Delight.SCHLIB
-ComponentDesignItemID21=RSB39VTE-17
-ComponentSymbolReference21=RSB39VTE-17
+ComponentDesignItemID21=RC0402FR-0710KP
+ComponentSymbolReference21=RC0402FR-0710KP
 ComponentUpdate21=1
 ComponentIsDeviceSheet21=0
 ComponentLibIdentifierKind22=Library Name And Type
 ComponentLibraryIdentifier22=3Delight.SCHLIB
-ComponentDesignItemID22=TestPoint
-ComponentSymbolReference22=TestPoint
+ComponentDesignItemID22=RC0402FR-0722RL
+ComponentSymbolReference22=RC0402FR-0722RL
 ComponentUpdate22=1
 ComponentIsDeviceSheet22=0
 ComponentLibIdentifierKind23=Library Name And Type
-ComponentLibraryIdentifier23=hmi.SchLib
-ComponentDesignItemID23=10029449-111RLF
-ComponentSymbolReference23=10029449-111RLF
+ComponentLibraryIdentifier23=3Delight.SCHLIB
+ComponentDesignItemID23=RC0402FR-072KL
+ComponentSymbolReference23=RC0402FR-072KL
 ComponentUpdate23=1
 ComponentIsDeviceSheet23=0
 ComponentLibIdentifierKind24=Library Name And Type
-ComponentLibraryIdentifier24=hmi.SchLib
-ComponentDesignItemID24=10118194-0001LF
-ComponentSymbolReference24=10118194-0001LF
+ComponentLibraryIdentifier24=3Delight.SCHLIB
+ComponentDesignItemID24=RC0603FR-07100KL
+ComponentSymbolReference24=RC0603FR-07100KL
 ComponentUpdate24=1
 ComponentIsDeviceSheet24=0
 ComponentLibIdentifierKind25=Library Name And Type
-ComponentLibraryIdentifier25=hmi.SchLib
-ComponentDesignItemID25=AP2127K-1.8TRG1
-ComponentSymbolReference25=AP2127K-1.8TRG1
+ComponentLibraryIdentifier25=3Delight.SCHLIB
+ComponentDesignItemID25=Resistor
+ComponentSymbolReference25=Resistor
 ComponentUpdate25=1
 ComponentIsDeviceSheet25=0
 ComponentLibIdentifierKind26=Library Name And Type
-ComponentLibraryIdentifier26=hmi.SchLib
-ComponentDesignItemID26=AP2127K-3.3TRG1
-ComponentSymbolReference26=AP2127K-3.3TRG1
+ComponentLibraryIdentifier26=3Delight.SCHLIB
+ComponentDesignItemID26=RK73H1ETTP1001F
+ComponentSymbolReference26=RK73H1ETTP1001F
 ComponentUpdate26=1
 ComponentIsDeviceSheet26=0
 ComponentLibIdentifierKind27=Library Name And Type
-ComponentLibraryIdentifier27=hmi.SchLib
-ComponentDesignItemID27=ASFL1-27.000MHZ-EK-T
-ComponentSymbolReference27=ASFL1-27.000MHZ-EK-T
+ComponentLibraryIdentifier27=3Delight.SCHLIB
+ComponentDesignItemID27=Standoff3TopConn
+ComponentSymbolReference27=Standoff3TopConn
 ComponentUpdate27=1
 ComponentIsDeviceSheet27=0
 ComponentLibIdentifierKind28=Library Name And Type
-ComponentLibraryIdentifier28=hmi.SchLib
-ComponentDesignItemID28=BAT54XV2
-ComponentSymbolReference28=BAT54XV2
+ComponentLibraryIdentifier28=3Delight.SCHLIB
+ComponentDesignItemID28=TestPoint
+ComponentSymbolReference28=TestPoint
 ComponentUpdate28=1
 ComponentIsDeviceSheet28=0
 ComponentLibIdentifierKind29=Library Name And Type
-ComponentLibraryIdentifier29=hmi.SchLib
-ComponentDesignItemID29=BD12IA5WEFJ-E2
-ComponentSymbolReference29=BD12IA5WEFJ-E2
+ComponentLibraryIdentifier29=Adams Altium Library.SchLib
+ComponentDesignItemID29=ARM Cortex JTAG-DEBUG Header
+ComponentSymbolReference29=ARM Cortex JTAG-DEBUG Header
 ComponentUpdate29=1
 ComponentIsDeviceSheet29=0
 ComponentLibIdentifierKind30=Library Name And Type
 ComponentLibraryIdentifier30=hmi.SchLib
-ComponentDesignItemID30=C1608X7R1H334K080AC
-ComponentSymbolReference30=C1608X7R1H334K080AC
+ComponentDesignItemID30=10029449-111RLF
+ComponentSymbolReference30=10029449-111RLF
 ComponentUpdate30=1
 ComponentIsDeviceSheet30=0
 ComponentLibIdentifierKind31=Library Name And Type
 ComponentLibraryIdentifier31=hmi.SchLib
-ComponentDesignItemID31=FAN5333
-ComponentSymbolReference31=FAN5333
+ComponentDesignItemID31=10118194-0001LF
+ComponentSymbolReference31=10118194-0001LF
 ComponentUpdate31=1
 ComponentIsDeviceSheet31=0
 ComponentLibIdentifierKind32=Library Name And Type
 ComponentLibraryIdentifier32=hmi.SchLib
-ComponentDesignItemID32=IP4787CZ32Y
-ComponentSymbolReference32=IP4787CZ32Y
+ComponentDesignItemID32=AP2127K-1.8TRG1
+ComponentSymbolReference32=AP2127K-1.8TRG1
 ComponentUpdate32=1
 ComponentIsDeviceSheet32=0
 ComponentLibIdentifierKind33=Library Name And Type
 ComponentLibraryIdentifier33=hmi.SchLib
-ComponentDesignItemID33=LS050T1SX10
-ComponentSymbolReference33=LS050T1SX10
+ComponentDesignItemID33=AP2127K-3.3TRG1
+ComponentSymbolReference33=AP2127K-3.3TRG1
 ComponentUpdate33=1
 ComponentIsDeviceSheet33=0
 ComponentLibIdentifierKind34=Library Name And Type
 ComponentLibraryIdentifier34=hmi.SchLib
-ComponentDesignItemID34=MAX1759
-ComponentSymbolReference34=MAX1759
+ComponentDesignItemID34=ASFL1-27.000MHZ-EK-T
+ComponentSymbolReference34=ASFL1-27.000MHZ-EK-T
 ComponentUpdate34=1
 ComponentIsDeviceSheet34=0
 ComponentLibIdentifierKind35=Library Name And Type
 ComponentLibraryIdentifier35=hmi.SchLib
-ComponentDesignItemID35=MAX868
-ComponentSymbolReference35=MAX868
+ComponentDesignItemID35=BAT54XV2
+ComponentSymbolReference35=BAT54XV2
 ComponentUpdate35=1
 ComponentIsDeviceSheet35=0
 ComponentLibIdentifierKind36=Library Name And Type
 ComponentLibraryIdentifier36=hmi.SchLib
-ComponentDesignItemID36=SRN3015-100M
-ComponentSymbolReference36=SRN3015-100M
+ComponentDesignItemID36=BD12IA5WEFJ-E2
+ComponentSymbolReference36=BD12IA5WEFJ-E2
 ComponentUpdate36=1
 ComponentIsDeviceSheet36=0
 ComponentLibIdentifierKind37=Library Name And Type
 ComponentLibraryIdentifier37=hmi.SchLib
-ComponentDesignItemID37=TC358779
-ComponentSymbolReference37=TC358779
+ComponentDesignItemID37=C1608X7R1H334K080AC
+ComponentSymbolReference37=C1608X7R1H334K080AC
 ComponentUpdate37=1
 ComponentIsDeviceSheet37=0
 ComponentLibIdentifierKind38=Library Name And Type
-ComponentLibraryIdentifier38=Tigershark3D.SchLib
-ComponentDesignItemID38=GRM155R71H103JA88D
-ComponentSymbolReference38=GRM155R71H103JA88D
+ComponentLibraryIdentifier38=hmi.SchLib
+ComponentDesignItemID38=ERJ-3GEYJ332V
+ComponentSymbolReference38=ERJ-3GEYJ332V
 ComponentUpdate38=1
 ComponentIsDeviceSheet38=0
-ComponentLibIdentifierKind39=Library Name Only
-ComponentLibraryIdentifier39=Altium Content Vault
-ComponentDesignItemID39=CMP-0095-00166-2
-ComponentSymbolReference39=CMP-0095-00166-2
+ComponentLibIdentifierKind39=Library Name And Type
+ComponentLibraryIdentifier39=hmi.SchLib
+ComponentDesignItemID39=FAN5333
+ComponentSymbolReference39=FAN5333
 ComponentUpdate39=1
 ComponentIsDeviceSheet39=0
+ComponentLibIdentifierKind40=Library Name And Type
+ComponentLibraryIdentifier40=hmi.SchLib
+ComponentDesignItemID40=IP4787CZ32Y
+ComponentSymbolReference40=IP4787CZ32Y
+ComponentUpdate40=1
+ComponentIsDeviceSheet40=0
+ComponentLibIdentifierKind41=Library Name And Type
+ComponentLibraryIdentifier41=hmi.SchLib
+ComponentDesignItemID41=LS050T1SX10
+ComponentSymbolReference41=LS050T1SX10
+ComponentUpdate41=1
+ComponentIsDeviceSheet41=0
+ComponentLibIdentifierKind42=Library Name And Type
+ComponentLibraryIdentifier42=hmi.SchLib
+ComponentDesignItemID42=MAX1759
+ComponentSymbolReference42=MAX1759
+ComponentUpdate42=1
+ComponentIsDeviceSheet42=0
+ComponentLibIdentifierKind43=Library Name And Type
+ComponentLibraryIdentifier43=hmi.SchLib
+ComponentDesignItemID43=MAX868
+ComponentSymbolReference43=MAX868
+ComponentUpdate43=1
+ComponentIsDeviceSheet43=0
+ComponentLibIdentifierKind44=Library Name And Type
+ComponentLibraryIdentifier44=hmi.SchLib
+ComponentDesignItemID44=PTS840 GKP SMTR LFS
+ComponentSymbolReference44=PTS840 GKP SMTR LFS
+ComponentUpdate44=1
+ComponentIsDeviceSheet44=0
+ComponentLibIdentifierKind45=Library Name And Type
+ComponentLibraryIdentifier45=hmi.SchLib
+ComponentDesignItemID45=SRN3015-100M
+ComponentSymbolReference45=SRN3015-100M
+ComponentUpdate45=1
+ComponentIsDeviceSheet45=0
+ComponentLibIdentifierKind46=Library Name And Type
+ComponentLibraryIdentifier46=hmi.SchLib
+ComponentDesignItemID46=TC358779
+ComponentSymbolReference46=TC358779
+ComponentUpdate46=1
+ComponentIsDeviceSheet46=0
+ComponentLibIdentifierKind47=Library Name And Type
+ComponentLibraryIdentifier47=hmi.SchLib
+ComponentDesignItemID47=TP2053CA050C
+ComponentSymbolReference47=TP2053CA050C
+ComponentUpdate47=1
+ComponentIsDeviceSheet47=0
+ComponentLibIdentifierKind48=Library Name And Type
+ComponentLibraryIdentifier48=MC-8B-ATM16U4-SQ45.SchLib
+ComponentDesignItemID48=MC-8B-ATM16U4-SQ45
+ComponentSymbolReference48=MC-8B-ATM16U4-SQ45
+ComponentUpdate48=1
+ComponentIsDeviceSheet48=0
+ComponentLibIdentifierKind49=Library Name And Type
+ComponentLibraryIdentifier49=Tigershark3D.SchLib
+ComponentDesignItemID49=GRM155R71H103JA88D
+ComponentSymbolReference49=GRM155R71H103JA88D
+ComponentUpdate49=1
+ComponentIsDeviceSheet49=0
 
 [Comparison Options]
 ComparisonOptions0=Kind=Net|MinPercent=75|MinMatch=3|ShowMatch=-1|Confirm=-1|UseName=-1|InclAllRules=0

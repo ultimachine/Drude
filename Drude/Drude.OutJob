@@ -15,13 +15,13 @@ LifeCycleDefinitionGUID=
 RevisionNamingSchemeGUID=
 
 [OutputGroup1]
-Name=AMBIT.OutJob
+Name=Drude.OutJob
 Description=
 TargetOutputMedium=BoardFab
 VariantName=[No Variations]
 VariantScope=0
 CurrentConfigurationName=
-TargetPrinter=KONICA MINOLTA C360SeriesPCL
+TargetPrinter=KONICA MINOLTA C360SeriesPCL (Copy 1)
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputMedium1=Print Job
 OutputMedium1_Type=Printer
@@ -97,6 +97,7 @@ Configuration2_Name14=OutputConfigurationParameter14
 Configuration2_Item14=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|DDSymbolKind=0|DDSymbolSize=500000|DDSymbolSortKind=0|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical15|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer
 Configuration2_Name15=OutputConfigurationParameter15
 Configuration2_Item15=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|DDSymbolKind=0|DDSymbolSize=500000|DDSymbolSortKind=0|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical16|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer
+PcbPrintPreferences2=
 OutputType3=BOM_PartType
 OutputName3=Bill of Materials
 OutputCategory3=Report
@@ -188,7 +189,7 @@ Configuration7_Item1=Record=LayerStackReportView|Units=Imperial
 OutputType8=Pick Place
 OutputName8=Generates pick and place files
 OutputCategory8=Assembly
-OutputDocumentPath8=AMBIT.PcbDoc
+OutputDocumentPath8=
 OutputVariantName8=
 OutputEnabled8=1
 OutputEnabled8_OutputMedium1=0
@@ -298,7 +299,7 @@ MarkPortsId2=1
 GenerateTOC=1
 ShowComponentParameters2=1
 GlobalBookmarks2=1
-OutputFilePath3=C:\Users\johnny\Documents\AMBIT\Panels\./ProjectOutputs\
+OutputFilePath3=C:\Users\johnny\Documents\CapTouch\Drude\Drude\./ProjectOutputs\
 ReleaseManaged3=0
 OutputBasePath3=./ProjectOutputs\
 OutputPathMedia3=
@@ -313,7 +314,7 @@ OutputFileNameSpecial3=
 OpenOutput3=1
 OutputFilePath4=
 ReleaseManaged4=1
-OutputBasePath4=Project Outputs for AMBIT
+OutputBasePath4=Project Outputs for Drude
 OutputPathMedia4=
 OutputPathMediaValue4=
 OutputPathOutputer4=[Output Type]
@@ -389,7 +390,7 @@ OpenOutput6=1
 [GeneratedFilesSettings]
 RelativeOutputPath2=C:\Users\johnny\Documents\AMBIT\./ProjectOutputs\AMBIT_0.2a_VariantName_VarRevNo.PDF
 OpenOutputs2=1
-RelativeOutputPath3=C:\Users\johnny\Documents\AMBIT\Panels\./ProjectOutputs\
+RelativeOutputPath3=C:\Users\johnny\Documents\CapTouch\Drude\Drude\./ProjectOutputs\
 OpenOutputs3=1
 AddToProject3=1
 TimestampFolder3=0
