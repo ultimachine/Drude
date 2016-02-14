@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=5V Pin=R10-2
+Removed Pin From Net: NetName=PWR_BTN Pin=R33-1
+Removed Pin From Net: NetName=RESET Pin=U9-13
+Removed Pin From Net: NetName=RESET Pin=X18-5
+Added Component: Designator=C72(C0603)
+Added Component: Designator=R31(R0402)
+Added Component: Designator=R32(R0603)
+Added Pin To Net: NetName=GND Pin=C72-2
+Added Pin To Net: NetName=RESET Pin=R31-1
+Added Pin To Net: NetName=NetJ5_32 Pin=R32-1
+Added Pin To Net: NetName=PWR_BTN Pin=R33-2
+Added Pin To Net: NetName=RESET Pin=U9-28
+Change Net Name : Old Net Name=RESET New Net Name=BTN_2
+Added Pin To Net: NetName=NetC72_1 Pin=C72-1
+Added Pin To Net: NetName=NetC72_1 Pin=R10-2
+Added Pin To Net: NetName=NetC72_1 Pin=R32-2
+Added Net: Name=NetC72_1
+Added Pin To Net: NetName=NetR33_1 Pin=R33-1
+Added Pin To Net: NetName=NetR33_1 Pin=U9-29
+Added Net: Name=NetR33_1
+Added Pin To Net: NetName=RESET Pin=R31-2
+Added Pin To Net: NetName=RESET Pin=U9-13
+Added Pin To Net: NetName=RESET Pin=X18-5
+Added Net: Name=RESET
+Added Member To Class: ClassName=DrudePower Member=Component C72 C0603TBD
+Added Member To Class: ClassName=MCU Member=Component R31 R0402TBD
+Added Member To Class: ClassName=DrudePower Member=Component R32 

@@ -1,18 +1,17 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\johnny\Documents\CapTouch\Drude\Drude\Drude02.PcbDoc
-Date     : 11/25/2015
-Time     : 12:49:32 PM
+Date     : 11/27/2015
+Time     : 12:05:27 PM
 
-Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=8mil) (Max=8mil) (Prefered=8mil)  and Width Constraints (Min=4mil) (Max=4mil) (Prefered=4mil) (InDifferentialPairClass('HDMI'))
-   Violation between Differential Pairs Routing: Between Net HDMI_CK_P And Net HDMI_CK_N [Uncoupled Length = 106.7mil], [Maximum Uncoupled Length = 78.74mil]
-   Violation between Differential Pairs Routing: Between Net HDMI_D0_P And Net HDMI_D0_N [Uncoupled Length = 93.132mil], [Maximum Uncoupled Length = 78.74mil]
-   Violation between Differential Pairs Routing: Between Net HDMI_D1_P And Net HDMI_D1_N [Uncoupled Length = 82.128mil], [Maximum Uncoupled Length = 78.74mil]
-   Violation between Differential Pairs Routing: Between Net HDMI_D2_P And Net HDMI_D2_N [Uncoupled Length = 147.876mil], [Maximum Uncoupled Length = 78.74mil]
+Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=8mil) (Max=9mil) (Prefered=8mil)  and Width Constraints (Min=4mil) (Max=4mil) (Prefered=4mil) (InDifferentialPairClass('HDMI'))
+   Violation between Differential Pairs Routing: Between Net HDMI_CK_P And Net HDMI_CK_N [Uncoupled Length = 98.181mil], [Maximum Uncoupled Length = 78.74mil]
+   Violation between Differential Pairs Routing: Between Net HDMI_D0_P And Net HDMI_D0_N [Uncoupled Length = 86.019mil], [Maximum Uncoupled Length = 78.74mil]
+   Violation between Differential Pairs Routing: Between Net HDMI_D2_P And Net HDMI_D2_N [Uncoupled Length = 145.616mil], [Maximum Uncoupled Length = 78.74mil]
    Violation between Differential Pairs Routing: Between Net HDMI_CON_CK_P And Net HDMI_CON_CK_N [Uncoupled Length = 102.772mil], [Maximum Uncoupled Length = 78.74mil]
-   Violation between Differential Pairs Routing: Between Net HDMI_CON_D0_P And Net HDMI_CON_D0_N [Uncoupled Length = 112.768mil], [Maximum Uncoupled Length = 78.74mil]
-   Violation between Differential Pairs Routing: Between Net HDMI_CON_D1_P And Net HDMI_CON_D1_N [Uncoupled Length = 112.823mil], [Maximum Uncoupled Length = 78.74mil]
+   Violation between Differential Pairs Routing: Between Net HDMI_CON_D0_P And Net HDMI_CON_D0_N [Uncoupled Length = 102.827mil], [Maximum Uncoupled Length = 78.74mil]
+   Violation between Differential Pairs Routing: Between Net HDMI_CON_D1_P And Net HDMI_CON_D1_N [Uncoupled Length = 103.347mil], [Maximum Uncoupled Length = 78.74mil]
    Violation between Differential Pairs Routing: Between Net HDMI_CON_D2_P And Net HDMI_CON_D2_N [Uncoupled Length = 104.291mil], [Maximum Uncoupled Length = 78.74mil]
-Rule Violations :8
+Rule Violations :7
 
 Processing Rule : Matched Lengths(Tolerance=100mil) (InxSignalClass('xSignals_L5_Passives_U9_MatchLengthsClass'))
 Rule Violations :0
@@ -32,22 +31,14 @@ Rule Violations :0
 Processing Rule : Matched Lengths(Tolerance=100mil) (InxSignalClass('xSignals_J2_U9_MatchLengthsClass'))
 Rule Violations :0
 
-Processing Rule : Parallel Segment Constraint (Gap=8mil ) (Limit=3000mil) ((InDifferentialPairClass('LANE2'))),((InDifferentialPairClass('LANE2')))
+Processing Rule : Parallel Segment Constraint (Gap=8mil ) (Limit=3000mil) (InDifferentialPair('LANE2')),(InDifferentialPair('LANE2'))
 Rule Violations :0
 
-Processing Rule : Parallel Segment Constraint (Gap=8mil ) (Limit=300mil) ((InDifferentialPairClass('UD'))),((InDifferentialPairClass('UD')))
+Processing Rule : Parallel Segment Constraint (Gap=8mil ) (Limit=300mil) ((InDifferentialPairClass('USB'))),((InDifferentialPairClass('USB')))
 Rule Violations :0
 
-Processing Rule : Parallel Segment Constraint (Gap=42mil ) (Limit=500mil) ((InDifferentialPairClass('All Differential Pairs'))),(All)
-   Violation between Parallel Segment Constraint: (526.811mil > 500mil) Between Net UD_N And Net UD_P Gap < 42mil; Actual Parallel Span = 526.811mil
-   Violation between Parallel Segment Constraint: (539.011mil > 500mil) Between Net LANE3_N And Net LANE3_P Gap < 42mil; Actual Parallel Span = 539.011mil
-   Violation between Parallel Segment Constraint: (552.095mil > 500mil) Between Net LANE2_N And Net LANE2_P Gap < 42mil; Actual Parallel Span = 552.095mil
-   Violation between Parallel Segment Constraint: (552.095mil > 500mil) Between Net LANE2_P And Net LANE2_N Gap < 42mil; Actual Parallel Span = 552.095mil
-   Violation between Parallel Segment Constraint: (512.301mil > 500mil) Between Net LANE1_N And Net LANE1_P Gap < 42mil; Actual Parallel Span = 512.301mil
-   Violation between Parallel Segment Constraint: (556.64mil > 500mil) Between Net LANE0_N And Net LANE0_P Gap < 42mil; Actual Parallel Span = 556.64mil
-   Violation between Parallel Segment Constraint: (556.64mil > 500mil) Between Net LANE0_P And Net LANE0_N Gap < 42mil; Actual Parallel Span = 556.64mil
-   Violation between Parallel Segment Constraint: (505.987mil > 500mil) Between Net DSI_CLK_N And Net DSI_CLK_P Gap < 42mil; Actual Parallel Span = 505.987mil
-Rule Violations :8
+Processing Rule : Parallel Segment Constraint (Gap=8mil ) (Limit=3000mil) ((InDifferentialPairClass('All Differential Pairs'))),(All)
+Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=5mil) (InNetClass('HDMI'))
 Rule Violations :0
@@ -59,16 +50,15 @@ Processing Rule : Clearance Constraint (Gap=4mil) (WithinRoom('RoomDisplayConnec
 Rule Violations :0
 
 Processing Rule : Clearance Constraint (Gap=12mil) (InNetClass('DSI')  or InNetClass('HDMI')   or InNetClass('HDMI_CONN')),(All)
-   Violation between Clearance Constraint: (10mil < 12mil) Between Via (234mil,1432mil) from Top Layer to Bottom Layer And Via (224mil,1456mil) from Top Layer to Bottom Layer 
-Rule Violations :1
+Rule Violations :0
 
 Processing Rule : Clearance Constraint (Gap=6mil) (All),(All)
 Rule Violations :0
 
-Processing Rule : Parallel Segment Constraint (Gap=8mil ) (Limit=3000mil) ((InDifferentialPairClass('UD'))),((InDifferentialPairClass('UD')))
+Processing Rule : Parallel Segment Constraint (Gap=8mil ) (Limit=3000mil) ((InDifferentialPairClass('USB'))),((InDifferentialPairClass('USB')))
 Rule Violations :0
 
-Processing Rule : Parallel Segment Constraint (Gap=36mil ) (Limit=7874.016mil) ((InDifferentialPairClass('All Differential Pairs'))),(All)
+Processing Rule : Parallel Segment Constraint (Gap=36mil ) (Limit=8000mil) ((InDifferentialPairClass('All Differential Pairs'))),(All)
 Rule Violations :0
 
 Processing Rule : Width Constraint (Min=4mil) (Max=5.7mil) (Preferred=5.7mil) (InNetClass('DSI')  or InNetClass('HDMI')   or InNetClass('HDMI_CONN'))
@@ -113,7 +103,6 @@ Rule Violations :0
 
 Processing Rule : Acute Angle Constraint (Minimum=60.000) (All)
    Violation between Acute Angle Constraint: (56.051 < 60.000) Between Polygon Region (0 hole(s)) Top Layer And Region (0 hole(s)) Top Layer (Angle = 56.051)
-   Violation between Acute Angle Constraint: (48.943 < 60.000) Between Track (1517.337mil,2594.943mil)(1525.733mil,2595.315mil) on Top Layer And Pad D27-6(1525.733mil,2595.315mil) on Top Layer (Angle = 48.943)
    Violation between Acute Angle Constraint: (50.384 < 60.000) Between Via (1002mil,2054mil) from Top Layer to Bottom Layer And Track (1014.314mil,2041.686mil)(1097.16mil,2041.686mil) on Bottom Layer (Angle = 50.384)
    Violation between Acute Angle Constraint: (47.424 < 60.000) Between Pad C7-2(1080.709mil,771.851mil) on Top Layer And Track (1103.394mil,768.606mil)(1103.394mil,771.851mil) on Top Layer (Angle = 47.424)
    Violation between Acute Angle Constraint: (58.135 < 60.000) Between Pad C56-1(826.3mil,2357mil) on Bottom Layer And Track (814.467mil,2369.833mil)(826.3mil,2358mil) on Bottom Layer (Angle = 58.135)
@@ -121,7 +110,7 @@ Processing Rule : Acute Angle Constraint (Minimum=60.000) (All)
    Violation between Acute Angle Constraint: (54.868 < 60.000) Between Pad C11-2(356.394mil,549.457mil) on Top Layer And Via (370.772mil,596.701mil) from Top Layer to Bottom Layer (Angle = 54.868)
    Violation between Acute Angle Constraint: (56.251 < 60.000) Between Via (879.386mil,2374.614mil) from Top Layer to Bottom Layer And Pad C56-2(864mil,2357mil) on Bottom Layer (Angle = 56.251)
    Violation between Acute Angle Constraint: (45.000 < 60.000) Between Track (823.205mil,326.276mil)(836.767mil,312.713mil) on Top Layer And Track (787.398mil,312.713mil)(836.767mil,312.713mil) on Top Layer (Angle = 45.000)
-Rule Violations :9
+Rule Violations :8
 
 Processing Rule : RoomDisplayConnector (Bounding Region = (1434.095mil, 1679.134mil, 1585.866mil, 2020.669mil) (Not IsComponent)
 Rule Violations :0
@@ -236,13 +225,13 @@ Processing Rule : Minimum Solder Mask Sliver (Gap=4mil) (All),(All)
    Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad J1-17(1477.748mil,1145.047mil) on Top Layer And Pad J1-16(1477.748mil,1164.732mil) on Top Layer [Top Solder] Mask Sliver [1.874mil]
    Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad J1-18(1477.748mil,1125.362mil) on Top Layer And Pad J1-17(1477.748mil,1145.047mil) on Top Layer [Top Solder] Mask Sliver [1.874mil]
    Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad J1-19(1477.748mil,1105.677mil) on Top Layer And Pad J1-18(1477.748mil,1125.362mil) on Top Layer [Top Solder] Mask Sliver [1.874mil]
-   Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad U11-7(1403.543mil,2583.071mil) on Bottom Layer And Pad U11-8(1403.543mil,2563.386mil) on Bottom Layer [Bottom Solder] Mask Sliver [1.874mil]
-   Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad U11-6(1403.543mil,2602.756mil) on Bottom Layer And Pad U11-7(1403.543mil,2583.071mil) on Bottom Layer [Bottom Solder] Mask Sliver [1.874mil]
-   Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad U11-5(1403.543mil,2622.441mil) on Bottom Layer And Pad U11-6(1403.543mil,2602.756mil) on Bottom Layer [Bottom Solder] Mask Sliver [1.874mil]
-   Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad U11-4(1403.543mil,2642.126mil) on Bottom Layer And Pad U11-5(1403.543mil,2622.441mil) on Bottom Layer [Bottom Solder] Mask Sliver [1.874mil]
-   Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad U11-3(1403.543mil,2661.811mil) on Bottom Layer And Pad U11-4(1403.543mil,2642.126mil) on Bottom Layer [Bottom Solder] Mask Sliver [1.874mil]
-   Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad U11-2(1403.543mil,2681.496mil) on Bottom Layer And Pad U11-3(1403.543mil,2661.811mil) on Bottom Layer [Bottom Solder] Mask Sliver [1.874mil]
-   Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad U11-1(1403.543mil,2701.181mil) on Bottom Layer And Pad U11-2(1403.543mil,2681.496mil) on Bottom Layer [Bottom Solder] Mask Sliver [1.874mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad U11-7(1155.315mil,2583.071mil) on Bottom Layer And Pad U11-8(1155.315mil,2563.386mil) on Bottom Layer [Bottom Solder] Mask Sliver [1.874mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad U11-6(1155.315mil,2602.756mil) on Bottom Layer And Pad U11-7(1155.315mil,2583.071mil) on Bottom Layer [Bottom Solder] Mask Sliver [1.874mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad U11-5(1155.315mil,2622.441mil) on Bottom Layer And Pad U11-6(1155.315mil,2602.756mil) on Bottom Layer [Bottom Solder] Mask Sliver [1.874mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad U11-4(1155.315mil,2642.126mil) on Bottom Layer And Pad U11-5(1155.315mil,2622.441mil) on Bottom Layer [Bottom Solder] Mask Sliver [1.874mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad U11-3(1155.315mil,2661.811mil) on Bottom Layer And Pad U11-4(1155.315mil,2642.126mil) on Bottom Layer [Bottom Solder] Mask Sliver [1.874mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad U11-2(1155.315mil,2681.496mil) on Bottom Layer And Pad U11-3(1155.315mil,2661.811mil) on Bottom Layer [Bottom Solder] Mask Sliver [1.874mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (1.874mil < 4mil) Between Pad U11-1(1155.315mil,2701.181mil) on Bottom Layer And Pad U11-2(1155.315mil,2681.496mil) on Bottom Layer [Bottom Solder] Mask Sliver [1.874mil]
 Rule Violations :89
 
 Processing Rule : Silk To Solder Mask (Clearance=10mil) (Disabled)(IsPad),(All)
@@ -288,7 +277,7 @@ Processing Rule : Clearance Constraint (Gap=8mil) (InNetClass('USB')),(All)
 Rule Violations :0
 
 Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=8mil) (Max=8mil) (Prefered=8mil)  and Width Constraints (Min=4mil) (Max=4mil) (Prefered=4mil) (InDifferentialPairClass('DSI'))
-   Violation between Differential Pairs Routing: Between Net DSI_CLK_P And Net DSI_CLK_N [Uncoupled Length = 261.312mil], [Maximum Uncoupled Length = 78.74mil]
+   Violation between Differential Pairs Routing: Between Net DSI_CLK_P And Net DSI_CLK_N [Uncoupled Length = 231.637mil], [Maximum Uncoupled Length = 78.74mil]
    Violation between Differential Pairs Routing: Between Net LANE0_P And Net LANE0_N [Uncoupled Length = 136.472mil], [Maximum Uncoupled Length = 78.74mil]
    Violation between Differential Pairs Routing: Between Net LANE1_P And Net LANE1_N [Uncoupled Length = 207.975mil], [Maximum Uncoupled Length = 78.74mil]
    Violation between Differential Pairs Routing: Between Net LANE2_P And Net LANE2_N [Uncoupled Length = 161.432mil], [Maximum Uncoupled Length = 78.74mil]
@@ -299,5 +288,5 @@ Processing Rule : RoomTC (Bounding Region = (1914mil, 1725mil, 2246.299mil, 2022
 Rule Violations :0
 
 
-Violations Detected : 127
-Time Elapsed        : 00:00:06
+Violations Detected : 116
+Time Elapsed        : 00:00:04

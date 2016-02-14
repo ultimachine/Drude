@@ -1,0 +1,33 @@
+Removed Pin From Net: NetName=NetJ5_28 Pin=U9-30
+Change Component Designator: OldDesignator=R21 NewDesignator=R28
+Change Component Designator: OldDesignator=R33 NewDesignator=R27
+Added Component: Designator=C71(C0402)
+Added Component: Designator=C72(C0402)
+Added Component: Designator=C73(C0402)
+Added Component: Designator=C74(C0402)
+Added Component: Designator=C75(C0402)
+Added Component: Designator=C76(C0402)
+Added Component: Designator=R21(R0402)
+Added Component: Designator=R26(R0402)
+Added Component: Designator=R33(R0402)
+Added Pin To Net: NetName=1.8V Pin=C75-2
+Added Pin To Net: NetName=GND Pin=R21-1
+Added Pin To Net: NetName=NetJ5_28 Pin=R21-2
+Added Pin To Net: NetName=NetJ5_28 Pin=R26-2
+Added Pin To Net: NetName=PWR_BTN Pin=R33-1
+Added Pin To Net: NetName=NetR26_1 Pin=R26-1
+Added Pin To Net: NetName=NetR26_1 Pin=U9-30
+Added Net: Name=NetR26_1
+Added Pin To Net: NetName=NetR33_2 Pin=R33-2
+Added Pin To Net: NetName=NetR33_2 Pin=U9-29
+Added Net: Name=NetR33_2
+Added Member To Class: ClassName=LCD-Touch Member=Component C71 10nF
+Added Member To Class: ClassName=LCD-Touch Member=Component C72 10nF
+Added Member To Class: ClassName=LCD-Touch Member=Component C73 10nF
+Added Member To Class: ClassName=LCD-Touch Member=Component C74 10nF
+Added Member To Class: ClassName=LCD-Touch Member=Component C75 10nF
+Added Member To Class: ClassName=LCD-Touch Member=Component C76 10nF
+Added Member To Class: ClassName=MCU Member=Component R26 1k
+Added Member To Class: ClassName=MCU Member=Component R28 1k
+Added Member To Class: ClassName=MCU Member=Component R33 1k
+Added Member To Class: ClassName=LCD-Touch Member=Component U11 TP2053CA050C

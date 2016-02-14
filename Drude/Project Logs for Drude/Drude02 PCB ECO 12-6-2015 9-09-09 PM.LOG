@@ -1,0 +1,25 @@
+Removed Pin From Net: NetName=LED-PWM Pin=J5-32
+Removed Pin From Net: NetName=5V Pin=R13-1
+Removed Pin From Net: NetName=PD6 Pin=U9-26
+Added Component: Designator=C77(C0402)
+Added Component: Designator=R29(R0603)
+Added Component: Designator=R30(R0603)
+Added Pin To Net: NetName=GND Pin=C77-2
+Added Pin To Net: NetName=LED-PWM Pin=R29-2
+Added Pin To Net: NetName=PD6 Pin=U9-27
+Change Net Name : Old Net Name=PD6 New Net Name=PD7
+Added Pin To Net: NetName=NetC77_1 Pin=C77-1
+Added Pin To Net: NetName=NetC77_1 Pin=R30-1
+Added Pin To Net: NetName=NetC77_1 Pin=U9-36
+Added Net: Name=NetC77_1
+Added Pin To Net: NetName=NetJ5_32 Pin=J5-32
+Added Pin To Net: NetName=NetJ5_32 Pin=R13-1
+Added Pin To Net: NetName=NetJ5_32 Pin=R30-2
+Added Net: Name=NetJ5_32
+Added Pin To Net: NetName=NetR29_1 Pin=R29-1
+Added Pin To Net: NetName=NetR29_1 Pin=U9-26
+Added Net: Name=NetR29_1
+Added Member To Class: ClassName=MCU Member=Component C77 C0402TBD
+Added Member To Class: ClassName=MCU Member=Component R21 1k
+Added Member To Class: ClassName=DrudePower Member=Component R29 R0603TBD
+Added Member To Class: ClassName=MCU Member=Component R30 R0603TBD
