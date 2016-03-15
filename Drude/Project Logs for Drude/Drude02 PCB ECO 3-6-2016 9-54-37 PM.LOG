@@ -1,0 +1,4 @@
+Change Component DesignItemId : Designator=R6 Old DesignItemId=RC0603FR-07100KL New DesignItemId=RC0402FR-07100KL
+Change Component DesignItemId : Designator=R36 Old DesignItemId=RC0603FR-07100KL New DesignItemId=RC0402FR-07100KL
+Change Component Footprint: Designator=R6 Old Footprint=R0603 New Footprint=R0402
+Change Component Footprint: Designator=R36 Old Footprint=R0603 New Footprint=R0402

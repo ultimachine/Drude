@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=GND Pin=C43-1
+Removed Pin From Net: NetName=3.3V Pin=C43-2
+Removed Pin From Net: NetName=NetC91_1 Pin=C61-1
+Removed Pin From Net: NetName=GND Pin=C61-2
+Change Component DesignItemId : Designator=C43 Old DesignItemId=GRM155R71H103JA88D New DesignItemId=C0402TBD
+Change Component DesignItemId : Designator=C61 Old DesignItemId=GRM155R71H103JA88D New DesignItemId=C0402TBD
+Change Component Comment : Designator=C43 Old Comment=10nF New Comment=C0402TBD
+Change Component Comment : Designator=C61 Old Comment=10nF New Comment=C0402TBD
+Change Component Description : Designator=C43 Old Description=CAP CER 10nF 50V X7R 0402 New Description=Capacitor Non Polarized
+Change Component Description : Designator=C61 Old Description=CAP CER 10nF 50V X7R 0402 New Description=Capacitor Non Polarized
+Change Component Library : Designator=C43 Old Library=hmi.SchLib New Library=3Delight.SCHLIB
+Change Component Library : Designator=C61 Old Library=hmi.SchLib New Library=3Delight.SCHLIB
+Added Component: Designator=C91(C0402)
+Added Pin To Net: NetName=3.3V Pin=C43-1
+Added Pin To Net: NetName=GND Pin=C43-2
+Added Pin To Net: NetName=GND Pin=C61-1
+Added Pin To Net: NetName=3.3V Pin=C61-2
+Added Pin To Net: NetName=NetC91_1 Pin=C61-1
+Added Pin To Net: NetName=GND Pin=C61-2

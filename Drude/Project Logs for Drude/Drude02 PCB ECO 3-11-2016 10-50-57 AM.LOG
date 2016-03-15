@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=VBUS Pin=C92-1
+Removed Pin From Net: NetName=VBUS Pin=U9-2
+Removed Pin From Net: NetName=VBUS Pin=U9-7
+Change Net Name : Old Net Name=VBUS New Net Name=VMCU
+Added Pin To Net: NetName=VBUS Pin=C92-1
+Added Pin To Net: NetName=VBUS Pin=U9-2
+Added Pin To Net: NetName=VBUS Pin=U9-7
+Added Net: Name=VBUS

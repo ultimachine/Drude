@@ -1,0 +1,502 @@
+Removed Pin From Net: NetName=5V Pin=C2-1
+Removed Pin From Net: NetName=1.2V Pin=C3-1
+Removed Pin From Net: NetName=1.8V Pin=C4-1
+Removed Pin From Net: NetName=3.3V Pin=C5-1
+Removed Pin From Net: NetName=-5.5V Pin=C8-1
+Removed Pin From Net: NetName=5.5V Pin=C10-1
+Removed Pin From Net: NetName=5V Pin=C11-1
+Removed Pin From Net: NetName=-5.5V Pin=C12-2
+Removed Pin From Net: NetName=1.8V Pin=C13-1
+Removed Pin From Net: NetName=1.8V Pin=C17-1
+Removed Pin From Net: NetName=1.2V Pin=C17-2
+Removed Pin From Net: NetName=5V Pin=C18-1
+Removed Pin From Net: NetName=3.3V Pin=C19-1
+Removed Pin From Net: NetName=5V Pin=C20-1
+Removed Pin From Net: NetName=1.8V Pin=C21-1
+Removed Pin From Net: NetName=1.2V Pin=C28-1
+Removed Pin From Net: NetName=1.2V Pin=C29-2
+Removed Pin From Net: NetName=1.2V Pin=C30-1
+Removed Pin From Net: NetName=1.2V Pin=C31-2
+Removed Pin From Net: NetName=1.2V Pin=C33-2
+Removed Pin From Net: NetName=3.3V Pin=C34-1
+Removed Pin From Net: NetName=3.3V Pin=C35-2
+Removed Pin From Net: NetName=3.3V Pin=C36-2
+Removed Pin From Net: NetName=1.2V Pin=C37-1
+Removed Pin From Net: NetName=1.2V Pin=C38-2
+Removed Pin From Net: NetName=3.3V Pin=C39-1
+Removed Pin From Net: NetName=3.3V Pin=C40-2
+Removed Pin From Net: NetName=3.3V Pin=C41-1
+Removed Pin From Net: NetName=3.3V Pin=C42-2
+Removed Pin From Net: NetName=GND Pin=C43-1
+Removed Pin From Net: NetName=3.3V Pin=C43-2
+Removed Pin From Net: NetName=3.3V Pin=C45-1
+Removed Pin From Net: NetName=3.3V Pin=C53-1
+Removed Pin From Net: NetName=3.3V Pin=C54-1
+Removed Pin From Net: NetName=5V Pin=C62-1
+Removed Pin From Net: NetName=5V Pin=C63-1
+Removed Pin From Net: NetName=1.8V Pin=C64-1
+Removed Pin From Net: NetName=1.8V Pin=C65-1
+Removed Pin From Net: NetName=DAOUT Pin=J3-4
+Removed Pin From Net: NetName=PCKIN Pin=J3-6
+Removed Pin From Net: NetName=1.2V Pin=J4-5
+Removed Pin From Net: NetName=5V Pin=L1-1
+Removed Pin From Net: NetName=5V Pin=L7-1
+Removed Pin From Net: NetName=5.5V Pin=R1-2
+Removed Pin From Net: NetName=5.5V Pin=R2-1
+Removed Pin From Net: NetName=3.3V Pin=R4-1
+Removed Pin From Net: NetName=3.3V Pin=R5-1
+Removed Pin From Net: NetName=GND Pin=R6-1
+Removed Pin From Net: NetName=3.3V Pin=R7-1
+Removed Pin From Net: NetName=-5.5V Pin=R8-1
+Removed Pin From Net: NetName=NetR3_1 Pin=R15-1
+Removed Pin From Net: NetName=NetR13_1 Pin=R35-2
+Removed Pin From Net: NetName=5V Pin=TP2-TP
+Removed Pin From Net: NetName=3.3V Pin=U1-3
+Removed Pin From Net: NetName=3.3V Pin=U1-4
+Removed Pin From Net: NetName=5.5V Pin=U1-9
+Removed Pin From Net: NetName=-5.5V Pin=U2-2
+Removed Pin From Net: NetName=3.3V Pin=U2-7
+Removed Pin From Net: NetName=5V Pin=U3-5
+Removed Pin From Net: NetName=1.2V Pin=U5-1
+Removed Pin From Net: NetName=1.2V Pin=U5-2
+Removed Pin From Net: NetName=5V Pin=U5-8
+Removed Pin From Net: NetName=1.2V Pin=U6-A1
+Removed Pin From Net: NetName=1.2V Pin=U6-A8
+Removed Pin From Net: NetName=3.3V Pin=U6-B1
+Removed Pin From Net: NetName=1.2V Pin=U6-D10
+Removed Pin From Net: NetName=3.3V Pin=U6-G1
+Removed Pin From Net: NetName=1.2V Pin=U6-H1
+Removed Pin From Net: NetName=3.3V Pin=U6-K2
+Removed Pin From Net: NetName=3.3V Pin=U6-K7
+Removed Pin From Net: NetName=5V Pin=U7-1
+Removed Pin From Net: NetName=5V Pin=U7-3
+Removed Pin From Net: NetName=3.3V Pin=U7-5
+Removed Pin From Net: NetName=5V Pin=U8-1
+Removed Pin From Net: NetName=1.8V Pin=U8-5
+Removed Pin From Net: NetName=3.3V Pin=U9-14
+Removed Pin From Net: NetName=3.3V Pin=U9-34
+Removed Member From Class: ClassName=DrudePower Member=C15
+Removed Member From Class: ClassName=DrudePower Member=C16
+Removed Member From Class: ClassName=DrudePower Member=C25
+Removed Member From Class: ClassName=DrudePower Member=C26
+Removed Member From Class: ClassName=DrudePower Member=C27
+Removed Member From Class: ClassName=DrudePower Member=C28
+Removed Member From Class: ClassName=DrudePower Member=C29
+Removed Member From Class: ClassName=DrudePower Member=C30
+Removed Member From Class: ClassName=DrudePower Member=C31
+Removed Member From Class: ClassName=DrudePower Member=C33
+Removed Member From Class: ClassName=DrudePower Member=C34
+Removed Member From Class: ClassName=DrudePower Member=C35
+Removed Member From Class: ClassName=DrudePower Member=C36
+Removed Member From Class: ClassName=DrudePower Member=C37
+Removed Member From Class: ClassName=DrudePower Member=C38
+Removed Member From Class: ClassName=DrudePower Member=C39
+Removed Member From Class: ClassName=DrudePower Member=C40
+Removed Member From Class: ClassName=DrudePower Member=C41
+Removed Member From Class: ClassName=DrudePower Member=C42
+Removed Member From Class: ClassName=DrudePower Member=R5
+Removed Member From Class: ClassName=LCD-Touch Member=R35
+Removed Member From Class: ClassName=DrudePower Member=U6
+Change Component DesignItemId : Designator=C63 Old DesignItemId=C0805C106K8PACTU New DesignItemId=C0805TBD
+Change Component DesignItemId : Designator=C1 Old DesignItemId=C1608X7R1H334K080AC New DesignItemId=GRM188R61A475KE15D
+Change Component DesignItemId : Designator=C2 Old DesignItemId=CC0603ZRY5V6BB105 New DesignItemId=GRM188R61A475KE15D
+Change Component DesignItemId : Designator=C3 Old DesignItemId=CC0603ZRY5V6BB105 New DesignItemId=GRM188R61A475KE15D
+Change Component DesignItemId : Designator=C18 Old DesignItemId=CC0603ZRY5V6BB105 New DesignItemId=GRM188R61A475KE15D
+Change Component DesignItemId : Designator=C19 Old DesignItemId=CC0603ZRY5V6BB105 New DesignItemId=GRM188R61A475KE15D
+Change Component DesignItemId : Designator=C20 Old DesignItemId=CC0603ZRY5V6BB105 New DesignItemId=GRM188R61A475KE15D
+Change Component DesignItemId : Designator=C21 Old DesignItemId=CC0603ZRY5V6BB105 New DesignItemId=GRM188R61A475KE15D
+Change Component DesignItemId : Designator=C8 Old DesignItemId=GRM31CR71H475KA12L New DesignItemId=GRM188R61A475KE15D
+Change Component DesignItemId : Designator=C62 Old DesignItemId=GRM155R60J105KE19D New DesignItemId=CC0603ZRY5V6BB105
+Change Component DesignItemId : Designator=C60 Old DesignItemId=GRM155R60J105KE19D New DesignItemId=GRM155R71C104KA88D
+Change Component DesignItemId : Designator=C43 Old DesignItemId=GRM155R71H103JA88D New DesignItemId=GRM155R71C104KA88D
+Change Component DesignItemId : Designator=C61 Old DesignItemId=GRM155R71H103JA88D New DesignItemId=GRM155R71C104KA88D
+Change Component DesignItemId : Designator=R35 Old DesignItemId=R0603TBD New DesignItemId=ERJ3EKF4701V
+Change Component DesignItemId : Designator=R3 Old DesignItemId=Resistor New DesignItemId=ERJ-3EKF1001V
+Change Component DesignItemId : Designator=R2 Old DesignItemId=Resistor New DesignItemId=GRM188R61A475KE15D
+Change Component DesignItemId : Designator=R15 Old DesignItemId=Resistor New DesignItemId=GRM188R61A475KE15D
+Change Component DesignItemId : Designator=R6 Old DesignItemId=Resistor New DesignItemId=RC0603FR-07100KL
+Change Component Footprint: Designator=C62 Old Footprint=C0402 New Footprint=C0603
+Change Component Footprint: Designator=C8 Old Footprint=C1206 New Footprint=C0603
+Change Component Footprint: Designator=R2 Old Footprint=R0603 New Footprint=C0603
+Change Component Footprint: Designator=R15 Old Footprint=R0603 New Footprint=C0603
+Change Component Comment : Designator=R3 Old Comment= New Comment=1K
+Change Component Comment : Designator=R2 Old Comment= New Comment=4.7uF
+Change Component Comment : Designator=R15 Old Comment= New Comment=4.7uF
+Change Component Comment : Designator=R6 Old Comment= New Comment=100K
+Change Component Comment : Designator=C2 Old Comment=1uF New Comment=4.7uF
+Change Component Comment : Designator=C3 Old Comment=1uF New Comment=4.7uF
+Change Component Comment : Designator=C18 Old Comment=1uF New Comment=4.7uF
+Change Component Comment : Designator=C19 Old Comment=1uF New Comment=4.7uF
+Change Component Comment : Designator=C20 Old Comment=1uF New Comment=4.7uF
+Change Component Comment : Designator=C21 Old Comment=1uF New Comment=4.7uF
+Change Component Comment : Designator=C60 Old Comment=1uF New Comment=100nF
+Change Component Comment : Designator=C43 Old Comment=10nF New Comment=100nF
+Change Component Comment : Designator=C61 Old Comment=10nF New Comment=100nF
+Change Component Comment : Designator=C63 Old Comment=10uF New Comment=C0805TBD
+Change Component Comment : Designator=C1 Old Comment=330nF New Comment=4.7uF
+Change Component Comment : Designator=R35 Old Comment=R0603TBD New Comment=4.7K
+Change Component Designator: OldDesignator=L2 NewDesignator=FL19
+Change Component Designator: OldDesignator=L3 NewDesignator=FL22
+Change Component Designator: OldDesignator=L4 NewDesignator=FL21
+Change Component Designator: OldDesignator=L6 NewDesignator=FL24
+Change Component Designator: OldDesignator=L7 NewDesignator=FL20
+Change Component Designator: OldDesignator=L8 NewDesignator=FL23
+Change Component Description : Designator=C43 Old Description=CAP CER 10nF 50V X7R 0402 New Description=CAP CER 0402 100nF 16V 10% X7R
+Change Component Description : Designator=C61 Old Description=CAP CER 10nF 50V X7R 0402 New Description=CAP CER 0402 100nF 16V 10% X7R
+Change Component Description : Designator=C60 Old Description=CAP CER 0402 1uF 6.3V 10% X5R New Description=CAP CER 0402 100nF 16V 10% X7R
+Change Component Description : Designator=C2 Old Description=CAP CER 0603 1uF 10V Y5V New Description=CAP CER 4.7UF 10V X5R 0603
+Change Component Description : Designator=C3 Old Description=CAP CER 0603 1uF 10V Y5V New Description=CAP CER 4.7UF 10V X5R 0603
+Change Component Description : Designator=C18 Old Description=CAP CER 0603 1uF 10V Y5V New Description=CAP CER 4.7UF 10V X5R 0603
+Change Component Description : Designator=C19 Old Description=CAP CER 0603 1uF 10V Y5V New Description=CAP CER 4.7UF 10V X5R 0603
+Change Component Description : Designator=C20 Old Description=CAP CER 0603 1uF 10V Y5V New Description=CAP CER 4.7UF 10V X5R 0603
+Change Component Description : Designator=C21 Old Description=CAP CER 0603 1uF 10V Y5V New Description=CAP CER 4.7UF 10V X5R 0603
+Change Component Description : Designator=C63 Old Description=CAP CER 0805 10uF 10V 10% X5R New Description=Capacitor Non Polarized
+Change Component Description : Designator=C1 Old Description=CAP CER 0603 330nF 50V 10% X7R New Description=CAP CER 4.7UF 10V X5R 0603
+Change Component Description : Designator=R6 Old Description=Resistor New Description=RES 100K OHM 1/10W 1% 0603 SMD
+Change Component Description : Designator=R3 Old Description=Resistor New Description=RES 0603 1K 100mW 1%
+Change Component Description : Designator=R35 Old Description=Resistor New Description=RES 0603 4.7K 100mW 1%
+Change Component Library : Designator=C2 Old Library=3Delight.SCHLIB New Library=hmi.SchLib
+Change Component Library : Designator=C3 Old Library=3Delight.SCHLIB New Library=hmi.SchLib
+Change Component Library : Designator=C18 Old Library=3Delight.SCHLIB New Library=hmi.SchLib
+Change Component Library : Designator=C19 Old Library=3Delight.SCHLIB New Library=hmi.SchLib
+Change Component Library : Designator=C20 Old Library=3Delight.SCHLIB New Library=hmi.SchLib
+Change Component Library : Designator=C21 Old Library=3Delight.SCHLIB New Library=hmi.SchLib
+Change Component Library : Designator=C43 Old Library=Tigershark3D.SchLib New Library=3Delight.SCHLIB
+Change Component Library : Designator=C61 Old Library=Tigershark3D.SchLib New Library=3Delight.SCHLIB
+Added Component: Designator=C74(C0603)
+Added Component: Designator=C76(C0603)
+Added Component: Designator=C78(C0603)
+Added Component: Designator=C79(C0603)
+Added Component: Designator=C80(C0402)
+Added Component: Designator=C81(C0603)
+Added Component: Designator=C82(C0402)
+Added Component: Designator=C83(C0402)
+Added Component: Designator=C84(C0603)
+Added Component: Designator=C85(C0603)
+Added Component: Designator=C86(C0603)
+Added Component: Designator=C87(C0603)
+Added Component: Designator=C88(C0603)
+Added Component: Designator=C89(C0603)
+Added Component: Designator=C90(C0603)
+Added Component: Designator=FL1(C0603)
+Added Component: Designator=FL2(C0603)
+Added Component: Designator=FL3(C0603)
+Added Component: Designator=FL4(C0603)
+Added Component: Designator=FL5(C0603)
+Added Component: Designator=FL6(C0603)
+Added Component: Designator=FL7(C0603)
+Added Component: Designator=FL8(C0603)
+Added Component: Designator=FL9(C0603)
+Added Component: Designator=FL10(C0603)
+Added Component: Designator=FL11(C0603)
+Added Component: Designator=FL12(C0603)
+Added Component: Designator=FL13(C0603)
+Added Component: Designator=FL14(C0603)
+Added Component: Designator=FL15(C0603)
+Added Component: Designator=FL16(C0603)
+Added Component: Designator=FL17(C0603)
+Added Component: Designator=FL18(C0603)
+Added Component: Designator=Q1(SOT563-FL50P162X170-6N)
+Added Component: Designator=R36(R0603)
+Added Component: Designator=TP1(TP1-27TH)
+Added Component: Designator=TP4(TP1-27TH)
+Added Component: Designator=TP5(TP1-27TH)
+Added Component: Designator=TP6(TP1-27TH)
+Added Component: Designator=TP7(TP1-27TH)
+Added Component: Designator=TP8(TP1-27TH)
+Added Component: Designator=TP9(TP1-27TH)
+Added Component: Designator=TP10(TP1-27TH)
+Added Component: Designator=TP11(TP1-27TH)
+Added Component: Designator=TP12(TP1-27TH)
+Added Component: Designator=TP13(TP1-27TH)
+Added Component: Designator=TP14(TP1-27TH)
+Added Component: Designator=TP15(TP1-27TH)
+Added Component: Designator=TP16(TP1-27TH)
+Added Component: Designator=TP17(TP1-27TH)
+Added Component: Designator=TP18(TP1-27TH)
+Added Component: Designator=TP19(TP1-27TH)
+Added Component: Designator=TP20(TP1-27TH)
+Added Component: Designator=TP21(TP1-27TH)
+Added Pin To Net: NetName=3.3V Pin=C4-1
+Added Pin To Net: NetName=3.3V Pin=C13-1
+Added Pin To Net: NetName=3.3V Pin=C17-1
+Added Pin To Net: NetName=GND Pin=C17-2
+Added Pin To Net: NetName=3.3V Pin=C43-1
+Added Pin To Net: NetName=GND Pin=C43-2
+Added Pin To Net: NetName=3.3V Pin=C64-1
+Added Pin To Net: NetName=3.3V Pin=C65-1
+Added Pin To Net: NetName=5.5V Pin=C74-1
+Added Pin To Net: NetName=GND Pin=C74-2
+Added Pin To Net: NetName=-5.5V Pin=C76-1
+Added Pin To Net: NetName=GND Pin=C76-2
+Added Pin To Net: NetName=3.3V Pin=C78-1
+Added Pin To Net: NetName=GND Pin=C78-2
+Added Pin To Net: NetName=1.8V Pin=C79-1
+Added Pin To Net: NetName=GND Pin=C79-2
+Added Pin To Net: NetName=1.2V Pin=C80-1
+Added Pin To Net: NetName=GND Pin=C80-2
+Added Pin To Net: NetName=5V Pin=C81-1
+Added Pin To Net: NetName=GND Pin=C82-2
+Added Pin To Net: NetName=NetC56_1 Pin=C83-1
+Added Pin To Net: NetName=GND Pin=C83-2
+Added Pin To Net: NetName=1.2V Pin=C84-1
+Added Pin To Net: NetName=GND Pin=C84-2
+Added Pin To Net: NetName=GND Pin=C85-2
+Added Pin To Net: NetName=GND Pin=C86-2
+Added Pin To Net: NetName=GND Pin=C87-2
+Added Pin To Net: NetName=GND Pin=C88-2
+Added Pin To Net: NetName=GND Pin=C89-2
+Added Pin To Net: NetName=GND Pin=C90-2
+Added Pin To Net: NetName=5V Pin=FL1-1
+Added Pin To Net: NetName=3.3V Pin=FL2-1
+Added Pin To Net: NetName=3.3V Pin=FL3-2
+Added Pin To Net: NetName=5.5V Pin=FL4-2
+Added Pin To Net: NetName=-5.5V Pin=FL5-2
+Added Pin To Net: NetName=5V Pin=FL6-1
+Added Pin To Net: NetName=3.3V Pin=FL7-2
+Added Pin To Net: NetName=5V Pin=FL8-1
+Added Pin To Net: NetName=1.8V Pin=FL9-2
+Added Pin To Net: NetName=1.2V Pin=FL10-2
+Added Pin To Net: NetName=3.3V Pin=FL13-1
+Added Pin To Net: NetName=5V Pin=FL15-1
+Added Pin To Net: NetName=3.3V Pin=FL16-1
+Added Pin To Net: NetName=3.3V Pin=FL17-1
+Added Pin To Net: NetName=3.3V Pin=FL18-2
+Added Pin To Net: NetName=PCKIN Pin=J3-4
+Added Pin To Net: NetName=DAOUT Pin=J3-6
+Added Pin To Net: NetName=NetR13_1 Pin=J5-32
+Added Pin To Net: NetName=GND Pin=Q1-1
+Added Pin To Net: NetName=5V Pin=Q1-3
+Added Pin To Net: NetName=GND Pin=R36-1
+Added Pin To Net: NetName=5V Pin=TP8-TP
+Added Pin To Net: NetName=LED-A Pin=TP9-TP
+Added Pin To Net: NetName=NetR29_1 Pin=TP10-TP
+Added Pin To Net: NetName=NetJ4_10 Pin=TP11-TP
+Added Pin To Net: NetName=NetR13_1 Pin=TP16-TP
+Added Pin To Net: NetName=I2C_SDA Pin=TP17-TP
+Added Pin To Net: NetName=INT Pin=TP18-TP
+Added Pin To Net: NetName=NetJ5_28 Pin=TP19-TP
+Added Pin To Net: NetName=I2C_SCL Pin=TP20-TP
+Change Net Name : Old Net Name=1.2V New Net Name=NetC15_1
+Change Net Name : Old Net Name=NetJ1_20 New Net Name=NetFL23_2
+Change Net Name : Old Net Name=NetR13_1 New Net Name=NetJ5_32
+Added Pin To Net: NetName=1.2V Pin=C3-1
+Added Pin To Net: NetName=1.2V Pin=FL10-1
+Added Pin To Net: NetName=1.2V Pin=FL11-1
+Added Pin To Net: NetName=1.2V Pin=FL12-1
+Added Pin To Net: NetName=1.2V Pin=FL14-1
+Added Pin To Net: NetName=1.2V Pin=J4-5
+Added Pin To Net: NetName=1.2V Pin=TP1-TP
+Added Pin To Net: NetName=1.2V Pin=U5-1
+Added Pin To Net: NetName=1.2V Pin=U5-2
+Added Net: Name=1.2V
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=NetC2_1 Pin=FL1-2
+Added Pin To Net: NetName=NetC2_1 Pin=U5-8
+Added Net: Name=NetC2_1
+Added Pin To Net: NetName=NetC5_1 Pin=C5-1
+Added Pin To Net: NetName=NetC5_1 Pin=FL2-2
+Added Pin To Net: NetName=NetC5_1 Pin=R7-1
+Added Pin To Net: NetName=NetC5_1 Pin=U2-7
+Added Net: Name=NetC5_1
+Added Pin To Net: NetName=NetC8_1 Pin=C8-1
+Added Pin To Net: NetName=NetC8_1 Pin=C12-2
+Added Pin To Net: NetName=NetC8_1 Pin=FL5-1
+Added Pin To Net: NetName=NetC8_1 Pin=R8-1
+Added Pin To Net: NetName=NetC8_1 Pin=TP5-TP
+Added Pin To Net: NetName=NetC8_1 Pin=U2-2
+Added Net: Name=NetC8_1
+Added Pin To Net: NetName=NetC10_1 Pin=C10-1
+Added Pin To Net: NetName=NetC10_1 Pin=FL4-1
+Added Pin To Net: NetName=NetC10_1 Pin=R1-2
+Added Pin To Net: NetName=NetC10_1 Pin=TP4-TP
+Added Pin To Net: NetName=NetC10_1 Pin=U1-9
+Added Net: Name=NetC10_1
+Added Pin To Net: NetName=NetC11_1 Pin=C11-1
+Added Pin To Net: NetName=NetC11_1 Pin=FL15-2
+Added Pin To Net: NetName=NetC11_1 Pin=L1-1
+Added Pin To Net: NetName=NetC11_1 Pin=U3-5
+Added Net: Name=NetC11_1
+Added Pin To Net: NetName=NetC18_1 Pin=C18-1
+Added Pin To Net: NetName=NetC18_1 Pin=FL6-2
+Added Pin To Net: NetName=NetC18_1 Pin=U7-1
+Added Pin To Net: NetName=NetC18_1 Pin=U7-3
+Added Net: Name=NetC18_1
+Added Pin To Net: NetName=NetC19_1 Pin=C19-1
+Added Pin To Net: NetName=NetC19_1 Pin=FL7-1
+Added Pin To Net: NetName=NetC19_1 Pin=TP6-TP
+Added Pin To Net: NetName=NetC19_1 Pin=U7-5
+Added Net: Name=NetC19_1
+Added Pin To Net: NetName=NetC20_1 Pin=C20-1
+Added Pin To Net: NetName=NetC20_1 Pin=FL8-2
+Added Pin To Net: NetName=NetC20_1 Pin=U8-1
+Added Net: Name=NetC20_1
+Added Pin To Net: NetName=NetC21_1 Pin=C21-1
+Added Pin To Net: NetName=NetC21_1 Pin=FL9-1
+Added Pin To Net: NetName=NetC21_1 Pin=TP7-TP
+Added Pin To Net: NetName=NetC21_1 Pin=U8-5
+Added Net: Name=NetC21_1
+Added Pin To Net: NetName=NetC28_1 Pin=C28-1
+Added Pin To Net: NetName=NetC28_1 Pin=C29-2
+Added Pin To Net: NetName=NetC28_1 Pin=C85-1
+Added Pin To Net: NetName=NetC28_1 Pin=FL11-2
+Added Pin To Net: NetName=NetC28_1 Pin=U6-D10
+Added Net: Name=NetC28_1
+Added Pin To Net: NetName=NetC30_1 Pin=C30-1
+Added Pin To Net: NetName=NetC30_1 Pin=C31-2
+Added Pin To Net: NetName=NetC30_1 Pin=C33-2
+Added Pin To Net: NetName=NetC30_1 Pin=C86-1
+Added Pin To Net: NetName=NetC30_1 Pin=FL12-2
+Added Pin To Net: NetName=NetC30_1 Pin=U6-A1
+Added Pin To Net: NetName=NetC30_1 Pin=U6-H1
+Added Net: Name=NetC30_1
+Added Pin To Net: NetName=NetC34_1 Pin=C34-1
+Added Pin To Net: NetName=NetC34_1 Pin=C35-2
+Added Pin To Net: NetName=NetC34_1 Pin=C36-2
+Added Pin To Net: NetName=NetC34_1 Pin=C87-1
+Added Pin To Net: NetName=NetC34_1 Pin=FL13-2
+Added Pin To Net: NetName=NetC34_1 Pin=U6-B1
+Added Pin To Net: NetName=NetC34_1 Pin=U6-G1
+Added Net: Name=NetC34_1
+Added Pin To Net: NetName=NetC37_1 Pin=C37-1
+Added Pin To Net: NetName=NetC37_1 Pin=C38-2
+Added Pin To Net: NetName=NetC37_1 Pin=C88-1
+Added Pin To Net: NetName=NetC37_1 Pin=FL14-2
+Added Pin To Net: NetName=NetC37_1 Pin=U6-A8
+Added Net: Name=NetC37_1
+Added Pin To Net: NetName=NetC39_1 Pin=C39-1
+Added Pin To Net: NetName=NetC39_1 Pin=C40-2
+Added Pin To Net: NetName=NetC39_1 Pin=C89-1
+Added Pin To Net: NetName=NetC39_1 Pin=FL16-2
+Added Pin To Net: NetName=NetC39_1 Pin=U6-K2
+Added Net: Name=NetC39_1
+Added Pin To Net: NetName=NetC41_1 Pin=C41-1
+Added Pin To Net: NetName=NetC41_1 Pin=C42-2
+Added Pin To Net: NetName=NetC41_1 Pin=C90-1
+Added Pin To Net: NetName=NetC41_1 Pin=FL17-2
+Added Pin To Net: NetName=NetC41_1 Pin=R5-1
+Added Pin To Net: NetName=NetC41_1 Pin=U6-K7
+Added Net: Name=NetC41_1
+Added Pin To Net: NetName=NetC45_1 Pin=C45-1
+Added Pin To Net: NetName=NetC45_1 Pin=FL3-1
+Added Pin To Net: NetName=NetC45_1 Pin=R4-1
+Added Pin To Net: NetName=NetC45_1 Pin=U1-3
+Added Pin To Net: NetName=NetC45_1 Pin=U1-4
+Added Net: Name=NetC45_1
+Added Pin To Net: NetName=NetC53_1 Pin=C53-1
+Added Pin To Net: NetName=NetC53_1 Pin=C54-1
+Added Pin To Net: NetName=NetC53_1 Pin=C82-1
+Added Pin To Net: NetName=NetC53_1 Pin=FL18-1
+Added Pin To Net: NetName=NetC53_1 Pin=U9-14
+Added Pin To Net: NetName=NetC53_1 Pin=U9-34
+Added Net: Name=NetC53_1
+Added Pin To Net: NetName=NetC81_2 Pin=C81-2
+Added Pin To Net: NetName=NetC81_2 Pin=Q1-5
+Added Pin To Net: NetName=NetC81_2 Pin=R6-1
+Added Pin To Net: NetName=NetC81_2 Pin=R35-2
+Added Net: Name=NetC81_2
+Added Pin To Net: NetName=NetQ1_6 Pin=Q1-6
+Added Pin To Net: NetName=NetQ1_6 Pin=R35-1
+Added Net: Name=NetQ1_6
+Added Pin To Net: NetName=NetTP12_TP Pin=TP12-TP
+Added Pin To Net: NetName=NetTP12_TP Pin=U4-28
+Added Pin To Net: NetName=NetTP12_TP Pin=U9-40
+Added Net: Name=NetTP12_TP
+Added Pin To Net: NetName=NetTP13_TP Pin=TP13-TP
+Added Pin To Net: NetName=NetTP13_TP Pin=U6-K4
+Added Pin To Net: NetName=NetTP13_TP Pin=U9-39
+Added Net: Name=NetTP13_TP
+Added Pin To Net: NetName=NetTP14_TP Pin=TP14-TP
+Added Pin To Net: NetName=NetTP14_TP Pin=U6-J4
+Added Pin To Net: NetName=NetTP14_TP Pin=U9-1
+Added Net: Name=NetTP14_TP
+Added Pin To Net: NetName=NetTP15_TP Pin=TP15-TP
+Added Pin To Net: NetName=NetTP15_TP Pin=TP21-TP
+Added Pin To Net: NetName=NetTP15_TP Pin=U6-K6
+Added Pin To Net: NetName=NetTP15_TP Pin=U9-32
+Added Net: Name=NetTP15_TP
+Added Pin To Net: NetName=VUSB Pin=C62-1
+Added Pin To Net: NetName=VUSB Pin=C63-1
+Added Pin To Net: NetName=VUSB Pin=FL20-1
+Added Pin To Net: NetName=VUSB Pin=Q1-2
+Added Pin To Net: NetName=VUSB Pin=Q1-4
+Added Pin To Net: NetName=VUSB Pin=R6-2
+Added Pin To Net: NetName=VUSB Pin=R36-2
+Added Pin To Net: NetName=VUSB Pin=TP2-TP
+Added Net: Name=VUSB
+Added Member To Class: ClassName=TC358779XBG Member=Component C15 100nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C16 10nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C25 100nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C26 10nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C27 10nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C28 100nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C29 10nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C30 100nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C31 10nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C33 10nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C34 100nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C35 10nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C36 10nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C37 100nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C38 10nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C39 100nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C40 10nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C41 100nF
+Added Member To Class: ClassName=TC358779XBG Member=Component C42 10nF
+Added Member To Class: ClassName=DrudePower Member=Component C74 4.7uF
+Added Member To Class: ClassName=DrudePower Member=Component C76 4.7uF
+Added Member To Class: ClassName=DrudePower Member=Component C78 4.7uF
+Added Member To Class: ClassName=DrudePower Member=Component C79 4.7uF
+Added Member To Class: ClassName=TC358779XBG Member=Component C80 100nF
+Added Member To Class: ClassName=DrudePower Member=Component C81 100nF
+Added Member To Class: ClassName=MCU Member=Component C82 1uF
+Added Member To Class: ClassName=MCU Member=Component C83 1uF
+Added Member To Class: ClassName=TC358779XBG Member=Component C84 4.7uF
+Added Member To Class: ClassName=TC358779XBG Member=Component C85 4.7uF
+Added Member To Class: ClassName=TC358779XBG Member=Component C86 4.7uF
+Added Member To Class: ClassName=TC358779XBG Member=Component C87 4.7uF
+Added Member To Class: ClassName=TC358779XBG Member=Component C88 4.7uF
+Added Member To Class: ClassName=TC358779XBG Member=Component C89 4.7uF
+Added Member To Class: ClassName=TC358779XBG Member=Component C90 4.7uF
+Added Member To Class: ClassName=DrudePower Member=Component FL1 MPZ1608S221A
+Added Member To Class: ClassName=DrudePower Member=Component FL2 MPZ1608S221A
+Added Member To Class: ClassName=DrudePower Member=Component FL3 MPZ1608S221A
+Added Member To Class: ClassName=DrudePower Member=Component FL4 MPZ1608S221A
+Added Member To Class: ClassName=DrudePower Member=Component FL5 MPZ1608S221A
+Added Member To Class: ClassName=DrudePower Member=Component FL6 MPZ1608S221A
+Added Member To Class: ClassName=DrudePower Member=Component FL7 MPZ1608S221A
+Added Member To Class: ClassName=DrudePower Member=Component FL8 MPZ1608S221A
+Added Member To Class: ClassName=DrudePower Member=Component FL9 MPZ1608S221A
+Added Member To Class: ClassName=TC358779XBG Member=Component FL10 MPZ1608S221A
+Added Member To Class: ClassName=TC358779XBG Member=Component FL11 MPZ1608S221A
+Added Member To Class: ClassName=TC358779XBG Member=Component FL12 MPZ1608S221A
+Added Member To Class: ClassName=TC358779XBG Member=Component FL13 MPZ1608S221A
+Added Member To Class: ClassName=TC358779XBG Member=Component FL14 MPZ1608S221A
+Added Member To Class: ClassName=DrudePower Member=Component FL15 MPZ1608S221A
+Added Member To Class: ClassName=TC358779XBG Member=Component FL16 MPZ1608S221A
+Added Member To Class: ClassName=TC358779XBG Member=Component FL17 MPZ1608S221A
+Added Member To Class: ClassName=MCU Member=Component FL18 MPZ1608S221A
+Added Member To Class: ClassName=DrudePower Member=Component Q1 DMC2400UV
+Added Member To Class: ClassName=TC358779XBG Member=Component R5 2K
+Added Member To Class: ClassName=DrudePower Member=Component R35 4.7K
+Added Member To Class: ClassName=DrudePower Member=Component R36 100K
+Added Member To Class: ClassName=DrudePower Member=Component TP1 TestPoint
+Added Member To Class: ClassName=DrudePower Member=Component TP4 TestPoint
+Added Member To Class: ClassName=DrudePower Member=Component TP5 TestPoint
+Added Member To Class: ClassName=DrudePower Member=Component TP6 TestPoint
+Added Member To Class: ClassName=DrudePower Member=Component TP7 TestPoint
+Added Member To Class: ClassName=DrudePower Member=Component TP8 TestPoint
+Added Member To Class: ClassName=DrudePower Member=Component TP9 TestPoint
+Added Member To Class: ClassName=DrudePower Member=Component TP10 TestPoint
+Added Member To Class: ClassName=MCU Member=Component TP11 TestPoint
+Added Member To Class: ClassName=MCU Member=Component TP12 TestPoint
+Added Member To Class: ClassName=MCU Member=Component TP13 TestPoint
+Added Member To Class: ClassName=MCU Member=Component TP14 TestPoint
+Added Member To Class: ClassName=MCU Member=Component TP15 TestPoint
+Added Member To Class: ClassName=MCU Member=Component TP16 TestPoint
+Added Member To Class: ClassName=MCU Member=Component TP17 TestPoint
+Added Member To Class: ClassName=MCU Member=Component TP18 TestPoint
+Added Member To Class: ClassName=MCU Member=Component TP19 TestPoint
+Added Member To Class: ClassName=MCU Member=Component TP20 TestPoint
+Added Member To Class: ClassName=TC358779XBG Member=Component TP21 TestPoint
+Added Member To Class: ClassName=TC358779XBG Member=Component U6 TC358779

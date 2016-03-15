@@ -1,0 +1,4 @@
+Added Component: Designator=R34(R0603)
+Added Pin To Net: NetName=NetR29_1 Pin=R34-1
+Added Pin To Net: NetName=NetC72_1 Pin=R34-2
+Added Member To Class: ClassName=DrudePower Member=Component R34 R0603TBD

@@ -1,0 +1,7 @@
+Change Component Comment : Designator=C91 Old Comment=10nF New Comment=C0402TBD
+Change Component Comment : Designator=C61 Old Comment=C0402TBD New Comment=10nF
+Change Component Designator: OldDesignator=C61 NewDesignator=C91
+Change Component Designator: OldDesignator=C91 NewDesignator=C61
+Added Pin To Net: NetName=GND Pin=C61-1
+Added Pin To Net: NetName=3.3V Pin=C61-2
+Added Member To Class: ClassName=MCU Member=Component C91 10nF

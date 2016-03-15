@@ -1,0 +1,6 @@
+Change Component DesignItemId : Designator=R8 Old DesignItemId=Resistor New DesignItemId=CRCW0402165KFKED
+Change Component DesignItemId : Designator=R7 Old DesignItemId=Resistor New DesignItemId=RC0402FR-07100KL
+Change Component Footprint: Designator=R7 Old Footprint=R0603 New Footprint=R0402
+Change Component Footprint: Designator=R8 Old Footprint=R0603 New Footprint=R0402
+Change Component Comment : Designator=R7 Old Comment= New Comment=100K
+Change Component Comment : Designator=R8 Old Comment= New Comment=165K

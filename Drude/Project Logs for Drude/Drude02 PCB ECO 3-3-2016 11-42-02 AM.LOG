@@ -1,0 +1,36 @@
+Removed Pin From Net: NetName=3.3V Pin=C43-1
+Removed Pin From Net: NetName=GND Pin=C43-2
+Removed Pin From Net: NetName=GND Pin=C61-1
+Removed Pin From Net: NetName=NetC61_2 Pin=C61-2
+Change Component DesignItemId : Designator=C43 Old DesignItemId=GRM155R71C104KA88D New DesignItemId=GRM155R71H103JA88D
+Change Component DesignItemId : Designator=C61 Old DesignItemId=GRM155R71C104KA88D New DesignItemId=GRM155R71H103JA88D
+Change Component DesignItemId : Designator=C1 Old DesignItemId=GRM188R61A475KE15D New DesignItemId=C1608X7R1H334K080AC
+Change Component DesignItemId : Designator=R15 Old DesignItemId=GRM188R61A475KE15D New DesignItemId=RC0603FR-0756KL
+Change Component DesignItemId : Designator=R2 Old DesignItemId=GRM188R61A475KE15D New DesignItemId=RC0603FR-07191KL
+Change Component Footprint: Designator=R2 Old Footprint=C0603 New Footprint=R0603
+Change Component Footprint: Designator=R15 Old Footprint=C0603 New Footprint=R0603
+Change Component Comment : Designator=R15 Old Comment=4.7uF New Comment=56K
+Change Component Comment : Designator=R2 Old Comment=4.7uF New Comment=191K
+Change Component Comment : Designator=C1 Old Comment=4.7uF New Comment=330nF
+Change Component Comment : Designator=C43 Old Comment=100nF New Comment=10nF
+Change Component Comment : Designator=C61 Old Comment=100nF New Comment=10nF
+Change Component Description : Designator=C1 Old Description=CAP CER 4.7UF 10V X5R 0603 New Description=CAP CER 0603 330nF 50V 10% X7R
+Change Component Description : Designator=C43 Old Description=CAP CER 0402 100nF 16V 10% X7R New Description=CAP CER 10nF 50V X7R 0402
+Change Component Description : Designator=C61 Old Description=CAP CER 0402 100nF 16V 10% X7R New Description=CAP CER 10nF 50V X7R 0402
+Change Component Library : Designator=C43 Old Library=3Delight.SCHLIB New Library=hmi.SchLib
+Change Component Library : Designator=C61 Old Library=3Delight.SCHLIB New Library=hmi.SchLib
+Added Component: Designator=C91(C0402)
+Added Pin To Net: NetName=GND Pin=C43-1
+Added Pin To Net: NetName=3.3V Pin=C43-2
+Added Pin To Net: NetName=3.3V Pin=C61-1
+Added Pin To Net: NetName=GND Pin=C61-2
+Added Pin To Net: NetName=NetC61_2 Pin=C61-1
+Added Pin To Net: NetName=GND Pin=C61-2
+Added Pin To Net: NetName=NetC10_1 Pin=R2-1
+Added Pin To Net: NetName=NetR3_1 Pin=R15-1
+Added Pin To Net: NetName=GND Pin=R15-2
+Change Net Name : Old Net Name=NetC61_2 New Net Name=NetC91_1
+Added Pin To Net: NetName=NetR2_2 Pin=R2-2
+Added Pin To Net: NetName=NetR2_2 Pin=R3-2
+Added Net: Name=NetR2_2
+Added Member To Class: ClassName=MCU Member=Component C91 10nF

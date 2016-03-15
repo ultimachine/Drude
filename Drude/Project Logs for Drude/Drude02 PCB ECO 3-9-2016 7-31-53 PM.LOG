@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=VDDIO2 Pin=R5-1
+Added Pin To Net: NetName=AVDD33 Pin=R5-1

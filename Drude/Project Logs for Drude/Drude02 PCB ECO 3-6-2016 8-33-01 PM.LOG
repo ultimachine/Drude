@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=UGND Pin=D3-A
+Removed Pin From Net: NetName=GND Pin=D3-C
+Added Pin To Net: NetName=USBSHIELD Pin=D3-A
+Added Pin To Net: NetName=UGND Pin=D3-C

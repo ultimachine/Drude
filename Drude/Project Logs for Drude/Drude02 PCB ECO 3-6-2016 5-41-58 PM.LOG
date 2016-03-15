@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=5V Pin=U9-7
+Change Component DesignItemId : Designator=C82 Old DesignItemId=GRM155R60J105KE19D New DesignItemId=C0805C106K8PACTU
+Change Component Footprint: Designator=C82 Old Footprint=C0402 New Footprint=C0805
+Change Component Comment : Designator=C82 Old Comment=1uF New Comment=10uF
+Added Pin To Net: NetName=NetC53_1 Pin=U9-7
+Change Net Name : Old Net Name=NetC53_1 New Net Name=VBUS

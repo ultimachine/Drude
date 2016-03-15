@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=GND Pin=D3-C
+Added Pin To Net: NetName=USBSHIELD Pin=D3-C

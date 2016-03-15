@@ -1,0 +1,5 @@
+Change Net Name : Old Net Name=NetL5_1 New Net Name=UR_P
+Change Net Name : Old Net Name=NetL5_4 New Net Name=UR_N
+Added Differential Pair: Name=UR
+Added Member To Class: ClassName=USB Member=Wire UR_N
+Added Member To Class: ClassName=USB Member=Wire UR_P
