@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: Drude02.PcbDoc   11/24/2015  4:55:18 PM
+NCDrill File Report For: Drude02.PcbDoc   5/3/2016  6:30:27 PM
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -8,18 +8,20 @@ ASCII SlotHoles File : Drude_0.1a-SlotHoles.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      8mil (0.203mm)                                            Round             187       PTH        12.58inch (319.58mm)
-T2      12mil (0.3mm)                                             Round             12        PTH        0.55inch (13.97mm)
-T3      15mil (0.381mm)                                           Round             119       PTH        26.34inch (669.05mm)
-T4      20mil (0.5mm)                                             Slot              2         PTH        0.60inch (15.33mm)
-T5      20mil (0.508mm)                                           Round             7         PTH        1.07inch (27.18mm)
-T6      22mil (0.551mm)                                           Slot              2         PTH        0.41inch (10.30mm)
-T7      24mil (0.61mm)                                            Round             3         PTH        0.29inch (7.27mm)
-T8      28mil (0.701mm)                                           Round             4         PTH        0.79inch (20.01mm)
-T9      38mil (0.965mm)                                           Round             6         PTH        0.50inch (12.70mm)
-T10     51mil (1.3mm)                                             Round             4         PTH        1.01inch (25.67mm)
-T11     130mil (3.299mm)                                          Round             4         NPTH       4.91inch (124.72mm)
+T1      8mil (0.203mm)                                            Round             167       PTH        14.30inch (363.33mm)
+T2      10mil (0.254mm)                                           Round             34        PTH        9.63inch (244.66mm)
+T3      12mil (0.3mm)                                             Round             12        PTH        0.65inch (16.51mm)
+T4      12mil (0.305mm)                                           Round             72        PTH        16.71inch (424.44mm)
+T5      15mil (0.381mm)                                           Round             80        PTH        17.49inch (444.21mm)
+T6      20mil (0.5mm)                                             Slot              2         PTH        0.60inch (15.33mm)
+T7      20mil (0.508mm)                                           Round             4         PTH        0.32inch (8.03mm)
+T8      22mil (0.551mm)                                           Slot              2         PTH        0.43inch (10.90mm)
+T9      24mil (0.61mm)                                            Round             2         PTH        0.21inch (5.23mm)
+T10     28mil (0.701mm)                                           Round             4         PTH        0.79inch (20.01mm)
+T11     38mil (0.965mm)                                           Round             6         PTH        0.50inch (12.70mm)
+T12     51mil (1.3mm)                                             Round             4         PTH        0.96inch (24.47mm)
+T13     130mil (3.299mm)                                          Round             4         NPTH       5.12inch (129.96mm)
 ----------------------------------------------------------------------------------------------------------------------------------
-Totals                                                                              350
+Totals                                                                              393
 
-Total Processing Time (hh:mm:ss) : 00:00:01
+Total Processing Time (hh:mm:ss) : 00:00:00

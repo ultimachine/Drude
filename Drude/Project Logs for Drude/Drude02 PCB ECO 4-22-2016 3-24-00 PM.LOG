@@ -1,0 +1,9 @@
+Removed Member From Class: ClassName=HDMI Member=HDMI_CON_CK_N
+Removed Member From Class: ClassName=HDMI Member=HDMI_CON_CK_P
+Removed Member From Class: ClassName=HDMI Member=HDMI_CON_D0_N
+Removed Member From Class: ClassName=HDMI Member=HDMI_CON_D0_P
+Removed Member From Class: ClassName=HDMI Member=HDMI_CON_D1_N
+Removed Member From Class: ClassName=HDMI Member=HDMI_CON_D1_P
+Removed Member From Class: ClassName=HDMI Member=HDMI_CON_D2_N
+Removed Member From Class: ClassName=HDMI Member=HDMI_CON_D2_P
+Added Class: Name=HDMI_CONN

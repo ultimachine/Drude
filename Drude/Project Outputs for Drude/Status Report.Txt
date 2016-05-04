@@ -1,10 +1,11 @@
-Output: Mixed Sim
-Type  : AdvSimNetlist
-From  : Project [Drude.PrjPcb]
-   Generated File[Drude.nsx]
+Output: Simple BOM
+Type  : SimpleBOM
+From  : Variant [[No Variations]] of Project [Drude.PrjPcb]
+   Generated File[Drude02.BOM]
+   Generated File[Drude02.CSV]
 
 
-Files Generated   : 1
+Files Generated   : 2
 Documents Printed : 0
 
-Finished Output Generation At 8:11:29 PM On 3/4/2016
+Finished Output Generation At 9:52:16 PM On 4/22/2016

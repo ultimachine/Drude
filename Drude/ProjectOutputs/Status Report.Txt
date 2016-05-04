@@ -1,10 +1,10 @@
 Output: Export STEP
 Type  : ExportSTEP
-From  : PCB Document [Drude02.PcbDoc]
+From  : Variant [Default] of PCB Document [Drude02.PcbDoc]
    Generated File[Drude_0.1a.step]
 
 
 Files Generated   : 1
 Documents Printed : 0
 
-Finished Output Generation At 4:55:41 PM On 11/24/2015
+Finished Output Generation At 6:30:51 PM On 5/3/2016

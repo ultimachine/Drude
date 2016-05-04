@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=1.8V Pin=C4-1
+Removed Pin From Net: NetName=GND Pin=C4-2
+Removed Pin From Net: NetName=1.8V Pin=C13-1
+Removed Pin From Net: NetName=GND Pin=C13-2
+Removed Pin From Net: NetName=3.3V Pin=C17-1
+Removed Pin From Net: NetName=GND Pin=C17-2
+Removed Pin From Net: NetName=3.3V Pin=C64-1
+Removed Pin From Net: NetName=GND Pin=C64-2
+Removed Pin From Net: NetName=3.3V Pin=C65-1
+Removed Pin From Net: NetName=GND Pin=C65-2
+Removed Member From Class: ClassName=LCD-Touch Member=C4
+Removed Member From Class: ClassName=LCD-Touch Member=C13
+Removed Member From Class: ClassName=LCD-Touch Member=C17
+Removed Member From Class: ClassName=LCD-Touch Member=C64
+Removed Member From Class: ClassName=LCD-Touch Member=C65
