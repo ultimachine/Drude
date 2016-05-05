@@ -1,0 +1,22 @@
+Do not handcuff the fabricator.  
+Tell the Tell them what impedance value 
+you are targeting with what line widths and 
+leave the rest to them. On your prints, please specify the 
+pitch or edge pitch or edge-edge spacing for 
+diff pairs. Allow them to 
+modify the dielectrics/lines as needed for their processes to
+achieve the required impedance by placing a note on
+the fabrication drawing allowing 
+this.  Remember, they are 
+the ones responsible for meeting the 
+required impedance.
+
+GTL,GBL
+4mil, 8mil space  = 100ohm diff
+5mil, 8mil space = 90ohm diff
+5mil = 50ohm
+Z = +/- 5ohm
+
+14.855 touch tail to pcb edge
+2,7mm insertion depth
+12.155 edge to edge

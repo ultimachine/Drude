@@ -1,0 +1,15 @@
+Added Component: Designator=C13(C0402)
+Added Component: Designator=C17(C0402)
+Added Component: Designator=J7(HDR1X4H)
+Added Pin To Net: NetName=BTN_2 Pin=C13-1
+Added Pin To Net: NetName=PWR_BTN Pin=C17-1
+Added Pin To Net: NetName=GND Pin=C17-2
+Added Pin To Net: NetName=GND Pin=J7-1
+Added Pin To Net: NetName=NetR25_2 Pin=J7-2
+Added Pin To Net: NetName=GND Pin=J7-3
+Added Pin To Net: NetName=NetR24_2 Pin=J7-4
+Change Net Name : Old Net Name=NetR24_2 New Net Name=NetJ7_4
+Change Net Name : Old Net Name=NetR25_2 New Net Name=NetJ7_2
+Added Member To Class: ClassName=MCU Member=Component C13 C0402TBD
+Added Member To Class: ClassName=MCU Member=Component C17 C0402TBD
+Added Member To Class: ClassName=MCU Member=Component J7 Header 4H

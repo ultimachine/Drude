@@ -158,6 +158,23 @@ GenerateClassCluster=0
 DocumentUniqueId=OGFDRGJU
 
 [Document8]
+DocumentPath=..\..\PCB\Libraries\hmi.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=RXVARWCD
+
+[Document9]
 DocumentPath=..\SYM-0019-00108-1\Released\MC-8B-ATM16U4-SQ45.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -174,7 +191,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HLELLPTR
 
-[Document9]
+[Document10]
 DocumentPath=..\PCC-0019-00096-2\Released\44PW_L-UM.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -196,13 +213,14 @@ UniqueID=BBF5B532-A49E-497B-8611-B82D9A471182
 Description=Default
 AllowFabrication=0
 ParameterCount=0
-VariationCount=6
+VariationCount=7
 Variation1=Designator=C12|UniqueId=\AKOPCYWL|Kind=1|AlternatePart= 
 Variation2=Designator=R10|UniqueId=\UKEQEGAD|Kind=1|AlternatePart= 
 Variation3=Designator=R13|UniqueId=\QLTRTEUL|Kind=1|AlternatePart= 
 Variation4=Designator=R34|UniqueId=\VYHASTDE|Kind=1|AlternatePart= 
 Variation5=Designator=R32|UniqueId=\GDCXVJHP|Kind=1|AlternatePart= 
 Variation6=Designator=C72|UniqueId=\UXBMHWRX|Kind=1|AlternatePart= 
+Variation7=Designator=C75|UniqueId=\LKFRWEYJ|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
 [GeneratedDocument1]

@@ -1,0 +1,9 @@
+Change Component DesignItemId : Designator=H1 Old DesignItemId=Standoff3TopConn New DesignItemId=Standoff3mm
+Change Component DesignItemId : Designator=H2 Old DesignItemId=Standoff3TopConn New DesignItemId=Standoff3mm
+Change Component DesignItemId : Designator=H4 Old DesignItemId=Standoff3TopConn New DesignItemId=Standoff3mm
+Change Component Footprint: Designator=H1 Old Footprint=Standoff3mmTopConn New Footprint=Standoff3mm
+Change Component Footprint: Designator=H2 Old Footprint=Standoff3mmTopConn New Footprint=Standoff3mm
+Change Component Footprint: Designator=H4 Old Footprint=Standoff3mmTopConn New Footprint=Standoff3mm
+Change Component Comment : Designator=H1 Old Comment=Standoff New Comment=Hole
+Change Component Comment : Designator=H2 Old Comment=Standoff New Comment=Hole
+Change Component Comment : Designator=H4 Old Comment=Standoff New Comment=Hole

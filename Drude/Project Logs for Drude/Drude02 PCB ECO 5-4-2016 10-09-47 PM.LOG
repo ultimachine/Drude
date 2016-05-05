@@ -1,0 +1,2 @@
+Change Component DesignItemId : Designator=H3 Old DesignItemId=Standoff3TopConn New DesignItemId=Hole_3x7_2sided
+Change Component Footprint: Designator=H3 Old Footprint=Standoff3mmTopConn New Footprint=Wave_hole_3x7-2sided

@@ -92,10 +92,10 @@ Generating : GND
 
 
 Used DCodes :
-    D51
-    D67
-    D68
+    D47
     D69
+    D70
+    D76
     D79
     D80
     D81
@@ -116,10 +116,10 @@ Generating : Supply
 
 
 Used DCodes :
-    D51
-    D67
-    D68
+    D47
     D69
+    D70
+    D76
     D79
     D80
     D81
@@ -149,9 +149,9 @@ Used DCodes :
     D23
     D44
     D45
-    D46
-    D47
     D48
+    D49
+    D50
     D53
     D54
     D55
@@ -191,9 +191,9 @@ Generating : Top Overlay
 
 Used DCodes :
     D44
-    D45
-    D46
-    D47
+    D48
+    D49
+    D50
     D53
     D55
     D94
@@ -260,7 +260,7 @@ Generating : Top Solder
 
 
 Used DCodes :
-    D46
+    D48
     D129
     D130
     D131
@@ -369,8 +369,8 @@ Generating : Bottom Overlay
 
 Used DCodes :
     D44
-    D45
-    D47
+    D49
+    D50
     D53
     D94
     D98
@@ -397,9 +397,9 @@ Generating : Mechanical 2
 
 Used DCodes :
     D44
-    D45
-    D46
-    D47
+    D48
+    D49
+    D50
     D96
     D183
     D184
@@ -413,7 +413,7 @@ Generating : Mechanical 8
 
 
 Used DCodes :
-    D44
+    D50
     D54
     D96
     D98
@@ -456,7 +456,7 @@ Generating : Drill Drawing
 
 
 Used DCodes :
-    D46
+    D48
     D54
     D201
 *************************************************************
@@ -471,6 +471,6 @@ Generating : Drill Guide
 
 
 Used DCodes :
-    D46
+    D48
 *************************************************************
 

@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=NetJ7_2 Pin=J7-2
+Removed Pin From Net: NetName=NetJ7_4 Pin=J7-4
+Change Component DesignItemId : Designator=J7 Old DesignItemId=Header 4H New DesignItemId=Header 2X2
+Change Component Footprint: Designator=J7 Old Footprint=HDR1X4H New Footprint=HDR2X2
+Change Component Comment : Designator=J7 Old Comment=Header 4H New Comment=Header 2X2
+Added Pin To Net: NetName=NetJ7_4 Pin=J7-2
+Added Pin To Net: NetName=NetJ7_2 Pin=J7-4
+Change Net Name : Old Net Name=NetJ7_2 New Net Name=NetJ7_4
+Change Net Name : Old Net Name=NetJ7_4 New Net Name=NetJ7_2
