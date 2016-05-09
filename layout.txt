@@ -11,11 +11,13 @@ this.  Remember, they are
 the ones responsible for meeting the 
 required impedance.
 
+Modify dielectrics/lines as needed for process to meet following controlled impedance requirements.
+Notify us of dielectric/stackup/changes. Add test coupon to panel.
 GTL,GBL
+Differential Trace
 4mil, 8mil space  = 100ohm diff
 5mil, 8mil space = 90ohm diff
-5mil = 50ohm
-Z = +/- 5ohm
+Z = +/- 10%
 
 14.855 touch tail to pcb edge
 2,7mm insertion depth
