@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: Drude-panel.PcbDoc   5/6/2016  3:30:36 PM
+NCDrill File Report For: Drude-panel.PcbDoc   6/1/2016  2:46:17 PM
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -8,17 +8,17 @@ ASCII SlotHoles File : Drude_Panel_0.1a-SlotHoles.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      8mil (0.203mm)                                            Round             492       PTH        41.81inch (1062.09mm)
-T2      10mil (0.254mm)                                           Round             486       PTH        87.65inch (2226.26mm)
-T3      12mil (0.3mm)                                             Round             36        PTH        5.64inch (143.33mm)
+T1      8mil (0.203mm)                                            Round             492       PTH        42.91inch (1089.94mm)
+T2      10mil (0.254mm)                                           Round             486       PTH        93.19inch (2367.01mm)
+T3      12mil (0.3mm)                                             Round             36        PTH        5.77inch (146.62mm)
 T4      12mil (0.305mm)                                           Round             207       PTH        49.15inch (1248.43mm)
-T5      15mil (0.381mm)                                           Round             234       PTH        61.46inch (1561.16mm)
+T5      15mil (0.381mm)                                           Round             234       PTH        59.15inch (1502.37mm)
 T6      20mil (0.5mm)                                             Slot              6         PTH        9.80inch (249.02mm)
 T7      20mil (0.508mm)                                           Round             12        PTH        4.97inch (126.26mm)
 T8      22mil (0.551mm)                                           Slot              6         PTH        9.31inch (236.43mm)
 T9      24mil (0.61mm)                                            Round             6         PTH        4.43inch (112.64mm)
 T10     28mil (0.701mm)                                           Round             12        PTH        5.09inch (129.37mm)
-T11     35mil (0.899mm)                                           Round             12        PTH        5.01inch (127.13mm)
+T11     35mil (0.899mm)                                           Round             12        PTH        4.76inch (121.00mm)
 T12     38mil (0.965mm)                                           Round             18        PTH        8.64inch (219.57mm)
 T13     51mil (1.3mm)                                             Round             12        PTH        6.99inch (177.60mm)
 T14     118mil (3mm)                                              Round             4         NPTH       17.94inch (455.57mm)
